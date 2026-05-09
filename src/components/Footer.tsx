@@ -31,7 +31,7 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <p className='mb-2'>The real-time collaborative production & jamming suite for musicians. Perfect for live jamming, collaborative DAW production, and music brainstorming.</p>
-              <p className="text-purple-400">✨ Currently in Alpha testing phase. Join the next generation of musical collaboration.</p>
+              <p className="text-purple-400">✨ Currently in BETA testing phase. Join the next generation of musical collaboration.</p>
             </motion.div>
           </div>
 

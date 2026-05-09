@@ -35,23 +35,28 @@ export default function HeroSection() {
             
             {/* Demo Banner */}
             <div className="mb-6 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 border border-purple-200 dark:border-purple-700 rounded-full">
-              <span className="text-purple-800 dark:text-purple-200 text-sm font-medium">✨ Test Version - Now with Arrange Rooms for Production</span>
+              <span className="text-purple-800 dark:text-purple-200 text-sm font-medium">✨ Beta Access: Pro features & AI Music Assistants included</span>
             </div>
             
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
               COLLAB - Jam Band is the ultimate real-time collaborative production & jamming suite. 
-              Jam live with friends or produce together in our collaborative DAW with built-in music theory assistance.
+              Jam live with friends, produce in our collaborative DAW, and explore the future with our experimental AI-powered music assistants.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a 
-                href={APP_URL} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 music-btn"
-              >
-                🚀 Start Creating Now
-              </a>
+              <div className="flex flex-col items-center lg:items-start gap-2">
+                <a 
+                  href={APP_URL} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 music-btn shadow-lg"
+                >
+                  🚀 Start Creating Now
+                </a>
+                <p className="text-xs text-gray-500 dark:text-gray-400 ml-1">
+                  No credit card required • Start in seconds
+                </p>
+              </div>
             </div>
           </motion.div>
           

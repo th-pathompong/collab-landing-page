@@ -86,8 +86,23 @@ export default function AboutPage() {
             About COLLAB
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A Proof of Concept for real-time collaborative music creation
+            The next-generation AI-native music ecosystem (BETA)
           </p>
+        </div>
+
+        {/* Core Mission Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {[
+            { label: 'PLAY', title: 'Spontaneous Jamming', icon: '🎸', color: 'bg-red-50 dark:bg-red-900/10' },
+            { label: 'CREATE', title: 'Professional DAW', icon: '🎹', color: 'bg-blue-50 dark:bg-blue-900/10' },
+            { label: 'EVOLVE', title: 'AI-Native Vision', icon: '🤖', color: 'bg-purple-50 dark:bg-purple-900/10' },
+          ].map((card) => (
+            <div key={card.label} className={`${card.color} p-6 rounded-2xl border border-gray-100 dark:border-gray-800 text-center shadow-sm`}>
+              <div className="text-3xl mb-3">{card.icon}</div>
+              <div className="text-[10px] font-black tracking-widest text-gray-400 mb-1">{card.label}</div>
+              <div className="text-sm font-bold text-gray-800 dark:text-gray-200">{card.title}</div>
+            </div>
+          ))}
         </div>
 
         {/* Main Content */}
@@ -102,6 +117,9 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Today, it bridges the gap between spontaneous jamming in <strong>Perform Rooms</strong> and granular, professional arrangement in <strong>Arrange Rooms</strong>, providing a seamless flow from live inspiration to recorded reality.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              The ultimate vision for COLLAB is to become an <strong>AI-Native Music Ecosystem</strong>. By leveraging the Model Context Protocol (MCP), we are transforming the DAW from a passive tool into an active, collaborative partner—where AI agents can join your session as virtual bandmates or professional co-producers.
             </p>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
               <p className="text-sm text-purple-700 dark:text-purple-300 leading-relaxed italic">
@@ -279,104 +297,100 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Phase 2 */}
+              {/* Phase 2 & 3 - Consolidatied as Completed */}
+              <div className="relative flex items-start mb-12">
+                <div className="flex-shrink-0 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-sm">✓</span>
+                </div>
+                <div className="ml-6 flex-1">
+                  <div className="flex items-center mb-2">
+                    <h3 className="text-xl font-bold text-green-600 dark:text-green-400">
+                      Phase 2 & 3: Performance & Scaling
+                    </h3>
+                    <span className="ml-3 px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs rounded-full font-medium">
+                      LIVE
+                    </span>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    Redis state persistence, multi-process clustering, and Backblaze B2 integration for professional-grade reliability.
+                  </p>
+                </div>
+              </div>
+
+              {/* Phase 4 - Current */}
+              <div className="relative flex items-start mb-12">
+                <div className="flex-shrink-0 w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-lg">⚙️</span>
+                </div>
+                <div className="ml-6 flex-1">
+                  <div className="flex items-center mb-2">
+                    <h3 className="text-xl font-bold text-amber-600 dark:text-amber-400">
+                      Phase 4: Stability & Production Readiness
+                    </h3>
+                    <span className="ml-3 px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-xs rounded-full font-medium">
+                      CURRENT
+                    </span>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    Monorepo migration (Bun Workspaces), unified shared packages, E2E automation with Playwright, and comprehensive UX polish.
+                  </p>
+                </div>
+              </div>
+
+              {/* Phase 5 - Next */}
               <div className="relative flex items-start mb-12">
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center shadow-lg z-10">
-                  <span className="text-white font-bold text-lg">🚀</span>
+                  <span className="text-white font-bold text-lg">🌉</span>
                 </div>
                 <div className="ml-6 flex-1">
                   <div className="flex items-center mb-2">
                     <h3 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                      Phase 2: Scale & Community
+                      Phase 5: The &quot;Jam-to-Arrange&quot; Bridge
                     </h3>
                     <span className="ml-3 px-3 py-1 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 text-purple-700 dark:text-purple-300 text-xs rounded-full font-medium">
-                      FUNDING NEEDED
+                      NEXT PRIORITY
                     </span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    Professional development with specialized team and funding
-                  </p>
                   <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                        🎼 Enhanced Music Features
-                      </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          More music scales (beyond major/minor)
-                        </div>
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          More (custom) instruments
-                        </div>
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          Custom / recorded sample sounds
-                        </div>
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          Advanced modular synthesizer
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-white/50 dark:bg-gray-800/50 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+                        <h4 className="font-bold text-sm mb-1 text-gray-900 dark:text-white">Catch! Mechanic</h4>
+                        <p className="text-xs text-gray-700 dark:text-gray-300">Retroactively save MIDI snippets from live jams into your Idea Crate.</p>
                       </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                        🌐 Infrastructure & Community
-                      </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          Broader servers for low latency
-                        </div>
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          100+ audience streaming capability
-                        </div>
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          Accounts, band party, virtual avatars
-                        </div>
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          Band-audience interactivity
-                        </div>
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          AI pattern generation assist
-                        </div>
-                        <div className="flex items-center">
-                          <span className="ml-4 w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></span>
-                          Monetization features
-                        </div>
+                      <div className="bg-white/50 dark:bg-gray-800/50 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+                        <h4 className="font-bold text-sm mb-1 text-gray-900 dark:text-white">Virtual Sessionists</h4>
+                        <p className="text-xs text-gray-700 dark:text-gray-300">AI-powered bandmates that react to your playing dynamics and key changes.</p>
+                      </div>
+                      <div className="bg-white/50 dark:bg-gray-800/50 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+                        <h4 className="font-bold text-sm mb-1 text-gray-900 dark:text-white">Vibe Quest</h4>
+                        <p className="text-xs text-gray-700 dark:text-gray-300">Gamified musical guidance with Bubble Guides and Rhythm Halos.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Phase 3 */}
+              {/* Phase 7+ - Future */}
               <div className="relative flex items-start">
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-600 to-pink-600 rounded-full flex items-center justify-center shadow-lg z-10">
-                  <span className="text-white font-bold text-lg">📱</span>
+                  <span className="text-white font-bold text-lg">🤖</span>
                 </div>
                 <div className="ml-6 flex-1">
                   <div className="flex items-center mb-2">
                     <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
-                      Phase 3: Native Apps
+                      Phase 7+: AI Ecosystem & MCP
                     </h3>
                     <span className="ml-3 px-3 py-1 bg-gradient-to-r from-blue-100 to-pink-100 dark:from-blue-900/30 dark:to-pink-900/30 text-blue-700 dark:text-blue-300 text-xs rounded-full font-medium">
-                      FUTURE
+                      FUTURE VISION
                     </span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 mb-3">
-                    Professional-grade native application development
-                  </p>
-                  <div className="bg-gradient-to-r from-blue-50 to-pink-50 dark:from-blue-900/20 dark:to-pink-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-                    <div className="flex items-center text-sm text-blue-700 dark:text-blue-300">
-                      <span className="ml-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full mr-3"></span>
-                      VST / Audio Unit plugin support
-                    </div>
+                  <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                    <p>Transforming Jam Band into an AI-Native platform through MCP Integration:</p>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li><strong>AI Agents as Co-Producers:</strong> Connect Claude/Gemini directly to your studio.</li>
+                      <li><strong>Natural Language DAW:</strong> Control every parameter with voice or text commands.</li>
+                      <li><strong>AI as a Pro Member:</strong> Real-time co-jamming with ultra-low latency AI interaction.</li>
+                    </ul>
                   </div>
                 </div>
               </div>

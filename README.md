@@ -38,19 +38,11 @@ cd jam-band-landing-page
 2. Install dependencies:
 ```bash
 bun install
-# or
-npm install
-# or
-yarn install
 ```
 
 3. Run the development server:
 ```bash
 bun run dev
-# or
-npm run dev
-# or
-yarn dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.

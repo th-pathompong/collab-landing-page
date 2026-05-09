@@ -12,6 +12,10 @@ export const SECTION_MENU_ITEMS = [
     href: '/#experience'
   },
   {
+    label: 'AI Features',
+    href: '/#ai-features'
+  },
+  {
     label: 'Music Theory',
     href: '/#music-theory'
   },
@@ -22,6 +26,10 @@ export const SECTION_MENU_ITEMS = [
   {
     label: 'Technical Requirements',
     href: '/#technical-requirements'
+  },
+  {
+    label: 'Pricing',
+    href: '/#pricing'
   }
 ] as const;
 

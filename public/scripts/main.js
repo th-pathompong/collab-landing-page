@@ -208,9 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let inThrottle;
         return function() {
             const args = arguments;
-            const context = this;
             if (!inThrottle) {
-                func.apply(context, args);
+                func.apply(this, args);
                 inThrottle = true;
                 setTimeout(() => inThrottle = false, limit);
             }
@@ -273,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Lazy loading for images (if any are added later)
     if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
+        const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
@@ -283,19 +282,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-        
+
         document.querySelectorAll('img[data-src]').forEach(img => {
             imageObserver.observe(img);
         });
     }
-    
+
     // Console welcome message
     console.log(`
     🎵 Welcome to COLLAB - Jam Band! 🎵
-    
+
     This is a real-time collaborative music-making web application.
     Built with ❤️ for musicians everywhere.
-    
+
     🎸 Features:
     - Virtual Instruments (Guitar, Bass, Keyboard, Drums, Synth)
     - Ultra-Low Latency Voice Chat
@@ -303,22 +302,23 @@ document.addEventListener('DOMContentLoaded', function() {
     - Step Sequencer
     - MIDI Controller Support
     - PWA Support
-    
+
     🌐 Visit: https://jam-band-fe.vercel.app/
-    
+
     Happy jamming! 🎶
     `);
-});
+    });
 
-// Service Worker registration for PWA features
-if ('serviceWorker' in navigator) {
+    // Service Worker registration for PWA features
+    if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
+            .then(function() {
                 console.log('ServiceWorker registration successful');
             })
-            .catch(function(err) {
+            .catch(function() {
                 console.log('ServiceWorker registration failed');
             });
     });
-} 
+    } 
+ 

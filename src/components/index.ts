@@ -12,4 +12,7 @@ export { default as ThemeToggle } from './ThemeToggle';
 export { default as ExperienceSection } from './ExperienceSection';
 export { default as MusicTheorySection } from './MusicTheorySection';
 export { default as SwapFeatureSection } from './SwapFeatureSection';
+export { default as AIFeaturesSection } from './AIFeaturesSection';
+export { default as PricingBetaSection } from './PricingBetaSection';
 export { ThemeProvider, useTheme } from './ThemeProvider'; 
+ 

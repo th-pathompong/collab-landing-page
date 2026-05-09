@@ -3,13 +3,14 @@
 import Script from 'next/script';
 import {
   HeroSection,
-  FeaturesSection,
   InstrumentsSection,
   UseCasesSection,
   TechnicalRequirementsSection,
   CTASection,
   ExperienceSection,
   MusicTheorySection,
+  AIFeaturesSection,
+  PricingBetaSection,
 } from '@/components';
 
 export default function HomePage() {
@@ -116,12 +117,13 @@ export default function HomePage() {
       />
       
       <HeroSection />
-      <FeaturesSection />
       <ExperienceSection />
+      <AIFeaturesSection />
       <MusicTheorySection />
       <InstrumentsSection />
       <UseCasesSection />
       <TechnicalRequirementsSection />
+      <PricingBetaSection />
       <CTASection />
     </div>
   );

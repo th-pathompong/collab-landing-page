@@ -11,7 +11,7 @@ const experienceModes = [
     features: [
       'Real-time instrument synchronization',
       'Low-latency voice chat mesh',
-      'Interactive drumpad and sequencers',
+      'Shadow Capture (Retroactive recording)',
       'Audience interaction mode'
     ],
     image: '/images/perform-room.webp',
@@ -22,10 +22,10 @@ const experienceModes = [
     subtitle: 'Collaborative DAW & Production',
     description: 'Take your ideas further. A collaborative digital audio workstation where you can arrange, record, and produce tracks together with advanced version control.',
     features: [
-      'Multi-track arrangement grid',
-      'Project forking and versioning',
-      'Collaborative lock management',
-      'High-quality audio export'
+      'Professional MIDI + Multitrack WAV export',
+      'Tempo-Synced Audio (Time-stretching)',
+      'Count-in (Pre-roll) recording support',
+      'Project forking and versioning'
     ],
     image: '/images/arrange-room.webp',
     color: 'from-pink-500 to-orange-500'
@@ -77,8 +77,8 @@ export default function ExperienceSection() {
               <div className="mb-8 flex-grow">
                 <ul className="space-y-3">
                   {mode.features.map(feature => (
-                    <li key={feature} className="flex items-center space-x-3 text-gray-700 dark:text-gray-300">
-                      <span className={`flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r ${mode.color} flex items-center justify-center text-white text-[10px]`}>
+                    <li key={feature} className="flex items-start space-x-3 text-gray-700 dark:text-gray-300">
+                      <span className={`flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-gradient-to-r ${mode.color} flex items-center justify-center text-white text-[10px]`}>
                         ✓
                       </span>
                       <span>{feature}</span>

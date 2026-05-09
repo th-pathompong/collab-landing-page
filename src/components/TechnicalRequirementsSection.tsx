@@ -11,9 +11,15 @@ const technicalRequirements = [
   },
   {
     icon: '🧬',
-    title: 'Ephemeral/Commit Sync',
-    description: 'Advanced sync strategy that broadcasts rapid changes instantly while committing final states to Redis, optimized for high-capacity rooms.',
+    title: 'Real-Time Sync Engine',
+    description: 'Powered by an Ephemeral/Commit pattern and per-room mutex to ensure seamless synchronization across all collaborators.',
     status: 'Custom Engine'
+  },
+  {
+    icon: '🎤',
+    title: 'Low-Latency Voice Chat',
+    description: 'WebRTC-powered voice chat prioritized for timing, perfect for synchronized musical collaboration and communication.',
+    status: 'Optimized Audio'
   },
   {
     icon: '🛠️',
@@ -22,16 +28,16 @@ const technicalRequirements = [
     status: 'Modern Stack'
   },
   {
-    icon: '🌍',
-    title: 'Low-Latency Infrastructure',
-    description: 'Currently optimized for Southeast Asia with remote DB and Redis architecture on Railway.',
-    status: 'Regional Optimized'
-  },
-  {
     icon: '🔌',
     title: 'Full MIDI Support',
     description: 'Connect your physical MIDI controllers directly via the Web MIDI API. Optimized for Chromium-based browsers.',
     status: 'Pro Ready'
+  },
+  {
+    icon: '🌍',
+    title: 'Regional Infrastructure',
+    description: 'Currently optimized for Southeast Asia with high-performance Railway clusters and Redis state persistence.',
+    status: 'Stability'
   }
 ];
 
@@ -47,7 +53,7 @@ export default function TechnicalRequirementsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-            *Technical Requirements & Notes
+            Technical Requirements & Notes
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Important information to help you get the best jamming experience. These details ensure smooth performance and set realistic expectations.
