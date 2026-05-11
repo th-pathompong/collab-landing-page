@@ -2,6 +2,7 @@
 
 import { createPortal } from 'react-dom';
 import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
@@ -34,6 +35,7 @@ interface DropdownMenuProps {
   dropdownClassName?: string;
   showChevron?: boolean;
   usePortal?: boolean; // Use createPortal for fixed positioned elements
+  triggerHref?: string; // If provided, label navigates here; chevron-only toggles dropdown
 }
 
 export default function DropdownMenu({
@@ -47,32 +49,38 @@ export default function DropdownMenu({
   className = '',
   dropdownClassName = '',
   showChevron = true,
-  usePortal = false
+  usePortal = false,
+  triggerHref
 }: DropdownMenuProps) {
   const router = useRouter();
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0 });
 
   // Calculate dropdown position for portal
+  // Use wrapperRef when trigger is split (triggerHref), otherwise triggerRef
   useEffect(() => {
-    if (usePortal && isOpen && triggerRef.current) {
-      const rect = triggerRef.current.getBoundingClientRect();
+    const anchorEl = triggerHref ? wrapperRef.current : triggerRef.current;
+    if (usePortal && isOpen && anchorEl) {
+      const rect = anchorEl.getBoundingClientRect();
       setPosition({
         top: rect.bottom + (offset.y || 0),
         left: rect.left + (offset.x || 0)
       });
     }
-  }, [isOpen, usePortal, offset]);
+  }, [isOpen, usePortal, offset, triggerHref]);
 
   // Handle click outside to close dropdown
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
       if (
         isOpen &&
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node) &&
-        (!usePortal || !triggerRef.current || !triggerRef.current.contains(event.target as Node))
+        !dropdownRef.current.contains(target) &&
+        !triggerRef.current?.contains(target) &&
+        !wrapperRef.current?.contains(target)
       ) {
         onClose();
       }
@@ -80,7 +88,7 @@ export default function DropdownMenu({
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isOpen, onClose, usePortal]);
+  }, [isOpen, onClose]);
 
   // Handle escape key
   useEffect(() => {
@@ -98,18 +106,22 @@ export default function DropdownMenu({
     if (item.onClick) {
       item.onClick();
     } else if (item.href && item.href.includes('#')) {
-      // Handle navigation to sections from other pages
-      if (item.href.startsWith('/#')) {
-        // Navigate to homepage first, then scroll to section
-        router.push(item.href);
-      } else if (item.href.startsWith('#')) {
-        // Already on homepage, just scroll to section
-        const hash = item.href.substring(1);
+      const [path, hash] = item.href.split('#');
+      const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
+      const onSamePage = !path || currentPath === path;
+
+      if (onSamePage) {
+        // Already on the target page — scroll directly
         const targetElement = document.querySelector(`#${hash}`);
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
         }
+      } else {
+        // Navigate to the target page; browser handles hash scroll on load
+        router.push(item.href);
       }
+    } else if (item.href) {
+      router.push(item.href);
     }
     onClose();
   };
@@ -176,21 +188,47 @@ export default function DropdownMenu({
 
   return (
     <div className="relative" ref={usePortal ? undefined : dropdownRef}>
-      {/* Trigger Button */}
-      <button
-        ref={triggerRef}
-        onClick={onToggle}
-        className={`flex items-center transition-colors ${className}`}
-        aria-expanded={isOpen}
-        aria-haspopup="true"
-      >
-        {trigger}
-        {showChevron && (
-          <ChevronDown 
-            className={`w-4 h-4 ml-1 transition-transform duration-200 text-gray-900 dark:text-gray-100 ${isOpen ? 'rotate-180' : ''}`} 
-          />
-        )}
-      </button>
+      {triggerHref ? (
+        /* Split trigger: label navigates, chevron toggles dropdown */
+        <div ref={wrapperRef} className="flex items-center">
+          <Link
+            href={triggerHref}
+            className={`transition-colors ${className}`}
+          >
+            {trigger}
+          </Link>
+          {showChevron && (
+            <button
+              ref={triggerRef}
+              onClick={onToggle}
+              className="ml-1 text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+              aria-expanded={isOpen}
+              aria-haspopup="true"
+              aria-label="Open menu"
+            >
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+          )}
+        </div>
+      ) : (
+        /* Single trigger: whole button toggles dropdown */
+        <button
+          ref={triggerRef}
+          onClick={onToggle}
+          className={`flex items-center transition-colors ${className}`}
+          aria-expanded={isOpen}
+          aria-haspopup="true"
+        >
+          {trigger}
+          {showChevron && (
+            <ChevronDown
+              className={`w-4 h-4 ml-1 transition-transform duration-200 text-gray-900 dark:text-gray-100 ${isOpen ? 'rotate-180' : ''}`}
+            />
+          )}
+        </button>
+      )}
 
       {/* Dropdown Menu */}
       {renderDropdown()}

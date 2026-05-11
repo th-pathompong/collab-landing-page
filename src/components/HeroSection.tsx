@@ -1,8 +1,88 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { APP_URL } from './constants/navigation';
+
+function HeroImageInteraction() {
+  const [hoveredSide, setHoveredSide] = useState<'left' | 'right' | null>(null);
+
+  const leftClip = 
+    hoveredSide === 'left' ? 'polygon(0% 0%, 89.5% 0%, 79.5% 100%, 0% 100%)' :
+    hoveredSide === 'right' ? 'polygon(0% 0%, 24.5% 0%, 14.5% 100%, 0% 100%)' :
+    'polygon(0% 0%, 54.5% 0%, 44.5% 100%, 0% 100%)';
+
+  const rightClip = 
+    hoveredSide === 'left' ? 'polygon(90.5% 0%, 100% 0%, 100% 100%, 80.5% 100%)' :
+    hoveredSide === 'right' ? 'polygon(25.5% 0%, 100% 0%, 100% 100%, 15.5% 100%)' :
+    'polygon(55.5% 0%, 100% 0%, 100% 100%, 45.5% 100%)';
+
+  return (
+    <div 
+      className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-800"
+      onMouseLeave={() => setHoveredSide(null)}
+    >
+      {/* Left Side (Perform Room) */}
+      <motion.div
+        className="absolute inset-0 cursor-pointer"
+        animate={{ clipPath: leftClip }}
+        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+        onMouseEnter={() => setHoveredSide('left')}
+      >
+        <Image 
+          src="/images/perform-room.webp"
+          alt="Perform Room"
+          fill
+          className="object-cover object-left"
+          priority
+        />
+        {/* Color Tint Overlay */}
+        <div className={`absolute inset-0 transition-all duration-500 pointer-events-none 
+          ${hoveredSide === 'left' ? 'bg-indigo-500/0' : 
+            hoveredSide === 'right' ? 'bg-indigo-950/50 backdrop-grayscale-[0.5]' : 
+            'bg-indigo-500/15'}`} 
+        />
+        
+        <div className={`absolute bottom-6 left-6 transition-all duration-300 ${hoveredSide === 'right' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
+          <div className="bg-black/60 text-white px-4 py-2 rounded-lg backdrop-blur-md border border-white/10 shadow-lg">
+            <p className="text-xs font-bold text-purple-400 mb-1 tracking-wider uppercase">Live</p>
+            <p className="font-bold">Perform Room</p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Right Side (Arrange Room) */}
+      <motion.div
+        className="absolute inset-0 cursor-pointer"
+        animate={{ clipPath: rightClip }}
+        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+        onMouseEnter={() => setHoveredSide('right')}
+      >
+        <Image 
+          src="/images/arrange-room.webp"
+          alt="Arrange Room"
+          fill
+          className="object-cover object-right"
+          priority
+        />
+        {/* Color Tint Overlay */}
+        <div className={`absolute inset-0 transition-all duration-500 pointer-events-none 
+          ${hoveredSide === 'right' ? 'bg-pink-500/0' : 
+            hoveredSide === 'left' ? 'bg-pink-950/50 backdrop-grayscale-[0.5]' : 
+            'bg-pink-500/10'}`} 
+        />
+
+        <div className={`absolute bottom-6 right-6 text-right transition-all duration-300 ${hoveredSide === 'left' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
+          <div className="bg-black/60 text-white px-4 py-2 rounded-lg backdrop-blur-md border border-white/10 shadow-lg">
+            <p className="text-xs font-bold text-blue-400 mb-1 tracking-wider uppercase">Studio</p>
+            <p className="font-bold">Arrange Room</p>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
 
 export default function HeroSection() {
   return (
@@ -68,13 +148,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="relative z-10">
-              <Image 
-                src="/images/app-overview.webp" 
-                alt="COLLAB - Jam Band App Interface" 
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500"
-              />
+              <HeroImageInteraction />
             </div>
             {/* Large background image for depth */}
             <div className="absolute inset-0 overflow-hidden" style={{ opacity: 0.15 }}>

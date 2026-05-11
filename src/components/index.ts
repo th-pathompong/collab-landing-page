@@ -14,5 +14,6 @@ export { default as MusicTheorySection } from './MusicTheorySection';
 export { default as SwapFeatureSection } from './SwapFeatureSection';
 export { default as AIFeaturesSection } from './AIFeaturesSection';
 export { default as PricingBetaSection } from './PricingBetaSection';
+export { default as StructuredData } from './StructuredData';
 export { ThemeProvider, useTheme } from './ThemeProvider'; 
  

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import NavigationWrapper from "@/components/NavigationWrapper";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/components/constants/navigation";
 
 export const viewport = {
   width: "device-width",
@@ -12,7 +13,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jam-band-landing-page.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "COLLAB - Jam Band | Real-time Collaborative Music Platform",
     template: "%s | COLLAB - Jam Band",
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
     description:
       "Create music together in real-time with virtual instruments, ultra-low latency voice chat, and synchronized metronome. Perfect for remote jam sessions, virtual music brainstorming, and collaborative music production. No installation required - jam directly in your browser.",
     type: "website",
-    url: "https://jam-band-landing-page.vercel.app/",
+    url: SITE_URL,
     siteName: "COLLAB - Jam Band",
     locale: "en_US",
     images: [
@@ -127,9 +128,9 @@ export const metadata: Metadata = {
     google: "JZvGAackfa_KIrMmkf0uFmBYnU1XWEE0VBSkJYNhsJw",
   },
   alternates: {
-    canonical: "https://jam-band-landing-page.vercel.app/",
+    canonical: SITE_URL,
     languages: {
-      "en-US": "https://jam-band-landing-page.vercel.app/",
+      "en-US": SITE_URL,
     },
   },
   manifest: "/manifest.json",

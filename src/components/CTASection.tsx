@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { APP_URL } from './constants/navigation';
 // import Image from 'next/image';

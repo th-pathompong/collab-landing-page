@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -23,44 +23,46 @@ export default function Navigation({
   onMobileMenuToggle 
 }: NavigationProps) {
   const router = useRouter();
-  const [sectionsDropdownOpen, setSectionsDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpandedLabel, setMobileExpandedLabel] = useState<string | null>(null);
 
   // Reusable function to handle hash navigation
   const handleHashNavigation = (href: string, closeMenu: boolean = false) => {
-    if (href.startsWith('/#')) {
-      // Navigate to homepage first, then scroll to section
-      router.push(href);
-      if (closeMenu) {
-        setTimeout(() => onMobileMenuToggle(), 100);
-      }
-    } else if (href.startsWith('#')) {
-      // Already on homepage, just scroll to section
-      const hash = href.substring(1);
+    if (!href.includes('#')) return;
+
+    const [path, hash] = href.split('#');
+    const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
+    const onSamePage = !path || currentPath === path;
+
+    if (onSamePage) {
       const targetElement = document.querySelector(`#${hash}`);
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth' });
-        if (closeMenu) {
-          setTimeout(() => onMobileMenuToggle(), 300);
-        }
+        if (closeMenu) setTimeout(() => onMobileMenuToggle(), 300);
       }
+    } else {
+      router.push(href);
+      if (closeMenu) setTimeout(() => onMobileMenuToggle(), 100);
     }
   };
 
   // Reusable function to render navigation item
   const renderNavigationItem = (item: NavigationItem, isMobile: boolean = false) => {
     if (item.hasDropdown) {
+      const realHref = item.href;
       return (
         <DropdownMenu
           key={item.label}
           trigger={item.label}
           items={(item as Extract<NavigationItem, { hasDropdown: true }>).dropdownItems || []}
-          isOpen={sectionsDropdownOpen}
-          onToggle={() => setSectionsDropdownOpen(!sectionsDropdownOpen)}
-          onClose={() => setSectionsDropdownOpen(false)}
+          isOpen={activeDropdown === item.label}
+          onToggle={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+          onClose={() => setActiveDropdown(null)}
           className="text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer whitespace-nowrap flex-shrink-0"
           anchorPosition="bottom-left"
           offset={{ x: 0, y: 8 }}
           usePortal={true}
+          triggerHref={realHref}
         />
       );
     }
@@ -104,30 +106,61 @@ export default function Navigation({
   // Reusable function to render dropdown section items for mobile
   const renderDropdownSectionItems = (item: NavigationItem) => {
     if (!item.hasDropdown || !item.dropdownItems) return null;
+    const isExpanded = mobileExpandedLabel === item.label;
     
     return (
-      <div key={item.label} className="space-y-2">
-        {/* Section Header */}
-        <div className="py-2 px-4 text-lg font-semibold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700">
-          {item.label}
-        </div>
-        {/* Section Items */}
-        <div className="pl-4 space-y-1">
-          {item.dropdownItems.map((subItem: DropdownItem) => (
-          <a 
-            key={subItem.href}
-            href={subItem.href}
-            className="block w-full text-left py-2 px-4 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              handleHashNavigation(subItem.href, true);
-            }}
+      <div key={item.label} className="border-b border-gray-100 dark:border-gray-800">
+        <div className="flex items-center justify-between py-2 px-4">
+          <Link
+            href={item.href}
+            className="flex-1 text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            onClick={() => onMobileMenuToggle()}
           >
-            {subItem.label}
-          </a>
-        ))}
+            {item.label}
+          </Link>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setMobileExpandedLabel(isExpanded ? null : item.label);
+            }}
+            className="p-2 text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            aria-expanded={isExpanded}
+            aria-label={`Toggle ${item.label} sections`}
+          >
+            <ChevronDown 
+              className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} 
+            />
+          </button>
+        </div>
+        
+        <AnimatePresence initial={false}>
+          {isExpanded && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className="overflow-hidden bg-gray-50/50 dark:bg-gray-800/30"
+            >
+              <div className="pl-4 pb-4 space-y-1 mt-1">
+                {item.dropdownItems.map((subItem: DropdownItem) => (
+                  <a 
+                    key={subItem.href}
+                    href={subItem.href}
+                    className="block w-full text-left py-2 px-4 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleHashNavigation(subItem.href, true);
+                    }}
+                  >
+                    {subItem.label}
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </div>
     );
   };
 
@@ -228,4 +261,4 @@ export default function Navigation({
       </nav>
     </>
   );
-} 
+}

@@ -1,6 +1,3 @@
-'use client';
-
-import Script from 'next/script';
 import {
   HeroSection,
   InstrumentsSection,
@@ -11,6 +8,7 @@ import {
   MusicTheorySection,
   AIFeaturesSection,
   PricingBetaSection,
+  StructuredData,
 } from '@/components';
 
 export default function HomePage() {
@@ -108,13 +106,7 @@ export default function HomePage() {
 
   return (
     <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
-      />
+      <StructuredData data={structuredData} />
       
       <HeroSection />
       <ExperienceSection />

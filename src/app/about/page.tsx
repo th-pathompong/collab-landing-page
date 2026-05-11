@@ -107,9 +107,38 @@ export default function AboutPage() {
 
         {/* Main Content */}
         <div className="space-y-8">
+          {/* Our Story */}
+          <section id="our-story" className="py-8 border-b border-gray-200 dark:border-gray-800">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 relative inline-block">
+              Our Story
+              <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
+            </h2>
+            <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
+              <p className="text-xl font-medium text-purple-700 dark:text-purple-400 mb-6">
+                We didn&apos;t set out to build a music app.
+              </p>
+              <p className="leading-relaxed mb-6">
+                It started as a question: if browsers can generate sound locally, and notes are just small data packets — could people play music together in real time, over the internet? The answer turned out to be yes. And when early users sat down to try it — many of them without any musical background — what surprised us was how naturally they took to it.
+              </p>
+              <p className="leading-relaxed font-semibold italic border-l-4 border-blue-400 pl-4 py-1 mb-6 bg-blue-50/50 dark:bg-blue-900/10">
+                That response shaped everything that followed.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Music has always been one of the ways humans connect with each other. Long before recorded audio, rhythm and melody were how communities formed. Over time, &quot;making music together&quot; became something that required years of practice, dedicated equipment, and physical proximity — barriers that most people simply never cross.
+              </p>
+              <p className="leading-relaxed mb-6">
+                COLLAB was built to lower those barriers. Not by removing the depth that makes music meaningful, but by making the entry point accessible to everyone — regardless of skill, gear, or location.
+              </p>
+              <p className="leading-relaxed">
+                The product grew from that early experiment into two distinct spaces: a <strong className="text-purple-600 dark:text-purple-400">Perform Room</strong> for live, real-time jamming with others; and an <strong className="text-blue-600 dark:text-blue-400">Arrange Room</strong> for building music collaboratively over time, with a shared workspace that everyone in the session can see and edit simultaneously. No music theory required. No equipment needed. Just people making music together — and occasionally, something worth keeping.
+              </p>
+            </div>
+          </section>
+
           {/* Introduction */}
-          <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <section id="what-is-collab" className="bg-gradient-to-br from-purple-50/80 to-blue-50/80 dark:from-purple-900/20 dark:to-blue-900/20 backdrop-blur-md rounded-2xl p-6 md:p-10 shadow-sm">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center text-white mr-3 text-sm">?</span>
               What is COLLAB?
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -118,48 +147,53 @@ export default function AboutPage() {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Today, it bridges the gap between spontaneous jamming in <strong>Perform Rooms</strong> and granular, professional arrangement in <strong>Arrange Rooms</strong>, providing a seamless flow from live inspiration to recorded reality.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               The ultimate vision for COLLAB is to become an <strong>AI-Native Music Ecosystem</strong>. By leveraging the Model Context Protocol (MCP), we are transforming the DAW from a passive tool into an active, collaborative partner—where AI agents can join your session as virtual bandmates or professional co-producers.
             </p>
-            <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
-              <p className="text-sm text-purple-700 dark:text-purple-300 leading-relaxed italic">
-                🚀 <span className="font-bold">COLLAB</span> is a high-fidelity Proof of Concept (POC) for a next-generation music platform developed through <span className="font-bold">&quot;vibe-coding&quot;</span>—a synergy between advanced AI agents and creative musical vision. What began as a passion project has evolved into a showcase of real-time synchronization and collaborative DAW capabilities, built at high velocity to bridge the gap between imagination and production-ready software.
+            <div className="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl border border-white/20 dark:border-gray-700/50 shadow-inner">
+              <p className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed italic">
+                🚀 <span className="font-bold text-purple-600 dark:text-purple-400">COLLAB</span> is a high-fidelity Proof of Concept (POC) for a next-generation music platform developed through <span className="font-bold">&quot;vibe-coding&quot;</span>—a synergy between advanced AI agents and creative musical vision. What began as a passion project has evolved into a showcase of real-time synchronization and collaborative DAW capabilities, built at high velocity to bridge the gap between imagination and production-ready software.
               </p>
             </div>
           </section>
 
           {/* Objectives / Targeting */}
-          <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <section className="py-8">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
               Objectives & Targeting
             </h2>
-            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
-              <li className="flex items-start">
-                <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 bg-purple-500 rounded-full mr-3"></span>
-                <span><strong>Real-time Synchronized Jamming:</strong> Play high-quality virtual instruments together with ultra-low latency and integrated voice chat.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 bg-purple-500 rounded-full mr-3"></span>
-                <span><strong>Collaborative DAW Production:</strong> A full-featured, browser-based workstation for arranging, editing, and producing multitrack projects.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 bg-purple-500 rounded-full mr-3"></span>
-                <span><strong>Musical Intelligence:</strong> Integrated music theory assistance and scale synchronization for harmonized brainstorming sessions.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 bg-purple-500 rounded-full mr-3"></span>
-                <span><strong>Open Evolution:</strong> A community-driven engine featuring project forking, intelligent contributor tracking, and collaborative versioning.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 bg-purple-500 rounded-full mr-3"></span>
-                <span><strong>Hardware-Software Synergy:</strong> Seamless MIDI controller integration and multi-device connectivity for flexible performance setups.</span>
-              </li>
-            </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white/95 dark:bg-gray-700/90 backdrop-blur-sm p-6 rounded-xl shadow-md border border-purple-100 dark:border-purple-800 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center mb-4 font-bold text-xl">⚡</div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">Real-time Synchronized Jamming</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Play high-quality virtual instruments together with ultra-low latency and integrated voice chat.</p>
+              </div>
+              <div className="bg-white/95 dark:bg-gray-700/90 backdrop-blur-sm p-6 rounded-xl shadow-md border border-blue-100 dark:border-blue-800 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center mb-4 font-bold text-xl">🎛️</div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">Collaborative DAW Production</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">A full-featured, browser-based workstation for arranging, editing, and producing multitrack projects.</p>
+              </div>
+              <div className="bg-white/95 dark:bg-gray-700/90 backdrop-blur-sm p-6 rounded-xl shadow-md border border-pink-100 dark:border-pink-800 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                <div className="w-10 h-10 bg-pink-100 dark:bg-pink-900/50 text-pink-600 dark:text-pink-400 rounded-lg flex items-center justify-center mb-4 font-bold text-xl">🧠</div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">Musical Intelligence</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Integrated music theory assistance and scale synchronization for harmonized brainstorming sessions.</p>
+              </div>
+              <div className="bg-white/95 dark:bg-gray-700/90 backdrop-blur-sm p-6 rounded-xl shadow-md border border-green-100 dark:border-green-800 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                <div className="w-10 h-10 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400 rounded-lg flex items-center justify-center mb-4 font-bold text-xl">🌱</div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">Open Evolution</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">A community-driven engine featuring project forking, intelligent contributor tracking, and collaborative versioning.</p>
+              </div>
+              <div className="bg-white/95 dark:bg-gray-700/90 backdrop-blur-sm p-6 rounded-xl shadow-md border border-amber-100 dark:border-amber-800 hover:shadow-lg transition-all transform hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+                <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 rounded-lg flex items-center justify-center mb-4 font-bold text-xl">🎹</div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">Hardware-Software Synergy</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Seamless MIDI controller integration and multi-device connectivity for flexible performance setups.</p>
+              </div>
+            </div>
           </section>
 
           {/* Roadmap */}
-          <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+          <section id="roadmap" className="py-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
               Roadmap
             </h2>
 
@@ -397,155 +431,106 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Team Knowledge Requirements */}
-          <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Team Knowledge Requirements
-            </h2>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
-              <li>Some knowledge of music theory</li>
-              <li>
-                Some knowledge of music production technology (MIDI standards, synthesizer, audio bus / FX chaining, etc.)
-              </li>
-              <li>Real-time communication networking (WebSocket, UDP / WebRTC, etc.)</li>
-              <li>JavaScript Audio API</li>
-              <li>
-                Strong knowledge about the tech stack and project architecture for scaling
-              </li>
-              <li>VST / Audio Unit API (future mobile app)</li>
-            </ul>
-          </section>
-
-          {/* Features */}
-          {/* <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li>• Multiple virtual instruments (Guitar, Bass, Keyboard, Drums, Synthesizer)</li>
-                <li>• Real-time collaborative jamming sessions</li>
-                <li>• Synchronized metronome with tap tempo and personal controls</li>
-                <li>• Step sequencer for pattern-based music creation</li>
-                <li>• WebRTC voice chat with connection health monitoring</li>
-                <li>• MIDI controller support and device management</li>
+          {/* Two-Column Info Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4">
+            {/* Team Knowledge Requirements */}
+            <section className="bg-indigo-50/50 dark:bg-indigo-900/10 rounded-2xl p-6 md:p-8 border border-indigo-100 dark:border-indigo-900/30">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                <span className="mr-3">🧠</span> Team Knowledge
+              </h2>
+              <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> Music theory fundamentals</li>
+                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> Production technology (MIDI, Audio FX routing)</li>
+                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> Real-time networking (WebSocket, WebRTC)</li>
+                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> JavaScript Audio API & Web Audio</li>
+                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> Scalable application architecture</li>
+                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> VST / Audio Unit integration concepts</li>
               </ul>
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li>• Preset management for instruments</li>
-                <li>• Room-based collaboration with role management</li>
-                <li>• Chat system for band communication</li>
-                <li>• Scale and chord selection with music theory helpers</li>
-                <li>• Network diagnostics and performance monitoring</li>
-                <li>• PWA support</li>
-              </ul>
-            </div>
-          </section> */}
+            </section>
 
-          {/* Coming Soon */}
-          {/* <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Coming Soon
-            </h2>
-            <div className="p-6 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
-              <p className="text-sm text-purple-700 dark:text-purple-300 leading-relaxed mb-3">
-                🚧 <span className="font-bold">Next on the roadmap:</span>
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ul className="space-y-1 text-xs text-purple-700 dark:text-purple-300">
-                  <li>• Audio effects (reverb, delay, distortion, etc.)</li>
-                  <li>• Mixer controls in the user list for individual volume management</li>
-                  <li>• Advanced audio recording and export capabilities</li>
-                </ul>
-                <ul className="space-y-1 text-xs text-purple-700 dark:text-purple-300">
-                  <li>• More advanced synthesizers (FM, wavetable, granular synthesis)</li>
-                  <li>• Advanced modulation and LFO controls</li>
-                  <li>• Custom wavetable editor and import</li>
-                </ul>
+            {/* Server Information */}
+            <section className="bg-teal-50/50 dark:bg-teal-900/10 rounded-2xl p-6 md:p-8 border border-teal-100 dark:border-teal-900/30">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                <span className="mr-3">🌍</span> Server Information
+              </h2>
+              <div className="space-y-4">
+                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1">Location</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Southeast Asia (Optimal Performance Zone)</p>
+                </div>
+                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm border-l-4 border-teal-400">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1">Latency Advisory</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Connection latency varies by geography. Users within or near Southeast Asia will experience the lowest latency, essential for precise real-time jamming synchronization.
+                  </p>
+                </div>
               </div>
-            </div>
-          </section> */}
-
-          {/* Server Information */}
-          <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Server Information
-            </h2>
-            <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-              <p className="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
-                <span className="font-medium">🌏 Server Location:</span>{" "}
-                Southeast Asia
-                <br />
-                <span className="font-medium">⚡ Latency Note:</span> Connection
-                latency may vary depending on your geographical location. Users
-                closer to Southeast Asia will experience lower latency for
-                optimal real-time jamming experience.
-              </p>
-            </div>
-          </section>
+            </section>
+          </div>
 
           {/* Tech Stack */}
-          <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Tech Stack
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Frontend */}
-              <div>
-                <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
-                  Frontend
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                  <li>• React 19 + TypeScript</li>
-                  <li>• Vite 7 (Build tool)</li>
-                  <li>• Tailwind CSS 4</li>
-                  <li>• DaisyUI 5 (Component library)</li>
-                  <li>• Zustand 5 (State management)</li>
-                  <li>• React Router DOM 7</li>
-                  <li>• TanStack Query 5 (Data fetching)</li>
-                </ul>
-              </div>
+          <section id="tech-stack" className="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-10 shadow-md dark:shadow-2xl border border-gray-200 dark:border-slate-800 text-gray-700 dark:text-slate-300 relative overflow-hidden">
+            {/* Decorative background grid */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                <span className="mr-3">⚙️</span> Tech Stack
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Frontend */}
+                <div className="bg-gray-50/80 dark:bg-slate-800/50 p-5 rounded-xl border border-gray-100 dark:border-slate-700/50 backdrop-blur-sm hover:border-purple-300 dark:hover:border-purple-500/50 transition-colors shadow-sm dark:shadow-none">
+                  <h3 className="text-lg font-bold text-purple-600 dark:text-purple-400 mb-4 flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span> Frontend
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+                    <li className="flex justify-between"><span>React 19 + TypeScript</span> <span className="opacity-60 dark:opacity-50">Core</span></li>
+                    <li className="flex justify-between"><span>Vite 7</span> <span className="opacity-60 dark:opacity-50">Build</span></li>
+                    <li className="flex justify-between"><span>Tailwind CSS 4</span> <span className="opacity-60 dark:opacity-50">Style</span></li>
+                    <li className="flex justify-between"><span>Zustand 5</span> <span className="opacity-60 dark:opacity-50">State</span></li>
+                    <li className="flex justify-between"><span>TanStack Query 5</span> <span className="opacity-60 dark:opacity-50">Data</span></li>
+                  </ul>
+                </div>
 
-              {/* Audio & Music */}
-              <div>
-                <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
-                  Audio & Music
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                  <li>• Tone.js 15 (Audio framework)</li>
-                  <li>• Smplr 0.16 (Sample player)</li>
-                  <li>• Web Audio API</li>
-                  <li>• MIDI support</li>
-                  <li>• WebRTC (Voice communication)</li>
-                </ul>
-              </div>
+                {/* Audio & Music */}
+                <div className="bg-gray-50/80 dark:bg-slate-800/50 p-5 rounded-xl border border-gray-100 dark:border-slate-700/50 backdrop-blur-sm hover:border-blue-300 dark:hover:border-blue-500/50 transition-colors shadow-sm dark:shadow-none">
+                  <h3 className="text-lg font-bold text-blue-600 dark:text-blue-400 mb-4 flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Audio & Music
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+                    <li className="flex justify-between"><span>Tone.js 15</span> <span className="opacity-60 dark:opacity-50">Framework</span></li>
+                    <li className="flex justify-between"><span>Smplr 0.16</span> <span className="opacity-60 dark:opacity-50">Sampler</span></li>
+                    <li className="flex justify-between"><span>Web Audio API</span> <span className="opacity-60 dark:opacity-50">Native</span></li>
+                    <li className="flex justify-between"><span>Web MIDI API</span> <span className="opacity-60 dark:opacity-50">Hardware</span></li>
+                    <li className="flex justify-between"><span>WebRTC</span> <span className="opacity-60 dark:opacity-50">Voice</span></li>
+                  </ul>
+                </div>
 
-              {/* Backend */}
-              <div>
-                <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
-                  Backend
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                  <li>• Node.js + Express 4</li>
-                  <li>• TypeScript 5</li>
-                  <li>• Socket.IO 4.8 (Real-time communication)</li>
-                  {/* <li>• Winston 3 (Logging)</li> */}
-                  <li>• Joi 17 (Validation)</li>
-                  <li>• Express Rate Limit (Security)</li>
-                </ul>
-              </div>
+                {/* Backend */}
+                <div className="bg-gray-50/80 dark:bg-slate-800/50 p-5 rounded-xl border border-gray-100 dark:border-slate-700/50 backdrop-blur-sm hover:border-green-300 dark:hover:border-green-500/50 transition-colors shadow-sm dark:shadow-none">
+                  <h3 className="text-lg font-bold text-green-600 dark:text-green-400 mb-4 flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span> Backend
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+                    <li className="flex justify-between"><span>Node.js + Express 4</span> <span className="opacity-60 dark:opacity-50">Server</span></li>
+                    <li className="flex justify-between"><span>Socket.IO 4.8</span> <span className="opacity-60 dark:opacity-50">Sync</span></li>
+                    <li className="flex justify-between"><span>TypeScript 5</span> <span className="opacity-60 dark:opacity-50">Language</span></li>
+                    <li className="flex justify-between"><span>Joi 17</span> <span className="opacity-60 dark:opacity-50">Validation</span></li>
+                  </ul>
+                </div>
 
-              {/* Landing Page */}
-              <div>
-                <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
-                  Landing Page
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                  <li>• Next.js 15.5 + React 19</li>
-                  <li>• Tailwind CSS 4</li>
-                  <li>• Framer Motion 11 (Animations)</li>
-                  <li>• Prisma 6 (Database ORM)</li>
-                  <li>• Zod 4 (Schema validation)</li>
-                </ul>
+                {/* Landing Page */}
+                <div className="bg-gray-50/80 dark:bg-slate-800/50 p-5 rounded-xl border border-gray-100 dark:border-slate-700/50 backdrop-blur-sm hover:border-pink-300 dark:hover:border-pink-500/50 transition-colors shadow-sm dark:shadow-none">
+                  <h3 className="text-lg font-bold text-pink-600 dark:text-pink-400 mb-4 flex items-center">
+                    <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span> Landing Page
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+                    <li className="flex justify-between"><span>Next.js 15.5</span> <span className="opacity-60 dark:opacity-50">Framework</span></li>
+                    <li className="flex justify-between"><span>Framer Motion 11</span> <span className="opacity-60 dark:opacity-50">Animation</span></li>
+                    <li className="flex justify-between"><span>Prisma 6</span> <span className="opacity-60 dark:opacity-50">Database</span></li>
+                    <li className="flex justify-between"><span>Zod 4</span> <span className="opacity-60 dark:opacity-50">Schema</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
