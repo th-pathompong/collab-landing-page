@@ -9,6 +9,11 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-plus-jakarta-sans)', 'sans-serif'],
+        display: ['var(--font-space-grotesk)', 'sans-serif'],
+        accent: ['var(--font-caveat)', 'cursive'],
+      },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',

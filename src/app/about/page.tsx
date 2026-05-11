@@ -83,7 +83,7 @@ export default function AboutPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">
-            About COLLAB
+            About <span className="font-brand">COLLAB</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             The next-generation AI-native music ecosystem (BETA)
@@ -139,7 +139,7 @@ export default function AboutPage() {
           <section id="what-is-collab" className="bg-gradient-to-br from-purple-50/80 to-blue-50/80 dark:from-purple-900/20 dark:to-blue-900/20 backdrop-blur-md rounded-2xl p-6 md:p-10 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
               <span className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center text-white mr-3 text-sm">?</span>
-              What is COLLAB?
+              What is <span className="ml-1 font-brand">COLLAB</span>?
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               COLLAB began as a Proof of Concept (POC)—a simple idea to explore real-time musical collaboration over the web. What started as an experiment to see if users could play instruments together simultaneously has evolved into a high-performance music production ecosystem.

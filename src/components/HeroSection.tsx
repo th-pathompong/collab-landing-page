@@ -86,7 +86,7 @@ function HeroImageInteraction() {
 
 export default function HeroSection() {
   return (
-    <section id="how-it-works" className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20 overflow-hidden">
+    <section id="how-it-works" className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 xl:pt-54 xl:pb-42 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20 overflow-hidden">
       {/* Background Image Effect */}
       <div className="absolute inset-0" style={{ opacity: 0.1 }}>
         <Image 
@@ -106,20 +106,20 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
               Jam & Collaborate
-              <span className="block text-5xl sm:text-6xl lg:text-7xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-extrabold">
+              <span className="block text-6xl sm:text-7xl md:text-8xl xl:text-9xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-bold font-accent -rotate-2 -mt-4 sm:-mt-6 lg:-mt-9 pr-6 relative z-10">
                 In Real-Time
               </span>
             </h1>
             
             {/* Demo Banner */}
             <div className="mb-6 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 border border-purple-200 dark:border-purple-700 rounded-full">
-              <span className="text-purple-800 dark:text-purple-200 text-sm font-medium">✨ Beta Access: Pro features & AI Music Assistants included</span>
+              <span className="text-purple-800 dark:text-purple-200 text-xs">✨ Beta Access: Pro features & AI Music Assistants included</span>
             </div>
             
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-              COLLAB - Jam Band is the ultimate real-time collaborative production & jamming suite. 
+              <span className="font-brand">COLLAB</span> - Jam Band is the ultimate real-time collaborative production & jamming suite. 
               Jam live with friends, produce in our collaborative DAW, and explore the future with our experimental AI-powered music assistants.
             </p>
             

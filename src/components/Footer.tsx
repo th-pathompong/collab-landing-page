@@ -21,7 +21,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">🎵</span>
               </div>
-              <span className="text-xl font-bold">COLLAB</span>
+              <span className="text-xl font-brand">COLLAB</span>
             </motion.div>
             <motion.div
               className="text-gray-400 mb-4 max-w-md"
@@ -87,7 +87,7 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-center gap-2">
-            <span className="text-white font-bold text-lg">COLLAB</span>
+            <span className="text-white font-brand text-lg">COLLAB</span>
             <span className="text-sm text-white/70">•</span>
             <span className="text-sm text-white/70">
               © {currentYear} by{" "}

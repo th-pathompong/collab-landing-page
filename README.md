@@ -110,6 +110,25 @@ The project uses Tailwind CSS with custom color schemes. Main colors are defined
 - Component-specific styles: Use Tailwind classes in the component files
 - Custom animations: Defined in `tailwind.config.ts`
 
+### Branding & Configuration
+
+#### Typefaces
+The project uses four primary font stacks defined in `globals.css`:
+- **Sans**: `Plus Jakarta Sans` - Primary body and UI font
+- **Display**: `Space Grotesk` - Default heading and title font
+- **Accent**: `Caveat` - Used for stylistic highlights and accents
+- **Brand**: `System Sans-Serif (Black 900)` - Reserved specifically for the "COLLAB" brand name in titles
+
+#### Modifying Brand Style (COLLAB)
+The branding for "COLLAB" is centralized. To change the font, weight, or style of the brand name across the entire site, modify **`src/app/globals.css`**:
+- `--font-brand`: Update the font-family stack
+- `@utility font-brand`: Update the `font-weight` (currently `900`) or add other global brand styles
+
+#### URL Constants
+Main application and site URLs are managed in **`src/components/constants/navigation.ts`**:
+- `APP_URL`: The URL for the Jam App (current: Stage)
+- `SITE_URL`: The URL for this landing page
+
 ## Performance Features
 
 - **Static Generation** - Pages are pre-built at build time

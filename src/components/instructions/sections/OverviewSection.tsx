@@ -11,7 +11,7 @@ export default function OverviewSection() {
           <Music className="w-8 h-8 text-purple-600" />
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-              Welcome to COLLAB - Jam Band
+              Welcome to <span className="font-brand">COLLAB</span> - Jam Band
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mt-1">
               Your gateway to real-time collaborative music making
@@ -36,14 +36,14 @@ export default function OverviewSection() {
           </p>
         </div>
 
-        {/* What is COLLAB - Jam Band */}
+        {/* What is <span className="font-brand">COLLAB</span> - Jam Band */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            What is COLLAB - Jam Band?
+            What is <span className="font-brand">COLLAB</span> - Jam Band?
           </h3>
           <div className="prose dark:prose-invert max-w-none">
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              COLLAB - Jam Band is a revolutionary web-based platform that enables musicians to create music together in real-time, 
+              <span className="font-brand">COLLAB</span> - Jam Band is a revolutionary web-based platform that enables musicians to create music together in real-time, 
               regardless of their physical location. Whether you&apos;re a beginner or an experienced musician, our platform provides 
               the tools you need to jam, create, and collaborate.
             </p>

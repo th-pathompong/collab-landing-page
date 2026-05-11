@@ -193,7 +193,7 @@ export default function InstructionsPage() {
                   How to Use
                 </h2> 
                 <h1 className="text-4xl sm:text-5xl block text-gray-900 dark:text-white">
-                  COLLAB - Jam Band
+                  <span className="font-brand">COLLAB</span> - Jam Band
                 </h1>
               </div>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">

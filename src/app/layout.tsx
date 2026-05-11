@@ -1,9 +1,28 @@
 import type { Metadata } from "next";
+import { Space_Grotesk, Plus_Jakarta_Sans, Caveat } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import NavigationWrapper from "@/components/NavigationWrapper";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/components/constants/navigation";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta-sans",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+  display: "swap",
+});
 
 export const viewport = {
   width: "device-width",
@@ -152,8 +171,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="antialiased">
+    <html lang="en" className={`scroll-smooth ${spaceGrotesk.variable} ${plusJakartaSans.variable} ${caveat.variable}`}>
+      <body className="font-sans antialiased">
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
             <NavigationWrapper />

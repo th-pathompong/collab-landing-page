@@ -186,7 +186,7 @@ export default function Navigation({
             <div className="flex items-center space-x-8 flex-1 min-w-0">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity flex-shrink-0">
-                <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                <span className="text-xl font-brand bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                   COLLAB
                 </span>
               </Link>
