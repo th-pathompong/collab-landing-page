@@ -220,6 +220,7 @@ export default function DropdownMenu({
           className={`flex items-center transition-colors ${className}`}
           aria-expanded={isOpen}
           aria-haspopup="true"
+          aria-label={typeof trigger === 'string' ? trigger : 'Open menu'}
         >
           {trigger}
           {showChevron && (

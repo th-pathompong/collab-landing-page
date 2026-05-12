@@ -27,8 +27,6 @@ const caveat = Caveat({
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export const metadata: Metadata = {
@@ -176,7 +174,7 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
             <NavigationWrapper />
-            <div className="flex flex-col flex-grow">{children}</div>
+            <main className="flex flex-col flex-grow">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>

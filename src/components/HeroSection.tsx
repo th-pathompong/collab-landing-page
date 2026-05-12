@@ -34,6 +34,7 @@ function HeroImageInteraction() {
           src="/images/perform-room.webp"
           alt="Perform Room"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover object-left"
           priority
         />
@@ -63,6 +64,7 @@ function HeroImageInteraction() {
           src="/images/arrange-room.webp"
           alt="Arrange Room"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover object-right"
           priority
         />
@@ -93,7 +95,9 @@ export default function HeroSection() {
           src="/images/app-overview.webp" 
           alt="" 
           fill
+          sizes="100vw"
           className="object-cover transform scale-150 -translate-x-20 -translate-y-20 blur-md"
+          priority
         />
       </div>
       

@@ -122,21 +122,21 @@ export default function AIFeaturesSection() {
               <div 
                 className="absolute top-0 left-0 w-[60%] aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-white/20 dark:border-gray-800 bg-gray-900 z-10 translate-x-[-10%] translate-y-[-10%]"
               >
-                <Image src="/images/ai-scale-sync.webp" alt="Scale Sync" fill className="object-contain p-2" />
+                <Image src="/images/ai-scale-sync.webp" alt="Scale Sync" fill sizes="(max-width: 768px) 60vw, 30vw" className="object-contain p-2" />
               </div>
 
               {/* Layer 2: Idea Capture (Middle - Bottom Right) */}
               <div 
                 className="absolute bottom-4 right-0 w-[65%] aspect-square rounded-2xl overflow-hidden shadow-2xl border-2 border-white/30 dark:border-gray-800 bg-gray-900 z-20 translate-x-[5%] translate-y-[5%]"
               >
-                <Image src="/images/ai-idea-capture.webp" alt="Idea Capture" fill className="object-contain p-2" />
+                <Image src="/images/ai-idea-capture.webp" alt="Idea Capture" fill sizes="(max-width: 768px) 65vw, 35vw" className="object-contain p-2" />
               </div>
 
               {/* Layer 1: AI Composer (Front - Center) */}
               <div 
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] aspect-square rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-4 border-white dark:border-gray-700 bg-gray-900 z-30"
               >
-                <Image src="/images/ai-composer.webp" alt="AI Composer" fill className="object-contain p-2" />
+                <Image src="/images/ai-composer.webp" alt="AI Composer" fill sizes="(max-width: 768px) 75vw, 40vw" className="object-contain p-2" />
               </div>
 
               {/* Background Glow */}
