@@ -52,7 +52,7 @@ export default function ExperienceSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            Whether you want to jam live or produce something together, there's a room for that.
+            Whether you want to jam live or produce something together, there&apos;s a room for that.
           </motion.p>
         </div>
 
