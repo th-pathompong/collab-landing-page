@@ -392,10 +392,6 @@ export default function AboutPage() {
                         <p className="text-xs text-gray-700 dark:text-gray-300">Retroactively save MIDI snippets from live jams into your Idea Crate.</p>
                       </div>
                       <div className="bg-white/50 dark:bg-gray-800/50 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
-                        <h4 className="font-bold text-sm mb-1 text-gray-900 dark:text-white">Virtual Sessionists</h4>
-                        <p className="text-xs text-gray-700 dark:text-gray-300">AI-powered bandmates that react to your playing dynamics and key changes.</p>
-                      </div>
-                      <div className="bg-white/50 dark:bg-gray-800/50 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
                         <h4 className="font-bold text-sm mb-1 text-gray-900 dark:text-white">Vibe Quest</h4>
                         <p className="text-xs text-gray-700 dark:text-gray-300">Gamified musical guidance with Bubble Guides and Rhythm Halos.</p>
                       </div>
@@ -404,15 +400,35 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Phase 7+ - Future */}
-              <div className="relative flex items-start">
+              {/* Phase 6 - Planned */}
+              <div className="relative flex items-start mb-12">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-lg">👥</span>
+                </div>
+                <div className="ml-6 flex-1">
+                  <div className="flex items-center mb-2">
+                    <h3 className="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+                      Phase 6: Virtual Sessionists
+                    </h3>
+                    <span className="ml-3 px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 text-xs rounded-full font-medium">
+                      PLANNED
+                    </span>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    AI-powered bandmates that react to your playing dynamics and key changes in real-time, providing accompaniment that feels alive.
+                  </p>
+                </div>
+              </div>
+
+              {/* Phase 7 - Future Vision */}
+              <div className="relative flex items-start mb-12">
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-600 to-pink-600 rounded-full flex items-center justify-center shadow-lg z-10">
                   <span className="text-white font-bold text-lg">🤖</span>
                 </div>
                 <div className="ml-6 flex-1">
                   <div className="flex items-center mb-2">
                     <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
-                      Phase 7+: AI Ecosystem & MCP
+                      Phase 7: AI Ecosystem & MCP
                     </h3>
                     <span className="ml-3 px-3 py-1 bg-gradient-to-r from-blue-100 to-pink-100 dark:from-blue-900/30 dark:to-pink-900/30 text-blue-700 dark:text-blue-300 text-xs rounded-full font-medium">
                       FUTURE VISION
@@ -428,54 +444,92 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
+
+              {/* Phase 8 - Vision */}
+              <div className="relative flex items-start">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-lg">🌐</span>
+                </div>
+                <div className="ml-6 flex-1">
+                  <div className="flex items-center mb-2">
+                    <h3 className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                      Phase 8: Global Music Network
+                    </h3>
+                    <span className="ml-3 px-3 py-1 bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 text-emerald-700 dark:text-emerald-300 text-xs rounded-full font-medium">
+                      VISION
+                    </span>
+                  </div>
+                  <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                    <p>Scaling COLLAB to a worldwide audience with professional-grade audio features:</p>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li><strong>Multi-Region Deployment:</strong> Strategic server replicas for ultra-low latency worldwide.</li>
+                      <li><strong>Advanced Audio Processing:</strong> Real-time pitch detection, stem separation, and VST research.</li>
+                      <li><strong>Global Collaborative Network:</strong> Discover and collaborate with musicians across the globe in real-time.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* Two-Column Info Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4">
-            {/* Team Knowledge Requirements */}
-            <section className="bg-indigo-50/50 dark:bg-indigo-900/10 rounded-2xl p-6 md:p-8 border border-indigo-100 dark:border-indigo-900/30">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-                <span className="mr-3">🧠</span> Team Knowledge
+          {/* Open for Collaboration Section */}
+          <section id="join-mission" className="bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/10 dark:to-purple-900/10 rounded-2xl p-6 md:p-10 border border-indigo-100 dark:border-indigo-900/30 text-center mb-8 relative overflow-hidden">
+            {/* Decorative background element */}
+            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-purple-500/10 blur-3xl rounded-full"></div>
+            <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full"></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Join the Mission
               </h2>
-              <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
-                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> Music theory fundamentals</li>
-                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> Production technology (MIDI, Audio FX routing)</li>
-                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> Real-time networking (WebSocket, WebRTC)</li>
-                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> JavaScript Audio API & Web Audio</li>
-                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> Scalable application architecture</li>
-                <li className="flex items-start"><span className="mr-2 text-indigo-500">•</span> VST / Audio Unit integration concepts</li>
-              </ul>
-            </section>
-
-            {/* Server Information */}
-            <section className="bg-teal-50/50 dark:bg-teal-900/10 rounded-2xl p-6 md:p-8 border border-teal-100 dark:border-teal-900/30">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-                <span className="mr-3">🌍</span> Server Information
-              </h2>
-              <div className="space-y-4">
-                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm">
-                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1">Location</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Southeast Asia (Optimal Performance Zone)</p>
+              <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8 text-lg">
+                COLLAB started as a passion project to bridge the gap between musicians. We are always looking for passionate builders to join the journey. If you love music and code, there&apos;s a place for you here.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left max-w-5xl mx-auto mb-8">
+                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm border border-transparent hover:border-purple-200 transition-colors">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center"><span className="mr-2">⚡</span> System & Sync</h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">WebRTC, Socket.IO, MIDI Integration, Low-latency Architectures</p>
                 </div>
-                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm border-l-4 border-teal-400">
-                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1">Latency Advisory</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Connection latency varies by geography. Users within or near Southeast Asia will experience the lowest latency, essential for precise real-time jamming synchronization.
-                  </p>
+                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm border border-transparent hover:border-blue-200 transition-colors">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center"><span className="mr-2">🤖</span> AI Intelligence</h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Pattern Generation, Musical LLMs, AI Co-producers (MCP)</p>
+                </div>
+                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm border border-transparent hover:border-orange-200 transition-colors">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center"><span className="mr-2">🎨</span> Experience Design</h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">UI/UX for DAWs, Visual Identity, Motion & Musical Storytelling</p>
+                </div>
+                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm border border-transparent hover:border-amber-200 transition-colors">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center"><span className="mr-2">🎹</span> Music & Creative</h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Sound Design, Music Theory, Composition, Instrument Presets</p>
+                </div>
+                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm border border-transparent hover:border-emerald-200 transition-colors">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center"><span className="mr-2">📣</span> Community & Artists</h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Artist Relations, Community Building, User Feedback Loops</p>
+                </div>
+                <div className="bg-white/60 dark:bg-gray-800/60 p-4 rounded-xl shadow-sm border border-transparent hover:border-pink-200 transition-colors">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center"><span className="mr-2">📈</span> Strategy & Growth</h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Marketing, Business Strategy, Market Analysis, Scaling Partnerships</p>
                 </div>
               </div>
-            </section>
-          </div>
+
+              <a 
+                href="mailto:themiddnight.dev@gmail.com" 
+                className="inline-flex items-center px-8 py-3 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              >
+                Let&apos;s talk about building COLLAB
+              </a>
+            </div>
+          </section>
 
           {/* Tech Stack */}
-          <section id="tech-stack" className="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-10 shadow-md dark:shadow-2xl border border-gray-200 dark:border-slate-800 text-gray-700 dark:text-slate-300 relative overflow-hidden">
+          <section id="tech-stack" className="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-10 shadow-md dark:shadow-2xl border border-gray-200 dark:border-slate-800 text-gray-700 dark:text-slate-300 relative overflow-hidden mb-8">
             {/* Decorative background grid */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
             
             <div className="relative z-10">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
-                <span className="mr-3">⚙️</span> Tech Stack
+                <span className="mr-3">⚙️</span> The Technology Behind COLLAB
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Frontend */}
@@ -535,41 +589,6 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Additional Features */}
-          {/* <section className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Additional Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
-                  Development & Testing
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                  <li>• Comprehensive test suites with Jest 30</li>
-                  <li>• Vitest 2 for frontend testing</li>
-                  <li>• Testing Library for React components</li>
-                  <li>• Load testing and performance monitoring</li>
-                  <li>• HTTPS WebRTC testing capabilities</li>
-                  <li>• Code coverage reporting</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
-                  Infrastructure & Deployment
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                  <li>• Docker containerization support</li>
-                  <li>• Railway deployment integration</li>
-                  <li>• Vercel hosting for frontend</li>
-                  <li>• SSL/TLS encryption for secure connections</li>
-                  <li>• Environment-based configuration</li>
-                  <li>• Automated build and deployment pipelines</li>
-                </ul>
-              </div>
-            </div>
-          </section> */}
-
           {/* Footer */}
           <section className="pt-8 border-t border-gray-200 dark:border-gray-700">
             <p className="text-sm text-gray-600 dark:text-gray-400 text-center leading-relaxed">
@@ -594,14 +613,6 @@ export default function AboutPage() {
               >
                 Try COLLAB Now
               </a>
-              {/* <a
-                href="https://github.com/themiddnight/jam-band-fe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-              >
-                View on GitHub
-              </a> */}
             </div>
           </section>
         </div>

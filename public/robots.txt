@@ -32,4 +32,5 @@ Disallow: /
 # Crawl delay for better server performance
 Crawl-delay: 1
 
-Sitemap: https://jam-band-landing-page.vercel.app/sitemap.xml 
+Sitemap: https://collab-landing-page.vercel.app/sitemap.xml 
+ 

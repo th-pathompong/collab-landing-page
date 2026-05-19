@@ -9,15 +9,15 @@ const aiFeatures = [
     id: 'scale',
     icon: <Mic className="w-6 h-6" />,
     title: 'Hum-to-Find Scale',
-    description: 'Not sure about the key? Just sing or hum into your microphone. Our AI detects the pitch and suggests the perfect musical scale for your room.',
+    description: 'Not sure about the key? Sing or hum into your microphone. Our system automatically detects the pitch and suggests the best matching scale for your room.',
     badge: 'BETA',
     image: '/images/ai-scale-sync.webp'
   },
   {
     id: 'composer',
     icon: <Sparkles className="w-6 h-6" />,
-    title: 'AI Composer (Prompt-to-MIDI)',
-    description: 'Describe what you want—a funky bassline or a sad piano melody. Gemini 3.0 Flash will generate it for you instantly.',
+    title: 'AI Pattern Generation',
+    description: 'Describe a style or feel in the sequencer and AI generates an initial pattern for your instrument, informed by your BPM and scale.',
     badge: 'EXPERIMENTAL',
     image: '/images/ai-composer.webp'
   },
@@ -25,17 +25,17 @@ const aiFeatures = [
     id: 'idea',
     icon: <Zap className="w-6 h-6" />,
     title: 'Idea Capture (Tap + Voice)',
-    description: 'Tap your tempo and sing your heart out. COLLAB automatically creates a track with your idea, quantized to your rhythm.',
+    description: 'Tap your tempo and hum your melody. COLLAB creates a MIDI track with your idea, quantized and snapped to your project scale.',
     badge: 'BETA',
     image: '/images/ai-idea-capture.webp'
   },
   {
-    id: 'recommender',
+    id: 'voice-to-midi',
     icon: <BrainCircuit className="w-6 h-6" />,
-    title: 'AI Chord Recommender',
-    description: 'Get real-time suggestions for the next chord in your progression based on the mood and scale of your session.',
-    badge: 'COMING SOON',
-    image: '/images/tools-section.webp'
+    title: 'Real-time Voice-to-MIDI',
+    description: 'Sing or hum directly into any MIDI track in the Arrange Room. Our real-time pitch detection converts your voice to notes instantly.',
+    badge: 'NEW',
+    image: '/images/music-theory-assist.webp'
   }
 ];
 
@@ -51,7 +51,7 @@ export default function AIFeaturesSection() {
             className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm font-bold mb-4"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            THE FUTURE OF CREATION
+            AI MUSIC TOOLS
           </motion.div>
           <motion.h2 
             className="text-3xl sm:text-4xl font-bold mb-4"
@@ -60,7 +60,7 @@ export default function AIFeaturesSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            Next-Gen AI Music Assistants
+            AI Music Assistants
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
@@ -69,7 +69,7 @@ export default function AIFeaturesSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Bridge the gap between inspiration and production with our experimental AI-powered tools.
+            A good idea shouldn’t get stuck on theory. COLLAB’s AI tools help you go from a hum, a tap, or a rough idea to something you can actually play with — quickly.
           </motion.p>
         </div>
 

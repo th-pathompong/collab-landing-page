@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Piano, Music, Layers3, Heart } from 'lucide-react';
+import { Piano, Music, Layers3, Heart, Sparkles } from 'lucide-react';
 
 export default function KeyboardSection() {
   return (
@@ -114,24 +114,57 @@ export default function KeyboardSection() {
             />
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-400 text-center ">
-            One-key chord playing with Roman numeral notation
+            One-key chord playing with automatic chord quality based on scale
           </p>
 
           <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-6">
             <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">Chord Mode Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <ul className="space-y-2 text-purple-600 dark:text-purple-400">
-                <li>• <strong>One-Key Chords:</strong> Play full chords with single key press</li>
-                <li>• <strong>Roman Numerals:</strong> I, ii, iii, IV, V, vi, vii° notation</li>
-                <li>• <strong>Chord Progressions:</strong> Easy to play common progressions</li>
-                <li>• <strong>Voicing Options:</strong> Different chord inversions</li>
+                <li>• <strong>One-Key Chords:</strong> Play full triads (I–VII) with a single key</li>
+                <li>• <strong>Smart Harmony:</strong> Quality (Maj/Min/Dim) auto-detected from scale</li>
+                <li>• <strong>Arpeggio Control:</strong> N / M keys to adjust arpeggio speed</li>
+                <li>• <strong>Voicing & Spread:</strong> C / V keys to change chord inversion</li>
               </ul>
               <ul className="space-y-2 text-purple-600 dark:text-purple-400">
-                <li>• <strong>Modifiers:</strong> Add 7ths, sus, and other extensions</li>
-                <li>• <strong>Arpeggio Mode:</strong> Play chords as flowing arpeggios</li>
-                <li>• <strong>Bass Integration:</strong> Works great with bass players</li>
-                <li>• <strong>Harmony Helper:</strong> Perfect for accompaniment</li>
+                <li>• <strong>Modifiers:</strong> Hold Q(6), W(7), E(M7), R(add9), A(sus2), S(sus4)</li>
+                <li>• <strong>Maj/Min Toggle:</strong> Press D to force parallel major/minor</li>
+                <li>• <strong>Visual Suffix:</strong> See active modifiers on keys (e.g., Am7)</li>
+                <li>• <strong>Root Note Row:</strong> Separate row for playing individual bass notes</li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Hybrid Mode */}
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+            <Sparkles className="w-6 h-6 text-amber-600" />
+            Hybrid Mode
+          </h3>
+          
+          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+            <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-3">The Best of Both Worlds:</h4>
+            <p className="text-sm text-amber-700 dark:text-amber-400 mb-4 leading-relaxed">
+              Hybrid mode splits your interface and keyboard into two sections, allowing you to play chords with your left hand and melodies with your right hand simultaneously.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg">
+                <h5 className="font-bold mb-2">Left Side: Chord Panel</h5>
+                <ul className="space-y-1 text-xs">
+                  <li>• 7 scale-degree triad keys</li>
+                  <li>• 8 root note keys for bass accompaniment</li>
+                  <li>• Clickable chord modifier buttons</li>
+                </ul>
+              </div>
+              <div className="p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg">
+                <h5 className="font-bold mb-2">Right Side: Melody Panel</h5>
+                <ul className="space-y-1 text-xs">
+                  <li>• Two rows of scale-constrained notes</li>
+                  <li>• Upper row for higher octave</li>
+                  <li>• Impossible to play out-of-scale notes</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -144,49 +177,53 @@ export default function KeyboardSection() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 p-6">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Basic Controls</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Core Controls</h4>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Change Octave</span>
+                  <span className="text-gray-600 dark:text-gray-400">Octave Shift</span>
                   <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">Z / X</kbd>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Sustain Pedal</span>
-                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">Space</kbd>
+                  <span className="text-gray-600 dark:text-gray-400">Sustain (Hold / Toggle)</span>
+                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">Space / \</kbd>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Velocity +/-</span>
-                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">C / V</kbd>
+                  <span className="text-gray-600 dark:text-gray-400">Velocity (10 steps)</span>
+                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">- / +</kbd>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Switch Mode</span>
-                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">Tab</kbd>
+                  <span className="text-gray-600 dark:text-gray-400">Sharp Modifier (+1 semitone)</span>
+                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">Shift</kbd>
                 </div>
               </div>
             </div>
 
             <div className="bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 p-6">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Playing Keys</h4>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <span className="text-gray-600 dark:text-gray-400 block mb-2">White Keys (Melody Mode):</span>
-                  <div className="flex flex-wrap gap-1">
-                    {['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'].map(key => (
-                      <kbd key={key} className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">
-                        {key}
-                      </kbd>
-                    ))}
-                  </div>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Chord Modifiers</h4>
+              <div className="grid grid-cols-2 gap-y-2 text-xs">
+                <div className="flex justify-between items-center pr-4">
+                  <span className="text-gray-500">Add 6</span>
+                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">Q</kbd>
                 </div>
-                <div>
-                  <span className="text-gray-600 dark:text-gray-400 block mb-2">Chord Triads:</span>
-                  <div className="flex flex-wrap gap-1">
-                    {['Y', 'U', 'I', 'O', 'P', '[', ']'].map(key => (
-                      <kbd key={key} className="px-2 py-1 bg-purple-100 dark:bg-purple-600 rounded text-xs">
-                        {key}
-                      </kbd>
-                    ))}
-                  </div>
+                <div className="flex justify-between items-center pl-4">
+                  <span className="text-gray-500">Sus2</span>
+                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">A</kbd>
+                </div>
+                <div className="flex justify-between items-center pr-4">
+                  <span className="text-gray-500">Dom 7</span>
+                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">W</kbd>
+                </div>
+                <div className="flex justify-between items-center pl-4">
+                  <span className="text-gray-500">Sus4</span>
+                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">S</kbd>
+                </div>
+                <div className="flex justify-between items-center pr-4">
+                  <span className="text-gray-500">Major 7</span>
+                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">E</kbd>
+                </div>
+                <div className="flex justify-between items-center pl-4">
+                  <span className="text-gray-500">Maj/Min Toggle</span>
+                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">D</kbd>
                 </div>
               </div>
             </div>

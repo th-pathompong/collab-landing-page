@@ -21,7 +21,7 @@ export default function MusicTheoryAssistSection() {
         <section>
           <div className="flex items-center gap-3 mb-4">
             <Music className="w-6 h-6 text-blue-500" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Scale Synchronization</h3>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Scale Intelligence</h3>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="prose dark:prose-invert text-sm text-gray-600 dark:text-gray-300">
@@ -29,13 +29,13 @@ export default function MusicTheoryAssistSection() {
                 In a collaborative room, the Room Owner can set a global key and scale. Jam Band then intelligently synchronizes all instruments to this scale.
               </p>
               <ul>
-                <li><strong>Visual Guides:</strong> Keys outside the scale are dimmed or color-coded.</li>
-                <li><strong>Auto-Mapping:</strong> Triggered notes are automatically shifted to the nearest valid note in the selected scale.</li>
-                <li><strong>Universal Sync:</strong> All collaborators play in harmony instantly.</li>
+                <li><strong>Hum-to-Find Scale:</strong> Not sure about the key? Sing or hum into your mic and let our AI suggest the best matching scale for your jam.</li>
+                <li><strong>Scale Snapping:</strong> Enable &quot;Snap to Scale&quot; to automatically shift any &quot;wrong&quot; note to the nearest valid scale degree in real-time.</li>
+                <li><strong>Scale Highlighting:</strong> Visual cues dim the keys or strings that aren&apos;t in your current scale, keeping you focused on the harmony.</li>
               </ul>
             </div>
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg aspect-video flex items-center justify-center border border-gray-200 dark:border-gray-700">
-              <p className="text-xs text-gray-500">[Screenshot: Scale Selection Panel]</p>
+              <p className="text-xs text-gray-500">[Screenshot: AI Scale Detection Panel]</p>
             </div>
           </div>
         </section>
@@ -44,20 +44,20 @@ export default function MusicTheoryAssistSection() {
         <section>
           <div className="flex items-center gap-3 mb-4">
             <Grid className="w-6 h-6 text-blue-500" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Chord Trigger Matrix</h3>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Smart Chord Engine</h3>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg aspect-video flex items-center justify-center border border-gray-200 dark:border-gray-700 order-2 lg:order-1">
-              <p className="text-xs text-gray-500">[Screenshot: Keyboard Chord Helper]</p>
+              <p className="text-xs text-gray-500">[Screenshot: Chord Quality Auto-Detection]</p>
             </div>
             <div className="prose dark:prose-invert text-sm text-gray-600 dark:text-gray-300 order-1 lg:order-2">
               <p>
-                Available in Keyboard and Synth modes, our Chord Helpers allow you to play complex chord progressions with just one finger.
+                Our Chord Helpers don&apos;t just trigger triads—they understand the harmonic context of your room.
               </p>
               <ul>
-                <li><strong>Diatonic Harmony:</strong> Automatically generates I, IV, V, and other common chords in your current key.</li>
-                <li><strong>Custom Extensions:</strong> Add 7ths, 9ths, or suspensions with simple toggle switches.</li>
-                <li><strong>Visual Feedback:</strong> Watch the notes of the chord light up as you trigger them.</li>
+                <li><strong>Auto-Quality:</strong> The engine knows that a &quot;II&quot; chord in a Major scale should be minor, and a &quot;VII&quot; should be diminished. It handles the theory so you don&apos;t have to.</li>
+                <li><strong>Advanced Modifiers:</strong> Add 7ths, Major 7ths, sus2, sus4, or add9 extensions with a single key hold or click.</li>
+                <li><strong>Parallel Shift:</strong> Force any chord to its parallel Major or Minor counterpart for expressive, non-diatonic changes.</li>
               </ul>
             </div>
           </div>

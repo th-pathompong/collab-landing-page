@@ -114,23 +114,23 @@ export default function GuitarSection() {
             />
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-400 text-center ">
-            One-key chord triggers with strumming patterns
+            One-key chord triggers with realistic strumming and picking
           </p>
 
           <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl p-6">
             <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3">Chord Strum Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <ul className="space-y-2 text-green-600 dark:text-green-400">
-                <li>• <strong>Instant Chords:</strong> Play full chords with single key press</li>
-                <li>• <strong>Strum Patterns:</strong> Realistic up and down strumming</li>
-                <li>• <strong>Chord Progressions:</strong> Easy to play common sequences</li>
-                <li>• <strong>Voicing Options:</strong> Different chord positions</li>
+                <li>• <strong>Instant Chords:</strong> 7 scale-degree keys (A–G) for full chords</li>
+                <li>• <strong>Picking &amp; Strumming:</strong> &quot;.&quot; for Down (1.0x vel), &quot;,&quot; for Up (1.5x vel)</li>
+                <li>• <strong>Power Chord:</strong> Toggle &quot;\&quot; to play only root + 5th</li>
+                <li>• <strong>Brushing Speed:</strong> N / M keys to adjust strum arpeggio timing</li>
               </ul>
               <ul className="space-y-2 text-green-600 dark:text-green-400">
-                <li>• <strong>Rhythm Guitar:</strong> Perfect for accompaniment</li>
-                <li>• <strong>Roman Numerals:</strong> Music theory chord notation</li>
-                <li>• <strong>Muted Strums:</strong> Percussive rhythm techniques</li>
-                <li>• <strong>Dynamics Control:</strong> Soft to aggressive strumming</li>
+                <li>• <strong>Guitar Modifiers:</strong> Q(Add6), W(Dom7), E(Maj7), R(add9), T(sus2), Y(sus4)</li>
+                <li>• <strong>Maj/Min Toggle:</strong> Press U to force parallel major/minor</li>
+                <li>• <strong>Hammer-on/Pull-off:</strong> Chain notes within 200ms of a pick</li>
+                <li>• <strong>Voicing:</strong> C / V keys to change chord position</li>
               </ul>
             </div>
           </div>
@@ -144,19 +144,19 @@ export default function GuitarSection() {
           </h3>
           
           <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-6 ">
-            <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">Bass Features:</h4>
+            <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">Bass Specific Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <ul className="space-y-2 text-purple-600 dark:text-purple-400">
-                <li>• <strong>4-String Layout:</strong> Standard bass tuning (E-A-D-G)</li>
-                <li>• <strong>Low-End Focus:</strong> Deep, punchy bass tones</li>
-                <li>• <strong>Rhythm Section:</strong> Lock in with drums and metronome</li>
-                <li>• <strong>Root Note Emphasis:</strong> Foundation for chord progressions</li>
+                <li>• <strong>Melody Mode:</strong> 2 virtual strings with 4th-interval layout</li>
+                <li>• <strong>Always Root:</strong> Toggle &quot;\&quot; to lock both rows to chord roots</li>
+                <li>• <strong>Pick Direction:</strong> &quot;.&quot; for Down, &quot;,&quot; for Up (1.5x velocity)</li>
+                <li>• <strong>Articulations:</strong> Expressive Hammer-on (0.8x) & Pull-off (0.7x)</li>
               </ul>
               <ul className="space-y-2 text-purple-600 dark:text-purple-400">
-                <li>• <strong>Walking Bass:</strong> Smooth melodic bass lines</li>
-                <li>• <strong>Slap & Pop:</strong> Percussive playing techniques</li>
-                <li>• <strong>Scale Integration:</strong> Works with scale helper system</li>
-                <li>• <strong>Chord Support:</strong> Perfect foundation for harmonies</li>
+                <li>• <strong>Range:</strong> E1–D#3 range for deep, punchy tones</li>
+                <li>• <strong>Octave Shift:</strong> Z / X keys available in Melody mode</li>
+                <li>• <strong>Sustain:</strong> Space for momentary hold, \ for toggle</li>
+                <li>• <strong>Sharp Modifier:</strong> Hold Shift for +1 semitone transposition</li>
               </ul>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function GuitarSection() {
           </div>
         </div>
 
-        {/* Keyboard Shortcuts */}
+        {/* Controls & Shortcuts */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Controls & Shortcuts
@@ -218,35 +218,49 @@ export default function GuitarSection() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 p-6">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Fretboard Controls</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Playing Controls</h4>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Change Fret Position</span>
+                  <span className="text-gray-600 dark:text-gray-400">Pick/Strum Down (Normal)</span>
+                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">.</kbd>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 dark:text-gray-400">Pick/Strum Up (Heavy)</span>
+                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">,</kbd>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 dark:text-gray-400">Power Chord / Always Root</span>
+                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">\</kbd>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 dark:text-gray-400">Octave (Bass/Melody)</span>
                   <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">Z / X</kbd>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Switch Strings</span>
-                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">↑ / ↓</kbd>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Strum Down/Up</span>
-                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">Space / Shift</kbd>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">Mode Switch</span>
-                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">Tab</kbd>
+                  <span className="text-gray-600 dark:text-gray-400">Velocity Adjust</span>
+                  <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded text-xs">- / +</kbd>
                 </div>
               </div>
             </div>
 
             <div className="bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 p-6">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Chord Triggers</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Chord Mapping</h4>
               <div className="space-y-3 text-sm">
                 <div>
-                  <span className="text-gray-600 dark:text-gray-400 block mb-2">Chord Keys (Roman Numerals):</span>
+                  <span className="text-gray-600 dark:text-gray-400 block mb-2">Chord Keys (Scale Degree):</span>
                   <div className="flex flex-wrap gap-1">
-                    {['Y (I)', 'U (ii)', 'I (iii)', 'O (IV)', 'P (V)', '[ (vi)', '] (vii°)'].map(key => (
+                    {['A (I)', 'B (ii)', 'C (iii)', 'D (IV)', 'E (V)', 'F (vi)', 'G (vii°)'].map(key => (
                       <kbd key={key} className="px-2 py-1 bg-green-100 dark:bg-green-600 rounded text-xs">
+                        {key}
+                      </kbd>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <span className="text-gray-600 dark:text-gray-400 block mb-2">Guitar Modifiers:</span>
+                  <div className="flex flex-wrap gap-1">
+                    {['Q(6)', 'W(7)', 'E(M7)', 'R(add9)', 'T(sus2)', 'Y(sus4)', 'U(m/M)'].map(key => (
+                      <kbd key={key} className="px-2 py-1 bg-purple-100 dark:bg-purple-600 rounded text-xs">
                         {key}
                       </kbd>
                     ))}

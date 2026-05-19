@@ -39,7 +39,7 @@ const tiers = [
   },
   {
     name: 'PRO',
-    tagline: 'The Ultimate Power User',
+    tagline: 'The Serious Creator',
     price: '$19',
     period: '/month',
     features: [
@@ -95,7 +95,7 @@ export default function PricingBetaSection() {
             >
               {tier.highlight && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
-                  Most Popular / Beta Special
+                  Beta Special
                 </div>
               )}
 

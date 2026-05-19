@@ -32,7 +32,7 @@ A modern, responsive landing page for COLLAB - Jam Band built with Next.js 15, T
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd jam-band-landing-page
+cd collab-landing-page
 ```
 
 2. Install dependencies:

@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Layers, Play, Pause, RotateCcw, Volume2 } from 'lucide-react';
+import { Layers, Play, RotateCcw, Volume2 } from 'lucide-react';
 
 export default function SequencerSection() {
   return (
@@ -119,37 +119,37 @@ export default function SequencerSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Layers className="w-4 h-4 text-white" />
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-xs">AI</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Multiple Tracks</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">AI Pattern Generation</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Layer different instruments and sounds to create complex compositions
+                    Describe a style or mood and let AI generate an initial pattern for you.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Play className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Real-time Sync</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Synchronized with room metronome and shared with all members
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <RotateCcw className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Loop Patterns</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">4 Banks (A, B, C, D)</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    16-step patterns that loop continuously for ongoing jamming
+                    Switch between 4 independent patterns using keys 6, 7, 8, and 9.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
+                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Play className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Continuous Loop Mode</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Play banks in sequence (A → B → C → D) for longer, evolving compositions.
                   </p>
                 </div>
               </div>
@@ -161,21 +161,21 @@ export default function SequencerSection() {
                   <Volume2 className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Volume Control</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Step Velocity & Gate</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Individual volume controls for each track and overall mix
+                    Adjust volume and note length for every single step in the pattern.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
                 <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Pause className="w-4 h-4 text-white" />
+                  <Layers className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Transport Controls</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Scale View Modes</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Start, stop, and reset your sequences with easy-to-use controls
+                    Switch between &quot;All Notes&quot; and &quot;Scale Notes&quot; to stay perfectly in key.
                   </p>
                 </div>
               </div>
@@ -185,9 +185,9 @@ export default function SequencerSection() {
                   <Play className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Live Editing</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Variable Step Speed</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Modify patterns while they&apos;re playing for dynamic performances
+                    Change beat length from 1/16 up to 16 beats per step for various styles.
                   </p>
                 </div>
               </div>

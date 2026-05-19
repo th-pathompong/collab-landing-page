@@ -101,10 +101,10 @@ export default function OverviewSection() {
             >
               <div className="flex items-center gap-3 mb-3">
                 <Zap className="w-6 h-6 text-pink-600" />
-                <h4 className="font-semibold text-gray-900 dark:text-white">Real-Time Sync</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Pro Tools</h4>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Advanced Ephemeral/Commit pattern ensures all changes are synced instantly across all collaborators.
+                Shadow Capture for retroactive recording, Multi-track DAW editing, and professional export to Logic, Ableton, or FL Studio.
               </p>
             </div>
           </div>

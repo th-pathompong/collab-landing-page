@@ -29,24 +29,24 @@ export default function InstrumentsSection() {
         
         {/* Sound Engine Info */}
         <motion.div 
-          className="text-center mb-16 bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/20 dark:to-blue-900/20 p-6 rounded-2xl"
+          className="text-center mb-16 bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/20 dark:to-blue-900/20 p-8 rounded-3xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold mb-4">Powered by Professional Audio Libraries</h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
-            Our instruments use industry-standard audio libraries for the highest quality sound and performance
+          <h3 className="text-2xl font-bold mb-4">Studio-Grade Sound Engines</h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg max-w-3xl mx-auto">
+            Experience professional sound quality with our integrated instrument engines, optimized for low-latency performance in the browser.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white/80 dark:bg-gray-700/80 p-4 rounded-lg">
-              <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">🎵 Melodic & Drum Instruments</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300">Powered by <strong>smplr</strong> - Professional soundfont engine with hundreds of standard instruments and high-quality drum samples</p>
+            <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-2xl shadow-sm border border-purple-50 dark:border-purple-900/30">
+              <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">🎵 Multi-Sampled Instruments</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Powered by <strong>smplr</strong> - A high-performance soundfont engine delivering authentic acoustic and electronic instrument sounds.</p>
             </div>
-            <div className="bg-white/80 dark:bg-gray-700/80 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">🔊 Synthesizers</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300">Powered by <strong>Tone.js</strong> - Advanced Web Audio framework with analog and FM synthesis capabilities</p>
+            <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-blue-900/30">
+              <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">🔊 Advanced Synthesis</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Powered by <strong>Tone.js</strong> - Industry-standard Web Audio framework providing powerful analog and FM synthesis capabilities.</p>
             </div>
           </div>
         </motion.div>
@@ -180,24 +180,24 @@ export default function InstrumentsSection() {
                 Drum Machine & Drumpad
               </h3>
                               <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
-                Color-coded pads with customizable sounds and responsive touch controls. Professional drum samples powered by smplr&apos;s extensive library.
+                16-pad layout with 3 banks (48 total pads). Customizable GM mapping with high-quality samples and precise volume control.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-                  <span className="font-medium">Color-Coded Pads</span>
+                  <span className="font-medium">48 Pads across 3 pages</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full"></span>
-                  <span className="font-medium">Customizable Sounds</span>
+                  <span className="font-medium">Per-pad Volume & Velocity sliders</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
-                  <span className="font-medium">Responsive Touch Controls</span>
+                  <span className="font-medium">Save & Load Pad Presets</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
-                  <span className="font-medium">Professional Drum Samples</span>
+                  <span className="font-medium">General MIDI standard percussion set</span>
                 </div>
               </div>
             </motion.div>
@@ -275,48 +275,7 @@ export default function InstrumentsSection() {
           </div>
         </div>
 
-        {/* Image Gallery */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <div className="relative group">
-            <Image 
-              src="/images/drumpad.webp" 
-              alt="Drumpad Interface" 
-              width={400}
-              height={300}
-              className="w-full h-auto rounded-xl shadow-lg transform group-hover:scale-105 transition-all duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
-          </div>
-          
-          <div className="relative group">
-            <Image 
-              src="/images/scale-pre-setup.webp" 
-              alt="Scale Setup" 
-              width={400}
-              height={300}
-              className="w-full h-auto rounded-xl shadow-lg transform group-hover:scale-105 transition-all duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
-          </div>
-          
-          <div className="relative group">
-            <Image 
-              src="/images/tools-section.webp" 
-              alt="Tools Section" 
-              width={400}
-              height={300}
-              className="w-full h-auto rounded-xl shadow-lg transform group-hover:scale-105 transition-all duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
-} 
+}

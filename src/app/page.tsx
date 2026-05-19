@@ -8,6 +8,8 @@ import {
   MusicTheorySection,
   AIFeaturesSection,
   PricingBetaSection,
+  RoadmapSection,
+  FAQSection,
   StructuredData,
 } from '@/components';
 
@@ -110,10 +112,12 @@ export default function HomePage() {
       
       <HeroSection />
       <ExperienceSection />
+      <UseCasesSection />
+      <InstrumentsSection />
       <AIFeaturesSection />
       <MusicTheorySection />
-      <InstrumentsSection />
-      <UseCasesSection />
+      <RoadmapSection />
+      <FAQSection />
       <TechnicalRequirementsSection />
       <PricingBetaSection />
       <CTASection />

@@ -7,12 +7,20 @@ export const SITE_URL = "https://jam-band-landing-page.vercel.app";
 // Section items that will be in the dropdown
 export const SECTION_MENU_ITEMS = [
   {
-    label: 'Features',
-    href: '/#features'
+    label: 'How it Works',
+    href: '/#how-it-works'
   },
   {
     label: 'Experience',
     href: '/#experience'
+  },
+  {
+    label: 'Built for Creators',
+    href: '/#use-cases'
+  },
+  {
+    label: 'Instruments',
+    href: '/#instruments'
   },
   {
     label: 'AI Features',
@@ -23,12 +31,16 @@ export const SECTION_MENU_ITEMS = [
     href: '/#music-theory'
   },
   {
-    label: 'Instruments',
-    href: '/#instruments'
+    label: 'Roadmap',
+    href: '/#roadmap'
   },
   {
-    label: 'Technical Requirements',
+    label: 'Tech Specs',
     href: '/#technical-requirements'
+  },
+  {
+    label: 'FAQ',
+    href: '/#faq'
   },
   {
     label: 'Pricing',
@@ -51,7 +63,11 @@ export const ABOUT_SECTION_ITEMS = [
     href: '/about#roadmap'
   },
   {
-    label: 'Tech Stack',
+    label: 'Join the Mission',
+    href: '/about#join-mission'
+  },
+  {
+    label: 'Technology',
     href: '/about#tech-stack'
   }
 ] as const;

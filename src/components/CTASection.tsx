@@ -34,7 +34,7 @@ export default function CTASection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Join thousands of musicians who are already jamming together online
+          No account needed. Share a link, pick an instrument, and play.
         </motion.p>
         <motion.div 
           className="flex justify-center"

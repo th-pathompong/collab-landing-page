@@ -1,19 +1,17 @@
 export { default as Navigation } from './Navigation';
 export { default as NavigationWrapper } from './NavigationWrapper';
 export { default as HeroSection } from './HeroSection';
-export { default as FeaturesSection } from './FeaturesSection';
 export { default as InstrumentsSection } from './InstrumentsSection';
 export { default as UseCasesSection } from './UseCasesSection';
-export { default as DetailSection } from './DetailSection';
 export { default as TechnicalRequirementsSection } from './TechnicalRequirementsSection';
 export { default as CTASection } from './CTASection';
 export { default as Footer } from './Footer';
 export { default as ThemeToggle } from './ThemeToggle';
 export { default as ExperienceSection } from './ExperienceSection';
 export { default as MusicTheorySection } from './MusicTheorySection';
-export { default as SwapFeatureSection } from './SwapFeatureSection';
 export { default as AIFeaturesSection } from './AIFeaturesSection';
+export { default as RoadmapSection } from './RoadmapSection';
+export { default as FAQSection } from './FAQSection';
 export { default as PricingBetaSection } from './PricingBetaSection';
 export { default as StructuredData } from './StructuredData';
-export { ThemeProvider, useTheme } from './ThemeProvider'; 
- 
+export { ThemeProvider, useTheme } from './ThemeProvider';

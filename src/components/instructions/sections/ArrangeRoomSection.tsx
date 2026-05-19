@@ -11,101 +11,108 @@ export default function ArrangeRoomSection() {
             Arrange Room (Collaborative DAW)
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mt-1">
-            Advanced production workflows and project management
+            Advanced production workflows for up to 10 users per room
           </p>
         </div>
       </div>
 
       <div className="space-y-10">
+        {/* Governance & Owners */}
+        <section className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+          <div className="flex items-center gap-3 mb-4">
+            <Users className="w-6 h-6 text-blue-600" />
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Room & Project Governance</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-bold text-sm mb-2 text-blue-700 dark:text-blue-400">Project Owner</h4>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                The creator of the project. Has exclusive rights to Save, Lock, and Export (DAW/Mixdown). When a project owner joins, they are automatically promoted to Room Owner.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-sm mb-2 text-blue-700 dark:text-blue-400">Room Owner</h4>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                Manages the ephemeral session. Can kick users, approve new members (for private rooms), and change room-wide settings like BPM and Scale.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* The Timeline */}
         <section>
           <div className="flex items-center gap-3 mb-4">
             <Layers className="w-6 h-6 text-blue-500" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">The Multi-Track Timeline</h3>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Multi-Track Editing</h3>
           </div>
           <div className="prose dark:prose-invert text-sm text-gray-600 dark:text-gray-300 max-w-none">
             <p>
-              The Arrange Room is built around a powerful multi-track timeline where you can arrange recordings from jam sessions or create new musical ideas.
+              Like a collaborative Google Doc for music, the Arrange Room allows multiple users to edit MIDI and Audio tracks simultaneously.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
               <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
-                <h4 className="font-bold mb-1">Regions</h4>
-                <p className="text-xs">Audio parts can be moved, split, and duplicated across the timeline.</p>
+                <h4 className="font-bold mb-1">Region Locking</h4>
+                <p className="text-xs">When you edit a region, it locks for others to prevent conflicts. Locks expire after 5 minutes.</p>
               </div>
               <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
-                <h4 className="font-bold mb-1">Track Lanes</h4>
-                <p className="text-xs">Each instrument or performer has a dedicated lane for clear arrangement.</p>
+                <h4 className="font-bold mb-1">Piano Roll</h4>
+                <p className="text-xs">Draw, move, and quantize MIDI notes together in real-time with scale assistance.</p>
               </div>
               <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
-                <h4 className="font-bold mb-1">Live Waveforms</h4>
-                <p className="text-xs">Visualise your audio assets directly on the grid for precision editing.</p>
+                <h4 className="font-bold mb-1">Monitor Share</h4>
+                <p className="text-xs">Stream your instrument audio to others so they can hear what you&apos;re playing instantly.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Governance & Locking */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <Lock className="w-6 h-6 text-blue-500" />
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Collaborative Locking</h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              To prevent sync conflicts, Arrange Rooms use a <strong>Project Locking</strong> system. When someone is making significant changes to the timeline, the project is locked to their session, ensuring data integrity across the band.
-            </p>
+        {/* Project Tools */}
+        <section>
+          <div className="flex items-center gap-3 mb-4">
+            <Download className="w-6 h-6 text-blue-500" />
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Advanced Export Tools</h3>
           </div>
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <GitFork className="w-6 h-6 text-blue-500" />
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Project Forking</h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              Found a public project you love? You can <strong>Fork</strong> it to create your own personal copy. This allows you to remix, re-arrange, and build upon other musicians&apos; work while keeping the original project intact.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+             <div className="p-5 border border-gray-200 dark:border-gray-700 rounded-xl">
+                <h4 className="font-bold text-sm mb-2">DAW Export</h4>
+                <p className="text-xs text-gray-500">Generate a ZIP containing MIDI files and multitrack WAVs, pre-formatted for Logic Pro, Ableton, and FL Studio.</p>
+             </div>
+             <div className="p-5 border border-gray-200 dark:border-gray-700 rounded-xl">
+                <h4 className="font-bold text-sm mb-2">Mixdown</h4>
+                <p className="text-xs text-gray-500">Render your final stereo mix directly in the browser using our high-fidelity audio engine.</p>
+             </div>
           </div>
         </section>
 
-        {/* Saving & Export */}
+        {/* Saving & Lock */}
         <section>
           <div className="flex items-center gap-3 mb-4">
             <Save className="w-6 h-6 text-blue-500" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Saving & Contributor Credits</h3>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Project Lock & Contributors</h3>
           </div>
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-6 text-white shadow-lg">
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="flex-1">
                 <p className="text-sm opacity-90 leading-relaxed mb-4">
-                  Jam Band automatically tracks every musician who contributes to a project. When you save your changes, your name is added to the <strong>Contributor List</strong>, which is displayed publicly on the project&apos;s detail page.
+                  Project owners can <strong>Lock</strong> their work to prevent non-owners from saving over it. Every authorized save automatically credits you in the <strong>Contributor List</strong> shown on the project page.
                 </p>
                 <div className="flex gap-4">
                   <div className="flex items-center gap-2">
-                    <Download className="w-5 h-5" />
-                    <span className="text-xs font-medium">Export to .WAV</span>
+                    <Lock className="w-5 h-5" />
+                    <span className="text-xs font-medium">Owner Lock</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Save className="w-5 h-5" />
-                    <span className="text-xs font-medium">Real-time sync</span>
+                    <GitFork className="w-5 h-5" />
+                    <span className="text-xs font-medium">Community Forking</span>
                   </div>
                 </div>
               </div>
               <div className="w-48 h-32 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
-                <p className="text-[10px] text-white/50">[Diagram: Save Flow]</p>
+                <p className="text-[10px] text-white/50">[Diagram: Collaboration Flow]</p>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Member List Note */}
-        <div className="bg-gray-100 dark:bg-gray-800/50 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-          <div className="flex items-center gap-3 mb-2">
-            <Users className="w-5 h-5 text-gray-500" />
-            <h4 className="font-bold text-gray-900 dark:text-white">Member List</h4>
-          </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            In an Arrange Room, look at the participants list to see who is currently in the session. Unlike Perform Rooms, there are no individual volume sliders here, as the focus is on a single, shared production mix on the DAW timeline.
-          </p>
-        </div>
       </div>
     </div>
   );

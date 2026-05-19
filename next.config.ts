@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   generateBuildId: async () => {
-    return 'jam-band-landing-page'
+    return 'collab-landing-page'
   },
 }
 

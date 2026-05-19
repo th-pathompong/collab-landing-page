@@ -30,10 +30,11 @@ export default function ModesSection() {
           </p>
           <ul className="space-y-3">
             {[
+              '8-user capacity per room',
               'Real-time instrument jamming',
               'Low-latency voice chat',
               'Audience interaction & streaming',
-              'Dynamic instrument swapping'
+              'Shadow Capture (Retroactive recording)'
             ].map((feature) => (
               <li key={feature} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                 <div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
@@ -52,14 +53,14 @@ export default function ModesSection() {
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Arrange Room</h3>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-            A collaborative DAW (Digital Audio Workstation) environment where you can arrange, record, and produce tracks together.
+            A collaborative DAW environment where you can arrange, record, and produce tracks together. Supports up to 10 users.
           </p>
           <ul className="space-y-3">
             {[
+              '10-user capacity per room',
               'Collaborative multi-track timeline',
               'Project locking & forking',
-              'Contributor tracking',
-              'Professional mixdown & export'
+              'Professional mixdown & DAW export'
             ].map((feature) => (
               <li key={feature} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />

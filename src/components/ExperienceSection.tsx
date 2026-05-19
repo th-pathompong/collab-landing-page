@@ -7,12 +7,12 @@ const experienceModes = [
   {
     title: 'Perform Room',
     subtitle: 'Live Jamming & Interaction',
-    description: 'The place for spontaneous creativity. Join a room as a band member or audience, use virtual instruments, and jam in real-time with ultra-low latency voice chat.',
+    description: 'The place for spontaneous creativity. Join a room as a band member or audience, use virtual instruments, and jam in real-time with ultra-low latency voice chat. Supports up to 8 users per room.',
     features: [
-      'Real-time instrument synchronization',
-      'Low-latency voice chat mesh',
-      'Shadow Capture (Retroactive recording)',
-      'Audience interaction mode'
+      'Real-time instrument & sequencer sync',
+      'Ultra-low latency WebRTC voice chat',
+      'Shadow Capture (Rolling 30s buffer)',
+      'HLS Broadcast for Audience Mode'
     ],
     image: '/images/perform-room.webp',
     color: 'from-indigo-500 to-purple-500'
@@ -20,12 +20,12 @@ const experienceModes = [
   {
     title: 'Arrange Room',
     subtitle: 'Collaborative DAW & Production',
-    description: 'Take your ideas further. A collaborative digital audio workstation where you can arrange, record, and produce tracks together with advanced version control.',
+    description: 'Take your ideas further. A collaborative digital audio workstation where multiple users can edit tracks, regions, and notes simultaneously. Supports up to 10 users per room.',
     features: [
-      'Professional MIDI + Multitrack WAV export',
-      'Tempo-Synced Audio (Time-stretching)',
-      'Count-in (Pre-roll) recording support',
-      'Project forking and versioning'
+      'Multi-track timeline & Piano Roll',
+      'Audio & MIDI recording (Voice-to-MIDI)',
+      'Collaborative region locking system',
+      'Export MIDI & Multitrack WAV stems'
     ],
     image: '/images/arrange-room.webp',
     color: 'from-pink-500 to-orange-500'
@@ -52,7 +52,7 @@ export default function ExperienceSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            Whether you want to jam live or produce a masterpiece, we have the perfect environment for your musical journey.
+            Whether you want to jam live or produce something together, there's a room for that.
           </motion.p>
         </div>
 
@@ -87,18 +87,15 @@ export default function ExperienceSection() {
                 </ul>
               </div>
 
-              <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden mt-auto">
-                <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400 dark:text-gray-500 font-medium">
-                  {/* Placeholder for actual screenshot */}
-                  [Screenshot: {mode.title} Interface]
-                </div>
+              <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden mt-auto shadow-inner bg-gray-900">
                 <Image 
                   src={mode.image} 
                   alt={mode.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 /> 
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
               </div>
             </motion.div>
           ))}

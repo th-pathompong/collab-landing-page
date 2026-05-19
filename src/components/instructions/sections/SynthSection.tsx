@@ -23,7 +23,7 @@ export default function SynthSection() {
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <Waves className="w-6 h-6 text-blue-600" />
-            Analog Synthesizer
+            Analog Mono & Poly Synth
           </h3>
           
           <div className="relative rounded-xl overflow-hidden shadow-lg mb-4">
@@ -36,23 +36,23 @@ export default function SynthSection() {
             />
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-400 text-center ">
-            Classic analog-style synthesizer with oscillators, filters, and envelopes
+            Classic subtractive synthesis with single (Mono) or multi-voice (Poly) capabilities
           </p>
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
             <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">Analog Synth Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <ul className="space-y-2 text-blue-600 dark:text-blue-400">
-                <li>• <strong>Multiple Oscillators:</strong> Layer different waveforms (sine, square, sawtooth)</li>
-                <li>• <strong>Low-Pass Filter:</strong> Shape the brightness and character</li>
-                <li>• <strong>ADSR Envelope:</strong> Control attack, decay, sustain, and release</li>
-                <li>• <strong>LFO Modulation:</strong> Add movement with low-frequency oscillation</li>
+                <li>• <strong>Waveforms:</strong> Sine, Square, Saw, Fat Saw, and Triangle</li>
+                <li>• <strong>Dual Envelopes:</strong> Independent Amp and Filter ADSR</li>
+                <li>• <strong>Resonant Filter:</strong> High-quality frequency and resonance control</li>
+                <li>• <strong>Portamento:</strong> Glide between notes (available in Mono mode)</li>
               </ul>
               <ul className="space-y-2 text-blue-600 dark:text-blue-400">
-                <li>• <strong>Filter Envelope:</strong> Dynamic filter sweeps and movements</li>
-                <li>• <strong>Resonance Control:</strong> Add emphasis to the filter frequency</li>
-                <li>• <strong>Sub Oscillator:</strong> Add deep bass foundation</li>
-                <li>• <strong>Real-time Control:</strong> Tweak parameters while playing</li>
+                <li>• <strong>LFO Sync:</strong> Modulate Pitch or Filter with BPM-synced rates</li>
+                <li>• <strong>Subdivisions:</strong> From 2 Bars down to 1/32 triplets</li>
+                <li>• <strong>Arpeggiator:</strong> Up, Down, Up/Down, Down/Up, and Random modes</li>
+                <li>• <strong>Arp Latch:</strong> Keep patterns playing after releasing keys</li>
               </ul>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function SynthSection() {
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <Zap className="w-6 h-6 text-purple-600" />
-            FM Synthesizer
+            FM Mono & Poly Synth
           </h3>
           
           <div className="relative rounded-xl overflow-hidden shadow-lg mb-4">
@@ -75,23 +75,23 @@ export default function SynthSection() {
             />
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-400 text-center ">
-            Frequency modulation synthesizer for complex, evolving textures
+            Frequency modulation for digital textures, bells, and aggressive basses
           </p>
 
           <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-6">
             <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">FM Synth Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <ul className="space-y-2 text-purple-600 dark:text-purple-400">
-                <li>• <strong>Operator System:</strong> Complex frequency modulation routing</li>
-                <li>• <strong>Algorithm Selection:</strong> Different modulation topologies</li>
-                <li>• <strong>Carrier/Modulator:</strong> Operators that create and modify sound</li>
-                <li>• <strong>Harmonic Complexity:</strong> Create rich, metallic, bell-like tones</li>
+                <li>• <strong>Modulation Index:</strong> Control the intensity of FM timbre</li>
+                <li>• <strong>Harmonicity:</strong> Adjust the ratio between carrier and modulator</li>
+                <li>• <strong>Mod Envelope:</strong> Shape how the timbre evolves over time</li>
+                <li>• <strong>LFO Targets:</strong> Apply LFO to modulation depth for movement</li>
               </ul>
               <ul className="space-y-2 text-purple-600 dark:text-purple-400">
-                <li>• <strong>Multiple Envelopes:</strong> Independent amplitude and frequency envelopes</li>
-                <li>• <strong>Feedback Control:</strong> Self-modulation for added complexity</li>
-                <li>• <strong>Ratio Tuning:</strong> Precise frequency relationships</li>
-                <li>• <strong>DX7-inspired:</strong> Classic FM synthesis workflow</li>
+                <li>• <strong>Arpeggiator:</strong> Same powerful arp engine as Analog synth</li>
+                <li>• <strong>Arp Gate:</strong> Control the length of each arpeggiated step</li>
+                <li>• <strong>8 Factory Presets:</strong> FM Bell, FM Bass, FM Lead, FM Electric Piano, etc.</li>
+                <li>• <strong>Custom Presets:</strong> Save and load your own synth designs</li>
               </ul>
             </div>
           </div>

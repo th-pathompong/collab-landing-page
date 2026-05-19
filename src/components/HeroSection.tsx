@@ -89,42 +89,55 @@ function HeroImageInteraction() {
 export default function HeroSection() {
   return (
     <section id="how-it-works" className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 xl:pt-54 xl:pb-42 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20 overflow-hidden">
-      {/* Background Image Effect */}
-      <div className="absolute inset-0" style={{ opacity: 0.1 }}>
-        <Image 
-          src="/images/app-overview.webp" 
-          alt="" 
-          fill
-          sizes="100vw"
-          className="object-cover transform scale-150 -translate-x-20 -translate-y-20 blur-md"
-          priority
-        />
+      {/* Background Video Effect */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-md"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        {/* Fade overlay to blend into section background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/70 via-purple-50/75 to-blue-50/70 dark:from-gray-950/95 dark:via-indigo-950/90 dark:to-blue-950/95" />
       </div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-screen-2xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <motion.div 
-            className="text-center lg:text-left"
+            className="text-center lg:text-left relative z-20"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
-              Jam & Collaborate
-              <span className="block text-6xl sm:text-7xl md:text-8xl xl:text-9xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-bold font-accent -rotate-2 -mt-4 sm:-mt-6 lg:-mt-9 pr-6 relative z-10">
-                In Real-Time
-              </span>
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-16 lg:mb-40 tracking-tight leading-tight relative">
+              <span className="inline-block whitespace-nowrap">Jam Live. Produce Together.</span>
+              <motion.span
+                className="block lg:absolute lg:top-10 whitespace-nowrap text-6xl sm:text-7xl md:text-8xl xl:text-9xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-bold font-accent -rotate-2 z-30 filter drop-shadow-[0_10px_10px_rgba(168,85,247,0.2)] dark:drop-shadow-[0_10px_10px_rgba(168,85,247,0.4)] pr-10"
+                initial={{ opacity: 0, x: 50, rotate: 0 }}
+                animate={{ opacity: 1, x: 0, rotate: -2 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.4,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 15
+                }}
+              >
+                Right Now!
+              </motion.span>
             </h1>
             
             {/* Demo Banner */}
             <div className="mb-6 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 border border-purple-200 dark:border-purple-700 rounded-full">
-              <span className="text-purple-800 dark:text-purple-200 text-xs">✨ Beta Access: Pro features & AI Music Assistants included</span>
+              <span className="text-purple-800 dark:text-purple-200 text-xs">✨ Currently in beta — Artist tier features are free for everyone</span>
             </div>
             
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-              <span className="font-brand">COLLAB</span> - Jam Band is the ultimate real-time collaborative production & jamming suite. 
-              Jam live with friends, produce in our collaborative DAW, and explore the future with our experimental AI-powered music assistants.
+              Making music with anyone just feels different. <span className="font-brand">COLLAB</span> brings that session online — no scheduling, no file swaps, no waiting. Share a room link and play.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -135,10 +148,10 @@ export default function HeroSection() {
                   rel="noopener noreferrer" 
                   className="bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 music-btn shadow-lg"
                 >
-                  🚀 Start Creating Now
+                  🚀 Jump into the Jam
                 </a>
-                <p className="text-xs text-gray-500 dark:text-gray-400 ml-1">
-                  No credit card required • Start in seconds
+                <p className="text-xs text-center w-full text-gray-500 dark:text-gray-400 ml-1">
+                  Free to start<br/>No signup required for Guest Mode
                 </p>
               </div>
             </div>
