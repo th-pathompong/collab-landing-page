@@ -1,33 +1,33 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Users, Music, Lightbulb } from 'lucide-react';
+import { Users, Music, Zap } from 'lucide-react';
 import Image from 'next/image';
 
 const useCases = [
   {
-    title: 'For Bands & Groups',
+    title: 'For Indie Bands',
     icon: <Users className="w-8 h-8" />,
-    description: 'No more traveling miles for a rehearsal. Open a Perform Room, invite your bandmates, and jam live from anywhere. Perfect for writing sessions and spontaneous improvisation.',
-    features: ['Real-time audio sync', 'Low-latency voice chat', 'Multi-user instrument control'],
+    description: 'No more traveling miles for a rehearsal or coordination headaches. Open a Perform Room, invite your bandmates, and jam live from anywhere. Perfect for writing sessions and spontaneous improvisation.',
+    features: ['Ultra-low latency audio sync', 'Professional instrument library', 'Room-based band management'],
     image: '/images/perform-room.webp',
     color: 'from-blue-500 to-indigo-600'
   },
   {
-    title: 'For Bedroom Producers',
-    icon: <Music className="w-8 h-8" />,
-    description: 'Stop sending large project files back and forth. Use the Arrange Room to produce tracks together in real-time. Edit MIDI, record vocals, and arrange your masterpiece collectively.',
-    features: ['Collaborative DAW', 'Shared track timeline', 'High-quality stems export'],
-    image: '/images/arrange-room.webp',
-    color: 'from-purple-500 to-pink-600'
+    title: 'For Creators & Influencers',
+    icon: <Zap className="w-8 h-8" />,
+    description: 'Engage your community like never before. Host live jam sessions where subscribers can jump in or watch in high quality via HLS broadcast. Turn your stream into an interactive musical stage.',
+    features: ['High-quality HLS broadcasting', 'Subscriber guest slots', 'Interactive audience interaction'],
+    image: '/images/app-overview.webp',
+    color: 'from-pink-500 to-rose-600'
   },
   {
-    title: 'For Beginners',
-    icon: <Lightbulb className="w-8 h-8" />,
-    description: 'Making music shouldn’t be hard. Our built-in music theory assistants and AI pattern generators help you stay in scale and create professional-sounding loops in minutes.',
-    features: ['AI Pattern Generation', 'Scale & Chord Assistance', 'Intuitive QWERTY mapping'],
-    image: '/images/music-theory-assist.webp',
-    color: 'from-amber-500 to-orange-600'
+    title: 'For Songwriters & Producers',
+    icon: <Music className="w-8 h-8" />,
+    description: 'Stop the file-sharing madness. Use the Arrange Room to produce tracks together in real-time. Edit MIDI, record ideas, and break through creative blocks with supportive AI assistance.',
+    features: ['Collaborative real-time DAW', 'AI-powered idea generation', 'Instant stems & MIDI export'],
+    image: '/images/arrange-room.webp',
+    color: 'from-purple-500 to-pink-600'
   }
 ];
 

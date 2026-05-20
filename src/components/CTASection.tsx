@@ -25,7 +25,7 @@ export default function CTASection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Ready to Start Making Music Together?
+          Your Virtual Session Awaits.
         </motion.h2>
         <motion.p 
           className="text-xl text-purple-100 mb-8"
@@ -34,7 +34,7 @@ export default function CTASection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          No account needed. Share a link, pick an instrument, and play.
+          No complex setup. Just you, your band, and your fans.
         </motion.p>
         <motion.div 
           className="flex justify-center"
@@ -47,9 +47,9 @@ export default function CTASection() {
             href={APP_URL} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 music-btn"
+            className="bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 music-btn shadow-xl"
           >
-            🎵 Start Jamming Now
+            Beta Access
           </a>
         </motion.div>
       </div>

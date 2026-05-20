@@ -133,11 +133,11 @@ export default function HeroSection() {
             
             {/* Demo Banner */}
             <div className="mb-6 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 border border-purple-200 dark:border-purple-700 rounded-full">
-              <span className="text-purple-800 dark:text-purple-200 text-xs">✨ Currently in beta — Artist tier features are free for everyone</span>
+              <span className="text-purple-800 dark:text-purple-200 text-xs">✨ We&apos;re in Public Beta — All Artist features are currently free for early adopters</span>
             </div>
             
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-              Making music with anyone just feels different. <span className="font-brand">COLLAB</span> brings that session online — no scheduling, no file swaps, no waiting. Share a room link and play.
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              Making music together should be as easy as sharing a link. <span className="font-brand">COLLAB</span> is the virtual room where your band rehearses, your subscribers jam along, and your next big hit begins.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -146,12 +146,12 @@ export default function HeroSection() {
                   href={APP_URL} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 music-btn shadow-lg"
+                  className="w-full text-center bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 music-btn shadow-lg"
                 >
-                  🚀 Jump into the Jam
+                  Join the Beta
                 </a>
                 <p className="text-xs text-center w-full text-gray-500 dark:text-gray-400 ml-1">
-                  Free to start<br/>No signup required for Guest Mode
+                  Start jamming instantly<br/>Guest mode available for quick tests
                 </p>
               </div>
             </div>

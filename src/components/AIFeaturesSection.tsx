@@ -8,32 +8,32 @@ const aiFeatures = [
   {
     id: 'scale',
     icon: <Mic className="w-6 h-6" />,
-    title: 'Hum-to-Find Scale',
-    description: 'Not sure about the key? Sing or hum into your microphone. Our system automatically detects the pitch and suggests the best matching scale for your room.',
+    title: 'Smart Scale Finder',
+    description: 'Struggling to find the right key? Just hum a melody. COLLAB suggests matching scales to keep your session in perfect harmony.',
     badge: 'BETA',
     image: '/images/ai-scale-sync.webp'
   },
   {
     id: 'composer',
     icon: <Sparkles className="w-6 h-6" />,
-    title: 'AI Pattern Generation',
-    description: 'Describe a style or feel in the sequencer and AI generates an initial pattern for your instrument, informed by your BPM and scale.',
+    title: 'Pattern Starter',
+    description: 'Get past the blank page. Describe a vibe and the AI generates a starting rhythm or sequence to kick off your creativity.',
     badge: 'EXPERIMENTAL',
     image: '/images/ai-composer.webp'
   },
   {
     id: 'idea',
     icon: <Zap className="w-6 h-6" />,
-    title: 'Idea Capture (Tap + Voice)',
-    description: 'Tap your tempo and hum your melody. COLLAB creates a MIDI track with your idea, quantized and snapped to your project scale.',
+    title: 'Idea Draftsman',
+    description: 'Capture inspiration as it strikes. Tap a tempo and hum a tune — we’ll sketch it into a MIDI region for you to refine.',
     badge: 'BETA',
     image: '/images/ai-idea-capture.webp'
   },
   {
     id: 'voice-to-midi',
     icon: <BrainCircuit className="w-6 h-6" />,
-    title: 'Real-time Voice-to-MIDI',
-    description: 'Sing or hum directly into any MIDI track in the Arrange Room. Our real-time pitch detection converts your voice to notes instantly.',
+    title: 'Assistive Voice-to-MIDI',
+    description: 'Use your most natural instrument — your voice. Convert your hums or vocals into MIDI notes to quickly build your arrangement.',
     badge: 'NEW',
     image: '/images/music-theory-assist.webp'
   }
@@ -69,7 +69,7 @@ export default function AIFeaturesSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            A good idea shouldn’t get stuck on theory. COLLAB’s AI tools help you go from a hum, a tap, or a rough idea to something you can actually play with — quickly.
+            A good idea shouldn’t get stuck on technicalities. Our assistants help you go from a hum or a tap to something you can actually build on.
           </motion.p>
         </div>
 

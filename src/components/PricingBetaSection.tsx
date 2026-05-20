@@ -33,7 +33,7 @@ const tiers = [
       'Join up to 3 bands',
       'Full AI quota & Live streaming',
     ],
-    cta: 'Get Beta Access',
+    cta: 'Beta Access',
     highlight: true,
     comingSoon: false,
   },

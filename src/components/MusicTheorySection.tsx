@@ -40,13 +40,13 @@ export default function MusicTheorySection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
-              No Music Theory?<br />
+              Focus on the Vibe.<br />
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                We&apos;ve Got You Covered.
+                Not the Technicalities.
               </span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              We believe music belongs to everyone. COLLAB&apos;s built-in theory tools handle the complex stuff, so you can focus on what sounds good.
+              Don&apos;t let music theory slow down your creative flow. COLLAB&apos;s assistive tools handle the heavy lifting, helping you find the right scales and chords so you can stay in the zone.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
