@@ -23,9 +23,9 @@ const tiers = [
   {
     name: 'ARTIST',
     tagline: 'The Professional Bridge',
-    price: '$9',
-    period: '/month',
-    betaPrice: 'FREE DURING BETA',
+    price: 'Free',
+    period: 'during beta',
+    betaPrice: 'Final pricing TBA — beta perks locked in',
     features: [
       '10 projects saved',
       '32 tracks per project',
@@ -40,8 +40,7 @@ const tiers = [
   {
     name: 'PRO',
     tagline: 'The Serious Creator',
-    price: '$19',
-    period: '/month',
+    price: 'TBA',
     features: [
       'Unlimited projects (50GB)',
       'Unlimited tracks & bands',
@@ -57,7 +56,7 @@ const tiers = [
 
 export default function PricingBetaSection() {
   return (
-    <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
+    <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-brand-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2 
@@ -85,7 +84,7 @@ export default function PricingBetaSection() {
               key={tier.name}
               className={`relative flex flex-col p-8 rounded-3xl border ${
                 tier.highlight 
-                  ? 'bg-white dark:bg-gray-800 border-purple-500 shadow-2xl scale-105 z-10' 
+                  ? 'bg-white dark:bg-gray-800 border-brand-500 shadow-2xl scale-105 z-10'
                   : 'bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 shadow-xl'
               }`}
               initial={{ opacity: 0, y: 30 }}
@@ -94,7 +93,7 @@ export default function PricingBetaSection() {
               transition={{ delay: index * 0.1 }}
             >
               {tier.highlight && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
                   Beta Special
                 </div>
               )}
@@ -110,7 +109,7 @@ export default function PricingBetaSection() {
                   {tier.period && <span className="text-gray-500 dark:text-gray-400 ml-1">{tier.period}</span>}
                 </div>
                 {tier.betaPrice && (
-                  <div className="mt-2 text-purple-600 dark:text-purple-400 font-bold text-sm animate-pulse">
+                  <div className="mt-2 text-brand dark:text-brand-300 font-bold text-sm animate-pulse">
                     ✨ {tier.betaPrice}
                   </div>
                 )}
@@ -133,7 +132,7 @@ export default function PricingBetaSection() {
                   tier.comingSoon
                     ? 'bg-gray-200 dark:bg-gray-700 text-gray-500 cursor-not-allowed'
                     : tier.highlight
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:opacity-90 shadow-lg'
+                      ? 'bg-brand-600 text-white hover:bg-brand-700 shadow-lg'
                       : 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:opacity-90'
                 }`}
               >
@@ -144,15 +143,15 @@ export default function PricingBetaSection() {
         </div>
 
         <motion.div 
-          className="mt-16 p-6 rounded-2xl bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 max-w-3xl mx-auto flex items-start space-x-4"
+          className="mt-16 p-6 rounded-2xl bg-brand-50 dark:bg-brand-900/30 border border-brand-100 dark:border-brand-800 max-w-3xl mx-auto flex items-start space-x-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
         >
-          <Info className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
-          <p className="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
-            <strong>About Beta Access:</strong> We are currently in our public beta phase. To show our gratitude for early adopters, the <strong>Artist Tier</strong> features are provided entirely for free. Your feedback during this period is invaluable in helping us build the ultimate collaborative music experience.
+          <Info className="w-6 h-6 text-brand dark:text-brand-300 flex-shrink-0 mt-1" />
+          <p className="text-sm text-brand-700 dark:text-brand-200 leading-relaxed">
+            <strong>About Beta Access:</strong> We are currently in our public beta phase. To show our gratitude for early adopters, the <strong>Artist Tier</strong> features are provided entirely for free. Final pricing for paid plans will be announced after beta — early adopters keep their launch perks. Your feedback during this period is invaluable in helping us build the ultimate collaborative music experience.
           </p>
         </motion.div>
       </div>

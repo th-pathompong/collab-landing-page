@@ -8,7 +8,7 @@ export default function DrumSection() {
       <div
       >
         <div className="flex items-center gap-3 ">
-          <Drum className="w-8 h-8 text-purple-600" />
+          <Drum className="w-8 h-8 text-brand" />
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
               Virtual Drums
@@ -66,7 +66,7 @@ export default function DrumSection() {
 
             <div className="bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 p-6">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="w-2 h-2 bg-brand-500 rounded-full"></span>
                 Group B (Right 8 Pads)
               </h4>
               <div className="grid grid-cols-4 gap-2 text-center">
@@ -97,7 +97,7 @@ export default function DrumSection() {
         {/* Advanced Controls */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Volume2 className="w-6 h-6 text-green-600" />
+            <Volume2 className="w-6 h-6 text-arrange-600" />
             Advanced Drum Controls
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -120,18 +120,18 @@ export default function DrumSection() {
         </div>
 
         {/* Collaboration Tips */}
-        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-6">
-          <h4 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-3 flex items-center gap-2">
+        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+          <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-3 flex items-center gap-2">
             🤝 Drummer Collaboration Tips
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+            <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li>• <strong>Be the foundation:</strong> Everyone relies on your timing</li>
               <li>• <strong>Lock with bass:</strong> Create a tight rhythm section</li>
               <li>• <strong>Support the song:</strong> Match the energy and feel</li>
               <li>• <strong>Signal changes:</strong> Use fills to lead transitions</li>
             </ul>
-            <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+            <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li>• <strong>Less is more:</strong> Simple, solid beats often work best</li>
               <li>• <strong>Listen actively:</strong> Respond to what others are playing</li>
               <li>• <strong>Use dynamics:</strong> Build and release tension</li>

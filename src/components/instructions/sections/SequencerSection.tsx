@@ -8,7 +8,7 @@ export default function SequencerSection() {
       <div
       >
         <div className="flex items-center gap-3 ">
-          <Layers className="w-8 h-8 text-purple-600" />
+          <Layers className="w-8 h-8 text-brand" />
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
               Step Sequencer
@@ -40,7 +40,7 @@ export default function SequencerSection() {
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             What is a Step Sequencer?
           </h3>
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
+          <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
               A step sequencer is a powerful tool for creating rhythmic patterns and musical sequences 
               for your currently selected instrument. Instead of playing notes in real-time, you program 
@@ -61,37 +61,37 @@ export default function SequencerSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
             <div
-              className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl p-4 text-center"
+              className="bg-arrange-50 dark:bg-arrange-900/20 border border-arrange-200 dark:border-arrange-700 rounded-xl p-4 text-center"
             >
-              <div className="w-8 h-8 bg-green-500 text-white rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-8 h-8 bg-arrange-500 text-white rounded-lg flex items-center justify-center mx-auto mb-3">
                 1
               </div>
-              <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">Select Instrument</h4>
-              <p className="text-sm text-green-600 dark:text-green-400">
+              <h4 className="font-semibold text-arrange-800 dark:text-arrange-300 mb-2">Select Instrument</h4>
+              <p className="text-sm text-arrange-600 dark:text-arrange-400">
                 Choose your instrument first - the sequencer will create patterns for that instrument
               </p>
             </div>
 
             <div
-              className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-center"
+              className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-4 text-center"
             >
-              <div className="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-8 h-8 bg-brand-500 text-white rounded-lg flex items-center justify-center mx-auto mb-3">
                 2
               </div>
-              <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">Activate Steps</h4>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-2">Activate Steps</h4>
+              <p className="text-sm text-brand-600 dark:text-brand-400">
                 Click on grid squares to activate steps where you want sounds to trigger
               </p>
             </div>
 
             <div
-              className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-4 text-center"
+              className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-4 text-center"
             >
-              <div className="w-8 h-8 bg-purple-500 text-white rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-8 h-8 bg-brand-500 text-white rounded-lg flex items-center justify-center mx-auto mb-3">
                 3
               </div>
-              <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-2">Press Play</h4>
-              <p className="text-sm text-purple-600 dark:text-purple-400">
+              <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-2">Press Play</h4>
+              <p className="text-sm text-brand dark:text-brand-300">
                 Hit the play button to start the sequence and hear your pattern loop
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function SequencerSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold text-xs">AI</span>
                 </div>
                 <div>
@@ -131,7 +131,7 @@ export default function SequencerSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <RotateCcw className="w-4 h-4 text-white" />
                 </div>
                 <div>
@@ -143,7 +143,7 @@ export default function SequencerSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-arrange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Play className="w-4 h-4 text-white" />
                 </div>
                 <div>
@@ -157,7 +157,7 @@ export default function SequencerSection() {
 
             <div className="space-y-4">
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Volume2 className="w-4 h-4 text-white" />
                 </div>
                 <div>
@@ -169,7 +169,7 @@ export default function SequencerSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-perform-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Layers className="w-4 h-4 text-white" />
                 </div>
                 <div>
@@ -181,7 +181,7 @@ export default function SequencerSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                <div className="w-8 h-8 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-arrange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Play className="w-4 h-4 text-white" />
                 </div>
                 <div>
@@ -202,9 +202,9 @@ export default function SequencerSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20 border border-pink-200 dark:border-pink-700 rounded-xl p-6">
-              <h4 className="font-semibold text-pink-800 dark:text-pink-300 mb-3">🥁 Drum Patterns</h4>
-              <ul className="space-y-2 text-sm text-pink-600 dark:text-pink-400">
+            <div className="bg-perform-50 dark:bg-perform-900/20 border border-perform-200 dark:border-perform-700 rounded-xl p-6">
+              <h4 className="font-semibold text-perform-800 dark:text-perform-300 mb-3">🥁 Drum Patterns</h4>
+              <ul className="space-y-2 text-sm text-perform-600 dark:text-perform-400">
                 <li>• Start with kick on 1 and 3, snare on 2 and 4</li>
                 <li>• Add hi-hats on every step for energy</li>
                 <li>• Try off-beat kicks for interesting rhythms</li>
@@ -212,9 +212,9 @@ export default function SequencerSection() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
-              <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">🎵 Bass Lines</h4>
-              <ul className="space-y-2 text-sm text-blue-600 dark:text-blue-400">
+            <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
+              <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">🎵 Bass Lines</h4>
+              <ul className="space-y-2 text-sm text-brand-600 dark:text-brand-400">
                 <li>• Follow the root notes of your chord progression</li>
                 <li>• Add movement with passing notes</li>
                 <li>• Try syncopated rhythms for groove</li>
@@ -222,9 +222,9 @@ export default function SequencerSection() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl p-6">
-              <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3">🎹 Arpeggios</h4>
-              <ul className="space-y-2 text-sm text-green-600 dark:text-green-400">
+            <div className="bg-arrange-50 dark:bg-arrange-900/20 border border-arrange-200 dark:border-arrange-700 rounded-xl p-6">
+              <h4 className="font-semibold text-arrange-800 dark:text-arrange-300 mb-3">🎹 Arpeggios</h4>
+              <ul className="space-y-2 text-sm text-arrange-600 dark:text-arrange-400">
                 <li>• Program chord notes in sequence</li>
                 <li>• Use faster note values for flowing melodies</li>
                 <li>• Try different octaves for range</li>
@@ -232,9 +232,9 @@ export default function SequencerSection() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-6">
-              <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">🎶 Collaboration</h4>
-              <ul className="space-y-2 text-sm text-purple-600 dark:text-purple-400">
+            <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
+              <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">🎶 Collaboration</h4>
+              <ul className="space-y-2 text-sm text-brand dark:text-brand-300">
                 <li>• Share sequence patterns with room members</li>
                 <li>• Build on each other&apos;s patterns</li>
                 <li>• Take turns leading different sections</li>
@@ -245,17 +245,17 @@ export default function SequencerSection() {
         </div>
 
         {/* Pro Tips */}
-        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-6">
-          <h4 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-3 flex items-center gap-2">
+        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+          <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-3 flex items-center gap-2">
             💡 Pro Tips for Sequencing
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+            <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li>• <strong>Start Simple:</strong> Begin with basic patterns and add complexity gradually</li>
               <li>• <strong>Leave Space:</strong> Not every step needs a sound - silence is important</li>
               <li>• <strong>Listen to Others:</strong> Make sure your sequence complements other players</li>
             </ul>
-            <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+            <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li>• <strong>Use Velocity:</strong> Vary the volume of different steps for dynamics</li>
               <li>• <strong>Experiment:</strong> Try unexpected patterns and rhythms</li>
               <li>• <strong>Build Arrangements:</strong> Turn tracks on/off to create song sections</li>

@@ -1,22 +1,88 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-plus-jakarta-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
-  --font-accent: var(--font-caveat), cursive;
-  --font-brand: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-figtree), var(--font-anuphan), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: var(--font-figtree), var(--font-anuphan), ui-sans-serif, system-ui, sans-serif;
+  --font-brand: var(--font-figtree), var(--font-anuphan), ui-sans-serif, system-ui, sans-serif;
+
+  /* murva CI color tokens — full brand scale (Tailwind v4 requires @theme vars for numbered utilities) */
+  --color-brand: #3D3A6B;
+  --color-brand-light: #9896c8;
+  --color-brand-dark: #2e2b52;
+  --color-brand-50: #EBEBF5;
+  --color-brand-100: #D8D0F0;
+  --color-brand-200: #B4AEDE;
+  --color-brand-300: #9896c8;
+  --color-brand-400: #7A77B0;
+  --color-brand-500: #5C5998;
+  --color-brand-600: #3D3A6B;
+  --color-brand-700: #2e2b52;
+  --color-brand-800: #1E2240;
+  --color-brand-900: #12152A;
+  --color-brand-950: #0D0F1A;
+  --color-bg: #0D0F1A;
+  --color-surface: #12152A;
+  --color-border: #1E2240;
+  --color-text-primary: #D8D0F0;
+
+  /* Room accent — Perform Room (coral pink, hsl ~322) */
+  --color-perform: #D43F93;
+  --color-perform-50: #FBE9F4;
+  --color-perform-100: #F6CDE7;
+  --color-perform-200: #EFA3D2;
+  --color-perform-300: #E777BC;
+  --color-perform-400: #E25BA8;
+  --color-perform-500: #D43F93;
+  --color-perform-600: #B33179;
+  --color-perform-700: #8C2660;
+  --color-perform-800: #651B45;
+  --color-perform-900: #45142F;
+
+  /* Warm accent — "dusk" amber. Emphasis (CTA) + caution/warning */
+  --color-amber: #F59E0B;
+  --color-amber-50: #FFFBEB;
+  --color-amber-100: #FEF3C7;
+  --color-amber-200: #FDE68A;
+  --color-amber-300: #FCD34D;
+  --color-amber-400: #FBBF24;
+  --color-amber-500: #F59E0B;
+  --color-amber-600: #D97706;
+  --color-amber-700: #B45309;
+  --color-amber-800: #92400E;
+  --color-amber-900: #78350F;
+  --color-amber-950: #451A03;
+
+  /* Room accent — Arrange Room (cyan-teal, hsl ~188) */
+  --color-arrange: #2AA7BE;
+  --color-arrange-50: #E7F6F9;
+  --color-arrange-100: #C6EAF0;
+  --color-arrange-200: #97D9E4;
+  --color-arrange-300: #66C6D6;
+  --color-arrange-400: #40BBD0;
+  --color-arrange-500: #2AA7BE;
+  --color-arrange-600: #22899C;
+  --color-arrange-700: #1B6B7A;
+  --color-arrange-800: #154E5A;
+  --color-arrange-900: #103A43;
 }
 
 @utility font-brand {
   font-family: var(--font-brand);
-  font-weight: 900;
+  font-weight: 700;
+}
+
+@utility font-wordmark {
+  font-family: var(--font-brand);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-figtree), var(--font-anuphan), ui-sans-serif, system-ui, sans-serif;
   }
 }
 

@@ -69,16 +69,16 @@ export default function FeedbackForm() {
       <div className="max-w-2xl mx-auto p-8 text-center bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Thank you for your feedback!</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-6">Your input helps us improve COLLAB for everyone.</p>
+        <p className="text-gray-600 dark:text-gray-300 mb-6">Your input helps us improve murva for everyone.</p>
       </div>
     );
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-5 md:p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+    <div className="max-w-2xl mx-auto p-5 md:p-8 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-800">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">We&apos;d Love Your Feedback!</h2>
-        <p className="text-gray-600 dark:text-gray-300">Help us make COLLAB even better for musicians like you.</p>
+        <p className="text-gray-600 dark:text-gray-300">Help us make murva even better for musicians like you.</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -94,7 +94,7 @@ export default function FeedbackForm() {
                   type="radio"
                   value={category.value}
                   {...register('category')}
-                  className="border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 bg-white dark:bg-gray-700"
+                  className="border-gray-300 dark:border-gray-600 text-brand-600 focus:ring-brand-500 bg-white dark:bg-gray-700"
                 />
                 <span className="text-sm text-gray-700 dark:text-gray-300">{category.label}</span>
               </label>
@@ -117,7 +117,7 @@ export default function FeedbackForm() {
                   type="radio"
                   value={level.value}
                   {...register('experienceLevel')}
-                  className="border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 bg-white dark:bg-gray-700"
+                  className="border-gray-300 dark:border-gray-600 text-brand-600 focus:ring-brand-500 bg-white dark:bg-gray-700"
                 />
                 <span className="text-sm text-gray-700 dark:text-gray-300">{level.label}</span>
               </label>
@@ -131,7 +131,7 @@ export default function FeedbackForm() {
         {/* Rating */}
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-            How likely are you to recommend Jam Band to a friend? <span className="text-red-500">*</span>
+            How likely are you to recommend murva to a friend? <span className="text-red-500">*</span>
           </label>
           <div className="flex flex-col space-y-2 w-fit">
             <div className="flex items-center space-x-1">
@@ -144,7 +144,7 @@ export default function FeedbackForm() {
                 >
                   <Star
                     className={`w-6 h-6 ${watch('rating') && star <= watch('rating')!
-                      ? 'text-yellow-400 fill-current'
+                      ? 'text-amber-400 fill-current'
                       : 'text-gray-300 dark:text-gray-600'
                     }`}
                   />
@@ -164,7 +164,7 @@ export default function FeedbackForm() {
         {/* Usage Purposes */}
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-            How do you use Jam Band? <span className="text-red-500">*</span>
+            How do you use murva? <span className="text-red-500">*</span>
           </label>
           <div className="grid grid-cols-2 gap-3 mb-3">
             {USAGE_PURPOSES.map((purpose) => (
@@ -173,7 +173,7 @@ export default function FeedbackForm() {
                   type="checkbox"
                   checked={watchedUsagePurposes?.includes(purpose) || false}
                   onChange={() => toggleUsagePurpose(purpose)}
-                  className="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 bg-white dark:bg-gray-700"
+                  className="rounded border-gray-300 dark:border-gray-600 text-brand-600 focus:ring-brand-500 bg-white dark:bg-gray-700"
                 />
                 <span className="text-sm text-gray-700 dark:text-gray-300">{purpose}</span>
               </label>
@@ -186,7 +186,7 @@ export default function FeedbackForm() {
               type="checkbox"
               checked={showCustomPurpose}
               onChange={(e) => setShowCustomPurpose(e.target.checked)}
-              className="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 bg-white dark:bg-gray-700"
+              className="rounded border-gray-300 dark:border-gray-600 text-brand-600 focus:ring-brand-500 bg-white dark:bg-gray-700"
             />
             <span className="text-sm text-gray-700 dark:text-gray-300">Other (please specify)</span>
           </div>
@@ -195,8 +195,8 @@ export default function FeedbackForm() {
             <input
               type="text"
               {...register('usagePurposes.custom')}
-              placeholder="Describe how you use Jam Band..."
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              placeholder="Describe how you use murva..."
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             />
           )}
           
@@ -214,7 +214,7 @@ export default function FeedbackForm() {
             {...register('message')}
             rows={4}
             placeholder="Tell us what you think, what you'd like to see, or any issues you've encountered... (optional)"
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
           />
         </div>
 
@@ -222,7 +222,7 @@ export default function FeedbackForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
+          className="w-full bg-amber-400 text-white dark:text-black py-3 px-6 rounded-lg font-medium hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
         >
           {isSubmitting ? (
             <>

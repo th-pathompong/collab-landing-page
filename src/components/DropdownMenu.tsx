@@ -170,8 +170,8 @@ export default function DropdownMenu({
               item.active && item.activeClassName
                 ? item.activeClassName
                 : item.active
-                ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20'
-                : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-purple-600 dark:hover:text-purple-400'
+                ? 'text-brand dark:text-brand-300 bg-purple-50 dark:bg-brand-900/20'
+                : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand-300'
             }`}
           >
             {item.icon && <span className="flex-shrink-0">{item.icon}</span>}
@@ -201,7 +201,7 @@ export default function DropdownMenu({
             <button
               ref={triggerRef}
               onClick={onToggle}
-              className="ml-1 text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+              className="ml-1 text-gray-900 dark:text-gray-100 hover:text-brand dark:hover:text-brand-300 transition-colors cursor-pointer"
               aria-expanded={isOpen}
               aria-haspopup="true"
               aria-label="Open menu"

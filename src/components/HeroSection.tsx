@@ -39,15 +39,15 @@ function HeroImageInteraction() {
           priority
         />
         {/* Color Tint Overlay */}
-        <div className={`absolute inset-0 transition-all duration-500 pointer-events-none 
-          ${hoveredSide === 'left' ? 'bg-indigo-500/0' : 
-            hoveredSide === 'right' ? 'bg-indigo-950/50 backdrop-grayscale-[0.5]' : 
-            'bg-indigo-500/15'}`} 
+        <div className={`absolute inset-0 transition-all duration-500 pointer-events-none
+          ${hoveredSide === 'left' ? 'bg-pink-500/0' :
+            hoveredSide === 'right' ? 'bg-fuchsia-950/50 backdrop-grayscale-[0.5]' :
+            'bg-pink-500/20'}`}
         />
-        
+
         <div className={`absolute bottom-6 left-6 transition-all duration-300 ${hoveredSide === 'right' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
           <div className="bg-black/60 text-white px-4 py-2 rounded-lg backdrop-blur-md border border-white/10 shadow-lg">
-            <p className="text-xs font-bold text-purple-400 mb-1 tracking-wider uppercase">Live</p>
+            <p className="text-xs font-bold text-pink-400 mb-1 tracking-wider uppercase">Live</p>
             <p className="font-bold">Perform Room</p>
           </div>
         </div>
@@ -69,15 +69,15 @@ function HeroImageInteraction() {
           priority
         />
         {/* Color Tint Overlay */}
-        <div className={`absolute inset-0 transition-all duration-500 pointer-events-none 
-          ${hoveredSide === 'right' ? 'bg-pink-500/0' : 
-            hoveredSide === 'left' ? 'bg-pink-950/50 backdrop-grayscale-[0.5]' : 
-            'bg-pink-500/10'}`} 
+        <div className={`absolute inset-0 transition-all duration-500 pointer-events-none
+          ${hoveredSide === 'right' ? 'bg-cyan-400/0' :
+            hoveredSide === 'left' ? 'bg-cyan-950/50 backdrop-grayscale-[0.5]' :
+            'bg-cyan-400/15'}`}
         />
 
         <div className={`absolute bottom-6 right-6 text-right transition-all duration-300 ${hoveredSide === 'left' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
           <div className="bg-black/60 text-white px-4 py-2 rounded-lg backdrop-blur-md border border-white/10 shadow-lg">
-            <p className="text-xs font-bold text-blue-400 mb-1 tracking-wider uppercase">Studio</p>
+            <p className="text-xs font-bold text-cyan-400 mb-1 tracking-wider uppercase">Studio</p>
             <p className="font-bold">Arrange Room</p>
           </div>
         </div>
@@ -88,7 +88,7 @@ function HeroImageInteraction() {
 
 export default function HeroSection() {
   return (
-    <section id="how-it-works" className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 xl:pt-54 xl:pb-42 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20 overflow-hidden">
+    <section id="how-it-works" className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 xl:pt-54 xl:pb-42 px-4 sm:px-6 lg:px-8 bg-brand-50 dark:bg-brand-950 overflow-hidden">
       {/* Background Video Effect */}
       <div className="absolute inset-0 overflow-hidden">
         <video
@@ -101,7 +101,7 @@ export default function HeroSection() {
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
         {/* Fade overlay to blend into section background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/70 via-purple-50/75 to-blue-50/70 dark:from-gray-950/95 dark:via-indigo-950/90 dark:to-blue-950/95" />
+        <div className="absolute inset-0 bg-brand-50/60 dark:bg-brand-800/85" />
       </div>
       
       <div className="max-w-screen-2xl mx-auto relative z-10">
@@ -113,12 +113,12 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-16 lg:mb-40 tracking-tight leading-tight relative">
-              <span className="inline-block whitespace-nowrap">Jam Live. Produce Together.</span>
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 tracking-tight leading-snug">
+              <span className="block">Jam Live. Produce Together.</span>
               <motion.span
-                className="block lg:absolute lg:top-10 whitespace-nowrap text-6xl sm:text-7xl md:text-8xl xl:text-9xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-bold font-accent -rotate-2 z-30 filter drop-shadow-[0_10px_10px_rgba(168,85,247,0.2)] dark:drop-shadow-[0_10px_10px_rgba(168,85,247,0.4)] pr-10"
-                initial={{ opacity: 0, x: 50, rotate: 0 }}
-                animate={{ opacity: 1, x: 0, rotate: -2 }}
+                className="block text-5xl sm:text-7xl md:text-8xl text-brand dark:text-brand-200 font-brand pb-3"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.8,
                   delay: 0.4,
@@ -132,12 +132,12 @@ export default function HeroSection() {
             </h1>
             
             {/* Demo Banner */}
-            <div className="mb-6 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 border border-purple-200 dark:border-purple-700 rounded-full">
-              <span className="text-purple-800 dark:text-purple-200 text-xs">✨ We&apos;re in Public Beta — All Artist features are currently free for early adopters</span>
+            <div className="mb-6 inline-flex items-center px-4 py-2 bg-brand-100/60 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700 rounded-full">
+              <span className="text-brand dark:text-brand-100 text-xs">✨ We&apos;re in Public Beta — All Artist features are currently free for early adopters</span>
             </div>
             
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Making music together should be as easy as sharing a link. <span className="font-brand">COLLAB</span> is the virtual room where your band rehearses, your subscribers jam along, and your next big hit begins.
+              Making music together should be as easy as sharing a link. <span className="font-wordmark text-brand dark:text-brand-300">murva</span> is the virtual room where your band rehearses, your subscribers jam along, and your next big hit begins.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -146,7 +146,7 @@ export default function HeroSection() {
                   href={APP_URL} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-full text-center bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 music-btn shadow-lg"
+                  className="w-full text-center bg-amber-400 text-brand-950 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-300 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-amber-500/20"
                 >
                   Join the Beta
                 </a>

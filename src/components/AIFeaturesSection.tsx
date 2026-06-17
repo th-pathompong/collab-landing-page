@@ -9,7 +9,7 @@ const aiFeatures = [
     id: 'scale',
     icon: <Mic className="w-6 h-6" />,
     title: 'Smart Scale Finder',
-    description: 'Struggling to find the right key? Just hum a melody. COLLAB suggests matching scales to keep your session in perfect harmony.',
+    description: 'Struggling to find the right key? Just hum a melody. murva suggests matching scales to keep your session in perfect harmony.',
     badge: 'BETA',
     image: '/images/ai-scale-sync.webp'
   },
@@ -41,14 +41,14 @@ const aiFeatures = [
 
 export default function AIFeaturesSection() {
   return (
-    <section id="ai-features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <section id="ai-features" className="py-24 px-4 sm:px-6 lg:px-8 bg-brand-50 dark:bg-brand-950">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm font-bold mb-4"
+            className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100/50 dark:bg-brand-900/30 text-brand dark:text-brand-300 text-sm font-bold mb-4"
           >
             <Sparkles className="w-4 h-4 mr-2" />
             AI MUSIC TOOLS
@@ -87,7 +87,7 @@ export default function AIFeaturesSection() {
                 className="p-6 rounded-2xl border bg-gray-50 dark:bg-gray-900 border-gray-100 dark:border-gray-800"
               >
                 <div className="flex justify-between items-start mb-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-sm bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-400">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-sm bg-white dark:bg-gray-800 text-brand dark:text-brand-300">
                     {feature.icon}
                   </div>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${
@@ -114,7 +114,6 @@ export default function AIFeaturesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {/* Background Decorative elements */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-tr from-purple-500/10 to-blue-500/10 rounded-full blur-3xl -z-10"></div>
             
             {/* Composite Stack - Static Layout */}
             <div className="relative w-full max-w-lg aspect-square">
@@ -140,7 +139,7 @@ export default function AIFeaturesSection() {
               </div>
 
               {/* Background Glow */}
-              <div className="absolute inset-0 bg-purple-500/10 blur-[100px] rounded-full -z-10"></div>
+              <div className="absolute inset-0 bg-brand-500/10 blur-[100px] rounded-full -z-10"></div>
             </div>
             
             {/* Disclaimer Box - Floating style */}

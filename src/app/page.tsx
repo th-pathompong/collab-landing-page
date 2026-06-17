@@ -12,18 +12,19 @@ import {
   FAQSection,
   StructuredData,
 } from '@/components';
+import { SITE_URL } from '@/components/constants/navigation';
 
 export default function HomePage() {
   // Structured Data for SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "COLLAB - Jam Band - Real-time Collaborative Music Platform",
+    "name": "murva - Real-time Collaborative Music Platform",
     "description": "Create music together in real-time with virtual instruments, ultra-low latency voice chat, and synchronized metronome. Perfect for remote jam sessions, virtual music brainstorming, and collaborative music production.",
-    "url": "https://jam-band-landing-page.vercel.app/",
+    "url": `${SITE_URL}/`,
     "mainEntity": {
       "@type": "WebApplication",
-      "name": "COLLAB - Jam Band",
+      "name": "murva",
       "description": "Real-time collaborative music platform with virtual instruments, ultra-low latency voice chat, synchronized metronome, and step sequencer. Create music together in your browser without any installation required.",
       "applicationCategory": "MusicApplication",
       "operatingSystem": "Web Browser",
@@ -46,7 +47,7 @@ export default function HomePage() {
       },
       "publisher": {
         "@type": "Organization",
-        "name": "COLLAB Team"
+        "name": "murva Team"
       },
       "featureList": [
         "Real-time collaborative jamming",
@@ -63,7 +64,7 @@ export default function HomePage() {
         "Real-time chat system",
         "Network diagnostics and performance monitoring"
       ],
-      "screenshot": "https://jam-band-landing-page.vercel.app/images/og/cover-index.webp",
+      "screenshot": `${SITE_URL}/images/og/cover-index.webp`,
       "softwareVersion": "1.0.0",
       "datePublished": "2024-08-27",
       "dateModified": "2026-02-22",
@@ -82,7 +83,7 @@ export default function HomePage() {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "COLLAB Team"
+      "name": "murva Team"
     },
     "datePublished": "2024-08-27",
     "dateModified": "2026-02-22",
@@ -94,13 +95,13 @@ export default function HomePage() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://jam-band-landing-page.vercel.app/"
+          "item": `${SITE_URL}/`
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "About",
-          "item": "https://jam-band-landing-page.vercel.app/about"
+          "item": `${SITE_URL}/about`
         }
       ]
     }

@@ -15,7 +15,7 @@ const experienceModes = [
       'HLS Broadcast for Audience Mode'
     ],
     image: '/images/perform-room.webp',
-    color: 'from-indigo-500 to-purple-500'
+    color: 'bg-perform-500'
   },
   {
     title: 'Arrange Room',
@@ -28,13 +28,13 @@ const experienceModes = [
       'Export MIDI & Multitrack WAV stems'
     ],
     image: '/images/arrange-room.webp',
-    color: 'from-pink-500 to-orange-500'
+    color: 'bg-arrange-500'
   }
 ];
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800">
+    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-brand-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2 
@@ -66,7 +66,7 @@ export default function ExperienceSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <div className={`inline-block px-4 py-1 rounded-full bg-gradient-to-r ${mode.color} text-white text-sm font-semibold mb-6 w-fit`}>
+              <div className={`inline-block px-4 py-1 rounded-full ${mode.color} text-white text-sm font-semibold mb-6 w-fit`}>
                 {mode.subtitle}
               </div>
               <h3 className="text-3xl font-bold mb-4">{mode.title}</h3>
@@ -78,7 +78,7 @@ export default function ExperienceSection() {
                 <ul className="space-y-3">
                   {mode.features.map(feature => (
                     <li key={feature} className="flex items-start space-x-3 text-gray-700 dark:text-gray-300">
-                      <span className={`flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-gradient-to-r ${mode.color} flex items-center justify-center text-white text-[10px]`}>
+                      <span className={`flex-shrink-0 w-5 h-5 mt-0.5 rounded-full ${mode.color} flex items-center justify-center text-white text-[10px]`}>
                         ✓
                       </span>
                       <span>{feature}</span>
@@ -95,7 +95,7 @@ export default function ExperienceSection() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 /> 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-black/30" />
               </div>
             </motion.div>
           ))}

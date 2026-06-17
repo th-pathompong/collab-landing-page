@@ -182,18 +182,18 @@ export default function InstructionsPage() {
   const nextTab = currentIndex < allTabs.length - 1 ? allTabs[currentIndex + 1] : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-950 dark:to-blue-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-2xl pt-16 pb-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
           <div className="py-4">
             <div className="text-center">
               <div className="font-bold mb-4 flex flex-col">
-                <h2 className="text-3xl sm:text-4xl  bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent py-3">
+                <h2 className="text-3xl sm:text-3xl text-gray-600 dark:text-gray-300 py-3">
                   How to Use
-                </h2> 
-                <h1 className="text-4xl sm:text-5xl block text-gray-900 dark:text-white">
-                  <span className="font-brand">COLLAB</span> - Jam Band
+                </h2>
+                <h1 className="text-4xl sm:text-7xl block text-gray-900 dark:text-white mb-3">
+                  <span className="font-wordmark text-brand dark:text-brand-300">murva</span>
                 </h1>
               </div>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -218,7 +218,7 @@ export default function InstructionsPage() {
                     <div key={category.id} className="space-y-2">
                       <button 
                         onClick={() => toggleCategory(category.id)}
-                        className="w-full flex items-center justify-between px-2 py-1 text-[11px] font-black tracking-widest text-gray-400 dark:text-gray-500 uppercase transition-colors hover:text-purple-500"
+                        className="w-full flex items-center justify-between px-2 py-1 text-[11px] font-black tracking-widest text-gray-400 dark:text-gray-500 uppercase transition-colors hover:text-brand-500"
                       >
                         {category.title}
                         <ChevronDown className={`w-3 h-3 transition-transform ${expandedCategories.includes(category.id) ? '' : '-rotate-90'}`} />
@@ -234,14 +234,14 @@ export default function InstructionsPage() {
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`w-full flex items-start gap-3 p-3 rounded-xl transition-all text-left group ${
                                   activeTab === tab.id
-                                    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-200 dark:shadow-none translate-x-1'
+                                    ? 'bg-brand-600 text-white shadow-lg dark:shadow-none translate-x-1'
                                     : 'text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm'
                                 }`}
                               >
-                                <Icon className={`w-5 h-5 mt-0.5 flex-shrink-0 ${activeTab === tab.id ? 'text-white' : 'text-purple-500 group-hover:scale-110 transition-transform'}`} />
+                                <Icon className={`w-5 h-5 mt-0.5 flex-shrink-0 ${activeTab === tab.id ? 'text-white' : 'text-brand-500 group-hover:scale-110 transition-transform'}`} />
                                 <div className="min-w-0">
                                   <div className="font-semibold text-sm">{tab.title}</div>
-                                  <div className={`text-[10px] opacity-75 mt-1 truncate ${activeTab === tab.id ? 'text-purple-100' : ''}`}>
+                                  <div className={`text-[10px] opacity-75 mt-1 truncate ${activeTab === tab.id ? 'text-brand-100' : ''}`}>
                                     {tab.description}
                                   </div>
                                 </div>
@@ -265,7 +265,7 @@ export default function InstructionsPage() {
                 className="w-full flex items-center justify-between text-left dark:text-white"
               >
                 <div className="flex items-center gap-3">
-                  <activeTabData.icon className="w-5 h-5 text-purple-600" />
+                  <activeTabData.icon className="w-5 h-5 text-brand" />
                   <span className="font-bold">{activeTabData.title}</span>
                 </div>
                 <ChevronRight className={`w-5 h-5 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`} />
@@ -290,7 +290,7 @@ export default function InstructionsPage() {
                                 }}
                                 className={`w-full flex items-center gap-3 p-3 rounded-lg transition-colors text-left ${
                                   activeTab === tab.id
-                                    ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
+                                    ? 'bg-brand-100/50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300'
                                     : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
                                 }`}
                               >
@@ -318,7 +318,7 @@ export default function InstructionsPage() {
               {prevTab ? (
                 <button
                   onClick={() => setActiveTab(prevTab.id)}
-                  className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-400 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-x-1"
+                  className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-800 text-brand dark:text-brand-300 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-x-1"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <div className="text-left">
@@ -333,7 +333,7 @@ export default function InstructionsPage() {
               {nextTab ? (
                 <button
                   onClick={() => setActiveTab(nextTab.id)}
-                  className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-400 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-x-1"
+                  className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-800 text-brand dark:text-brand-300 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-x-1"
                 >
                   <div className="text-right">
                     <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Next</div>

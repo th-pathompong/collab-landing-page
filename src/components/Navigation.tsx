@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import DropdownMenu from './DropdownMenu';
+import Wordmark from './Wordmark';
 import { NAVIGATION_MENU_ITEMS, APP_URL } from './constants/navigation';
 
 // Define proper types for navigation items
@@ -58,7 +59,7 @@ export default function Navigation({
           isOpen={activeDropdown === item.label}
           onToggle={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
           onClose={() => setActiveDropdown(null)}
-          className="text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer whitespace-nowrap flex-shrink-0"
+          className="text-gray-900 dark:text-gray-100 hover:text-brand dark:hover:text-brand-300 cursor-pointer whitespace-nowrap flex-shrink-0"
           anchorPosition="bottom-left"
           offset={{ x: 0, y: 8 }}
           usePortal={true}
@@ -69,8 +70,8 @@ export default function Navigation({
 
     if (item.href.startsWith('#') || item.href.startsWith('/#')) {
       const commonClasses = isMobile 
-        ? "block w-full text-left py-3 px-4 text-lg font-medium text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
-        : "text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer whitespace-nowrap flex-shrink-0";
+        ? "block w-full text-left py-3 px-4 text-lg font-medium text-gray-900 dark:text-gray-100 hover:text-brand dark:hover:text-brand-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+        : "text-gray-900 dark:text-gray-100 hover:text-brand dark:hover:text-brand-300 transition-colors cursor-pointer whitespace-nowrap flex-shrink-0";
 
       return (
         <a 
@@ -88,8 +89,8 @@ export default function Navigation({
     }
 
     const commonClasses = isMobile 
-      ? "block w-full text-left py-3 px-4 text-lg font-medium text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
-      : "text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer whitespace-nowrap flex-shrink-0";
+      ? "block w-full text-left py-3 px-4 text-lg font-medium text-gray-900 dark:text-gray-100 hover:text-brand dark:hover:text-brand-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+      : "text-gray-900 dark:text-gray-100 hover:text-brand dark:hover:text-brand-300 transition-colors cursor-pointer whitespace-nowrap flex-shrink-0";
 
     return (
       <Link 
@@ -113,7 +114,7 @@ export default function Navigation({
         <div className="flex items-center justify-between py-2 px-4">
           <Link
             href={item.href}
-            className="flex-1 text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            className="flex-1 text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-brand dark:hover:text-brand-300 transition-colors"
             onClick={() => onMobileMenuToggle()}
           >
             {item.label}
@@ -123,7 +124,7 @@ export default function Navigation({
               e.stopPropagation();
               setMobileExpandedLabel(isExpanded ? null : item.label);
             }}
-            className="p-2 text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            className="p-2 text-gray-500 dark:text-gray-400 hover:text-brand dark:hover:text-brand-300 transition-colors"
             aria-expanded={isExpanded}
             aria-label={`Toggle ${item.label} sections`}
           >
@@ -147,7 +148,7 @@ export default function Navigation({
                   <a 
                     key={subItem.href}
                     href={subItem.href}
-                    className="block w-full text-left py-2 px-4 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                    className="block w-full text-left py-2 px-4 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-brand-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
                     onClick={(e) => {
                       e.preventDefault();
                       handleHashNavigation(subItem.href, true);
@@ -185,10 +186,8 @@ export default function Navigation({
             {/* Logo and Navigation Links */}
             <div className="flex items-center space-x-8 flex-1 min-w-0">
               {/* Logo */}
-              <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity flex-shrink-0">
-                <span className="text-xl font-brand bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  COLLAB
-                </span>
+              <Link href="/" className="hover:opacity-80 transition-opacity flex-shrink-0">
+                <Wordmark size="sm" />
               </Link>
               
               {/* Desktop Navigation Links */}
@@ -207,7 +206,7 @@ export default function Navigation({
                 href={APP_URL} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hidden md:inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                className="hidden md:inline-block bg-brand text-white px-6 py-2 rounded-lg font-medium hover:bg-brand-700 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
               >
                 Start Jamming
               </a>
@@ -248,7 +247,7 @@ export default function Navigation({
                       href={APP_URL} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="block w-full text-center py-3 px-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+                      className="block w-full text-center py-3 px-4 bg-brand text-white font-medium rounded-lg hover:bg-brand-700 transition-all duration-300"
                     >
                       Start Jamming
                     </a>

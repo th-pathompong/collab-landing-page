@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import InstructionsPage from "@/components/instructions/InstructionsPage";
 
 export const metadata: Metadata = {
-  title: "Instructions | COLLAB - Jam Band",
-  description: "Learn how to use COLLAB - Jam Band's virtual instruments, effects, sequencer, and collaboration features. Complete guide for real-time collaborative music making.",
+  title: "Instructions | murva",
+  description: "Learn how to use murva's virtual instruments, effects, sequencer, and collaboration features. Complete guide for real-time collaborative music making.",
   keywords: [
     "instructions",
     "how to use",

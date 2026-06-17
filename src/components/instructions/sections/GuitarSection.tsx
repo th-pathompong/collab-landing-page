@@ -8,7 +8,7 @@ export default function GuitarSection() {
       <div
       >
         <div className="flex items-center gap-3 ">
-          <Guitar className="w-8 h-8 text-purple-600" />
+          <Guitar className="w-8 h-8 text-brand" />
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
               Virtual Guitar & Bass
@@ -22,7 +22,7 @@ export default function GuitarSection() {
         {/* Basic Guitar */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Guitar className="w-6 h-6 text-orange-600" />
+            <Guitar className="w-6 h-6 text-amber-600" />
             Basic Guitar Mode
           </h3>
           
@@ -39,16 +39,16 @@ export default function GuitarSection() {
             Interactive fretboard with individual string control
           </p>
 
-          <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-700 rounded-xl p-6">
-            <h4 className="font-semibold text-orange-800 dark:text-orange-300 mb-3">Basic Mode Features:</h4>
+          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+            <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-3">Basic Mode Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <ul className="space-y-2 text-orange-600 dark:text-orange-400">
+              <ul className="space-y-2 text-amber-600 dark:text-amber-400">
                 <li>• <strong>Virtual Fretboard:</strong> Click frets to play individual notes</li>
                 <li>• <strong>6-String Layout:</strong> Standard guitar tuning (E-A-D-G-B-E)</li>
                 <li>• <strong>Multiple Frets:</strong> Access to different positions on the neck</li>
                 <li>• <strong>String Muting:</strong> Control which strings ring out</li>
               </ul>
-              <ul className="space-y-2 text-orange-600 dark:text-orange-400">
+              <ul className="space-y-2 text-amber-600 dark:text-amber-400">
                 <li>• <strong>Bend & Slide:</strong> Expressive playing techniques</li>
                 <li>• <strong>Open Strings:</strong> Play unfretted strings</li>
                 <li>• <strong>Velocity Control:</strong> Adjust picking dynamics</li>
@@ -61,7 +61,7 @@ export default function GuitarSection() {
         {/* Melody Scale Guitar */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Music className="w-6 h-6 text-blue-600" />
+            <Music className="w-6 h-6 text-brand-600" />
             Melody Scale Mode
           </h3>
           
@@ -78,16 +78,16 @@ export default function GuitarSection() {
             Scale patterns highlighted across the fretboard
           </p>
 
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
-            <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">Melody Scale Features:</h4>
+          <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
+            <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">Melody Scale Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <ul className="space-y-2 text-blue-600 dark:text-blue-400">
+              <ul className="space-y-2 text-brand-600 dark:text-brand-400">
                 <li>• <strong>Scale Visualization:</strong> Highlighted frets show scale notes</li>
                 <li>• <strong>Position Patterns:</strong> Learn common scale shapes</li>
                 <li>• <strong>Root Note Indicators:</strong> See where the key center is</li>
                 <li>• <strong>Mode Exploration:</strong> Discover different scale positions</li>
               </ul>
-              <ul className="space-y-2 text-blue-600 dark:text-blue-400">
+              <ul className="space-y-2 text-brand-600 dark:text-brand-400">
                 <li>• <strong>Lead Playing:</strong> Perfect for solos and melodies</li>
                 <li>• <strong>Pentatonic Patterns:</strong> Rock and blues scale shapes</li>
                 <li>• <strong>Color Coding:</strong> Visual feedback for scale degrees</li>
@@ -100,7 +100,7 @@ export default function GuitarSection() {
         {/* Chord Strum Mode */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Layers3 className="w-6 h-6 text-green-600" />
+            <Layers3 className="w-6 h-6 text-arrange-600" />
             Chord Strum Mode
           </h3>
           
@@ -117,16 +117,16 @@ export default function GuitarSection() {
             One-key chord triggers with realistic strumming and picking
           </p>
 
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl p-6">
-            <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3">Chord Strum Features:</h4>
+          <div className="bg-arrange-50 dark:bg-arrange-900/20 border border-arrange-200 dark:border-arrange-700 rounded-xl p-6">
+            <h4 className="font-semibold text-arrange-800 dark:text-arrange-300 mb-3">Chord Strum Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <ul className="space-y-2 text-green-600 dark:text-green-400">
+              <ul className="space-y-2 text-arrange-600 dark:text-arrange-400">
                 <li>• <strong>Instant Chords:</strong> 7 scale-degree keys (A–G) for full chords</li>
                 <li>• <strong>Picking &amp; Strumming:</strong> &quot;.&quot; for Down (1.0x vel), &quot;,&quot; for Up (1.5x vel)</li>
                 <li>• <strong>Power Chord:</strong> Toggle &quot;\&quot; to play only root + 5th</li>
                 <li>• <strong>Brushing Speed:</strong> N / M keys to adjust strum arpeggio timing</li>
               </ul>
-              <ul className="space-y-2 text-green-600 dark:text-green-400">
+              <ul className="space-y-2 text-arrange-600 dark:text-arrange-400">
                 <li>• <strong>Guitar Modifiers:</strong> Q(Add6), W(Dom7), E(Maj7), R(add9), T(sus2), Y(sus4)</li>
                 <li>• <strong>Maj/Min Toggle:</strong> Press U to force parallel major/minor</li>
                 <li>• <strong>Hammer-on/Pull-off:</strong> Chain notes within 200ms of a pick</li>
@@ -139,20 +139,20 @@ export default function GuitarSection() {
         {/* Bass Guitar */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Zap className="w-6 h-6 text-purple-600" />
+            <Zap className="w-6 h-6 text-brand" />
             Bass Guitar
           </h3>
           
-          <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-6 ">
-            <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">Bass Specific Features:</h4>
+          <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6 ">
+            <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">Bass Specific Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <ul className="space-y-2 text-purple-600 dark:text-purple-400">
+              <ul className="space-y-2 text-brand dark:text-brand-300">
                 <li>• <strong>Melody Mode:</strong> 2 virtual strings with 4th-interval layout</li>
                 <li>• <strong>Always Root:</strong> Toggle &quot;\&quot; to lock both rows to chord roots</li>
                 <li>• <strong>Pick Direction:</strong> &quot;.&quot; for Down, &quot;,&quot; for Up (1.5x velocity)</li>
                 <li>• <strong>Articulations:</strong> Expressive Hammer-on (0.8x) & Pull-off (0.7x)</li>
               </ul>
-              <ul className="space-y-2 text-purple-600 dark:text-purple-400">
+              <ul className="space-y-2 text-brand dark:text-brand-300">
                 <li>• <strong>Range:</strong> E1–D#3 range for deep, punchy tones</li>
                 <li>• <strong>Octave Shift:</strong> Z / X keys available in Melody mode</li>
                 <li>• <strong>Sustain:</strong> Space for momentary hold, \ for toggle</li>
@@ -250,7 +250,7 @@ export default function GuitarSection() {
                   <span className="text-gray-600 dark:text-gray-400 block mb-2">Chord Keys (Scale Degree):</span>
                   <div className="flex flex-wrap gap-1">
                     {['A (I)', 'B (ii)', 'C (iii)', 'D (IV)', 'E (V)', 'F (vi)', 'G (vii°)'].map(key => (
-                      <kbd key={key} className="px-2 py-1 bg-green-100 dark:bg-green-600 rounded text-xs">
+                      <kbd key={key} className="px-2 py-1 bg-arrange-100 dark:bg-arrange-600 rounded text-xs">
                         {key}
                       </kbd>
                     ))}
@@ -260,7 +260,7 @@ export default function GuitarSection() {
                   <span className="text-gray-600 dark:text-gray-400 block mb-2">Guitar Modifiers:</span>
                   <div className="flex flex-wrap gap-1">
                     {['Q(6)', 'W(7)', 'E(M7)', 'R(add9)', 'T(sus2)', 'Y(sus4)', 'U(m/M)'].map(key => (
-                      <kbd key={key} className="px-2 py-1 bg-purple-100 dark:bg-purple-600 rounded text-xs">
+                      <kbd key={key} className="px-2 py-1 bg-brand-100/50 dark:bg-brand-600 rounded text-xs">
                         {key}
                       </kbd>
                     ))}
@@ -278,7 +278,7 @@ export default function GuitarSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border border-red-200 dark:border-red-700 rounded-xl p-6">
+            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-xl p-6">
               <h4 className="font-semibold text-red-800 dark:text-red-300 mb-3">🎸 Rock & Blues</h4>
               <ul className="space-y-2 text-sm text-red-600 dark:text-red-400">
                 <li>• Use pentatonic scales for solos</li>
@@ -289,9 +289,9 @@ export default function GuitarSection() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 border border-green-200 dark:border-green-700 rounded-xl p-6">
-              <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3">🎵 Folk & Pop</h4>
-              <ul className="space-y-2 text-sm text-green-600 dark:text-green-400">
+            <div className="bg-arrange-50 dark:bg-arrange-900/20 border border-arrange-200 dark:border-arrange-700 rounded-xl p-6">
+              <h4 className="font-semibold text-arrange-800 dark:text-arrange-300 mb-3">🎵 Folk & Pop</h4>
+              <ul className="space-y-2 text-sm text-arrange-600 dark:text-arrange-400">
                 <li>• Focus on chord progressions</li>
                 <li>• Use open chord voicings</li>
                 <li>• Strumming patterns are key</li>
@@ -300,9 +300,9 @@ export default function GuitarSection() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-6">
-              <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">🎼 Jazz & Fusion</h4>
-              <ul className="space-y-2 text-sm text-purple-600 dark:text-purple-400">
+            <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
+              <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">🎼 Jazz & Fusion</h4>
+              <ul className="space-y-2 text-sm text-brand dark:text-brand-300">
                 <li>• Extended chords (7ths, 9ths, 11ths)</li>
                 <li>• Complex chord progressions</li>
                 <li>• Improvisation over changes</li>
@@ -311,7 +311,7 @@ export default function GuitarSection() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
               <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-3">🎸 Bass Playing</h4>
               <ul className="space-y-2 text-sm text-amber-600 dark:text-amber-400">
                 <li>• Lock in with the kick drum</li>
@@ -325,17 +325,17 @@ export default function GuitarSection() {
         </div>
 
         {/* Collaboration Tips */}
-        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-6">
-          <h4 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-3 flex items-center gap-2">
+        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+          <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-3 flex items-center gap-2">
             🤝 Guitar Collaboration Tips
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+            <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li>• <strong>Frequency separation:</strong> Lead guitar in higher register, rhythm in mid-range</li>
               <li>• <strong>Take turns:</strong> Alternate between lead and rhythm roles</li>
               <li>• <strong>Support vocals:</strong> Leave space when someone is singing</li>
             </ul>
-            <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+            <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li>• <strong>Lock with bass:</strong> Coordinate chord progressions and timing</li>
               <li>• <strong>Follow drummer:</strong> Match the groove and feel</li>
               <li>• <strong>Communicate:</strong> Use voice chat to coordinate changes</li>

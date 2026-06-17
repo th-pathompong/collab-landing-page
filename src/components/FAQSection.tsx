@@ -7,7 +7,7 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 const faqs = [
   {
     question: 'Do I need to install any software or plugins?',
-    answer: 'No. COLLAB is 100% browser-based. You don’t need to download anything or install any VSTs. Just open the link, and you’re ready to jam.'
+    answer: 'No. murva is 100% browser-based. You don’t need to download anything or install any VSTs. Just open the link, and you’re ready to jam.'
   },
   {
     question: 'Does it support external MIDI controllers?',
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: 'What about latency? Can we really jam in real-time?',
-    answer: 'We use ultra-low latency WebRTC for voice and an optimized binary protocol for instrument sync. While physics limits us to the speed of light, COLLAB is designed to provide the tightest possible feel for remote collaboration.'
+    answer: 'We use ultra-low latency WebRTC for voice and an optimized binary protocol for instrument sync. While physics limits us to the speed of light, murva is designed to provide the tightest possible feel for remote collaboration.'
   },
   {
     question: 'Is it really free?',
@@ -31,14 +31,14 @@ export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
+    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-brand-900">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mb-6"
+            className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand dark:text-brand-300 mb-6"
           >
             <HelpCircle className="w-8 h-8" />
           </motion.div>

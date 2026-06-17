@@ -8,7 +8,7 @@ const milestones = [
     phase: 'Phase 5',
     title: 'The Jam-to-Arrange Bridge',
     icon: <Zap className="w-6 h-6" />,
-    description: 'Introducing the &quot;Catch!&quot; mechanic. Retroactively save the best moments from your live jams and instantly turn them into structured projects in the Arrange Room.',
+    description: 'Introducing the "Catch!" mechanic. Retroactively save the best moments from your live jams and instantly turn them into structured projects in the Arrange Room.',
     status: 'IN DEVELOPMENT',
     color: 'border-amber-500 text-amber-500'
   },
@@ -18,7 +18,7 @@ const milestones = [
     icon: <Bot className="w-6 h-6" />,
     description: 'Never play alone again. Our autonomous AI bandmates react to your dynamics and style, providing real-time accompaniment that feels alive.',
     status: 'PLANNED',
-    color: 'border-purple-500 text-purple-500'
+    color: 'border-brand-500 text-brand-500'
   },
   {
     phase: 'Phase 7',
@@ -26,13 +26,13 @@ const milestones = [
     icon: <Rocket className="w-6 h-6" />,
     description: 'Full integration with external AI agents. Control your studio with natural language and collaborate with specialized music-focused AI models.',
     status: 'RESEARCH',
-    color: 'border-blue-500 text-blue-500'
+    color: 'border-arrange-500 text-arrange-500'
   }
 ];
 
 export default function RoadmapSection() {
   return (
-    <section id="roadmap" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <section id="roadmap" className="py-24 px-4 sm:px-6 lg:px-8 bg-brand-50 dark:bg-brand-950">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2 
@@ -78,7 +78,7 @@ export default function RoadmapSection() {
           </div>
 
           {/* Vertical Line for Desktop */}
-          <div className="hidden lg:block absolute left-1/2 top-58 bottom-16 w-0.5 bg-gradient-to-b from-green-500 via-purple-400 to-blue-500 -translate-x-1/2 opacity-30" />
+          <div className="hidden lg:block absolute left-1/2 top-58 bottom-16 w-0.5 bg-brand-300 -translate-x-1/2 opacity-30" />
 
           <div className="space-y-12 lg:-space-y-24">
             {milestones.map((milestone, index) => (
@@ -135,7 +135,7 @@ export default function RoadmapSection() {
           >
             <a 
               href="/about#roadmap" 
-              className="inline-flex items-center px-8 py-3 rounded-full border-2 border-purple-600 text-purple-600 dark:text-purple-400 font-bold hover:bg-purple-600 hover:text-white transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-3 rounded-full border-2 border-brand text-brand dark:text-brand-300 font-bold hover:bg-brand hover:text-white transition-all duration-300 group"
             >
               View Full Detailed Roadmap
               <Rocket className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

@@ -5,7 +5,7 @@ export default function ModesSection() {
   return (
     <div className="p-6 sm:p-8">
       <div className="flex items-center gap-3 mb-6">
-        <Layout className="w-8 h-8 text-purple-600" />
+        <Layout className="w-8 h-8 text-brand" />
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
             Experience Modes
@@ -18,9 +18,9 @@ export default function ModesSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
         {/* Perform Room */}
-        <div className="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-6 rounded-2xl border border-purple-200 dark:border-purple-800 shadow-sm transition-all hover:shadow-md">
+        <div className="bg-brand-50 dark:bg-brand-900/20 p-6 rounded-2xl border border-brand-200 dark:border-brand-800 shadow-sm transition-all hover:shadow-md">
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 bg-purple-600 rounded-lg">
+            <div className="p-2 bg-brand-600 rounded-lg">
               <Play className="w-5 h-5 text-white" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Perform Room</h3>
@@ -37,7 +37,7 @@ export default function ModesSection() {
               'Shadow Capture (Retroactive recording)'
             ].map((feature) => (
               <li key={feature} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                <div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+                <div className="w-1.5 h-1.5 bg-brand-500 rounded-full" />
                 {feature}
               </li>
             ))}
@@ -45,9 +45,9 @@ export default function ModesSection() {
         </div>
 
         {/* Arrange Room */}
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 shadow-sm transition-all hover:shadow-md">
+        <div className="bg-brand-50 dark:bg-brand-900/20 p-6 rounded-2xl border border-brand-200 dark:border-brand-800 shadow-sm transition-all hover:shadow-md">
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 bg-blue-600 rounded-lg">
+            <div className="p-2 bg-brand-600 rounded-lg">
               <Radio className="w-5 h-5 text-white" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Arrange Room</h3>
@@ -63,7 +63,7 @@ export default function ModesSection() {
               'Professional mixdown & DAW export'
             ].map((feature) => (
               <li key={feature} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                <div className="w-1.5 h-1.5 bg-brand-500 rounded-full" />
                 {feature}
               </li>
             ))}
@@ -76,7 +76,7 @@ export default function ModesSection() {
         <div>
           <h4 className="font-semibold text-amber-900 dark:text-amber-200">Switching Between Modes</h4>
           <p className="text-sm text-amber-800 dark:text-amber-300 mt-1">
-            Projects in Jam Band are deeply integrated. You can start a jam in a Perform Room, and then open that project in an Arrange Room to further refine and arrangement your recorded parts.
+            Projects in murva are deeply integrated. You can start a jam in a Perform Room, and then open that project in an Arrange Room to further refine and arrangement your recorded parts.
           </p>
         </div>
       </div>

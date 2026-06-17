@@ -1,26 +1,20 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Plus_Jakarta_Sans, Caveat } from "next/font/google";
+import { Figtree, Anuphan } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import NavigationWrapper from "@/components/NavigationWrapper";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/components/constants/navigation";
 
-const spaceGrotesk = Space_Grotesk({
+const figtree = Figtree({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-figtree",
   display: "swap",
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta-sans",
-  display: "swap",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
+const anuphan = Anuphan({
+  subsets: ["latin", "thai"],
+  variable: "--font-anuphan",
   display: "swap",
 });
 
@@ -32,8 +26,8 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "COLLAB - Jam Band | Real-time Collaborative Music Platform",
-    template: "%s | COLLAB - Jam Band",
+    default: "murva | Real-time Collaborative Music Platform",
+    template: "%s | murva",
   },
   description:
     "Create music together in real-time with virtual instruments, ultra-low latency voice chat, and synchronized metronome. Perfect for remote jam sessions, virtual music brainstorming, and collaborative music production. No installation required - jam directly in your browser.",
@@ -77,58 +71,58 @@ export const metadata: Metadata = {
     "collaborative jamming",
     "virtual music studio",
   ],
-  authors: [{ name: "COLLAB Team" }],
-  creator: "COLLAB Team",
-  publisher: "COLLAB",
+  authors: [{ name: "murva Team" }],
+  creator: "murva Team",
+  publisher: "murva",
   category: "Music Application",
   classification: "Music Software",
   other: {
-    "application-name": "COLLAB - Jam Band",
+    "application-name": "murva",
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
-    "apple-mobile-web-app-title": "COLLAB",
-    "msapplication-TileColor": "#667eea",
+    "apple-mobile-web-app-title": "murva",
+    "msapplication-TileColor": "#3D3A6B",
     "msapplication-config": "/browserconfig.xml",
-    "theme-color": "#667eea",
+    "theme-color": "#3D3A6B",
   },
   openGraph: {
-    title: "COLLAB - Jam Band | Real-time Collaborative Music Platform",
+    title: "murva | Real-time Collaborative Music Platform",
     description:
       "Create music together in real-time with virtual instruments, ultra-low latency voice chat, and synchronized metronome. Perfect for remote jam sessions, virtual music brainstorming, and collaborative music production. No installation required - jam directly in your browser.",
     type: "website",
     url: SITE_URL,
-    siteName: "COLLAB - Jam Band",
+    siteName: "murva",
     locale: "en_US",
     images: [
       {
         url: "/images/og/cover-index.webp",
         width: 1200,
         height: 630,
-        alt: "COLLAB - Jam Band | Real-time Collaborative Music Platform - Virtual instruments, voice chat, synchronized metronome",
+        alt: "murva | Real-time Collaborative Music Platform - Virtual instruments, voice chat, synchronized metronome",
         type: "image/webp",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "COLLAB - Jam Band | Real-time Collaborative Music Platform",
+    title: "murva | Real-time Collaborative Music Platform",
     description:
       "Create music together in real-time with virtual instruments, ultra-low latency voice chat, and synchronized metronome. No installation required - jam directly in your browser.",
     images: ["/images/og/cover-index.webp"],
-    creator: "@collab_jamband",
-    site: "@collab_jamband",
+    creator: "@murva_app",
+    site: "@murva_app",
   },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon-32x32.png", sizes: "any" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/icon-32x32.png",
+    shortcut: "/favicon.ico",
   },
   robots: {
     index: true,
@@ -154,7 +148,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "COLLAB",
+    title: "murva",
   },
   formatDetection: {
     email: false,
@@ -169,7 +163,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${spaceGrotesk.variable} ${plusJakartaSans.variable} ${caveat.variable}`}>
+    <html lang="en" className={`scroll-smooth ${figtree.variable} ${anuphan.variable}`}>
       <body className="font-sans antialiased">
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">

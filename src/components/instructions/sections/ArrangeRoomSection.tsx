@@ -5,7 +5,7 @@ export default function ArrangeRoomSection() {
   return (
     <div className="p-6 sm:p-8">
       <div className="flex items-center gap-3 mb-6">
-        <FileMusic className="w-8 h-8 text-blue-600" />
+        <FileMusic className="w-8 h-8 text-brand-600" />
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
             Arrange Room (Collaborative DAW)
@@ -18,20 +18,20 @@ export default function ArrangeRoomSection() {
 
       <div className="space-y-10">
         {/* Governance & Owners */}
-        <section className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+        <section className="bg-brand-50 dark:bg-brand-900/20 p-6 rounded-xl border border-brand-100 dark:border-brand-800">
           <div className="flex items-center gap-3 mb-4">
-            <Users className="w-6 h-6 text-blue-600" />
+            <Users className="w-6 h-6 text-brand-600" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Room & Project Governance</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-bold text-sm mb-2 text-blue-700 dark:text-blue-400">Project Owner</h4>
+              <h4 className="font-bold text-sm mb-2 text-brand-700 dark:text-brand-400">Project Owner</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                 The creator of the project. Has exclusive rights to Save, Lock, and Export (DAW/Mixdown). When a project owner joins, they are automatically promoted to Room Owner.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-sm mb-2 text-blue-700 dark:text-blue-400">Room Owner</h4>
+              <h4 className="font-bold text-sm mb-2 text-brand-700 dark:text-brand-400">Room Owner</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                 Manages the ephemeral session. Can kick users, approve new members (for private rooms), and change room-wide settings like BPM and Scale.
               </p>
@@ -42,7 +42,7 @@ export default function ArrangeRoomSection() {
         {/* The Timeline */}
         <section>
           <div className="flex items-center gap-3 mb-4">
-            <Layers className="w-6 h-6 text-blue-500" />
+            <Layers className="w-6 h-6 text-brand-500" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Multi-Track Editing</h3>
           </div>
           <div className="prose dark:prose-invert text-sm text-gray-600 dark:text-gray-300 max-w-none">
@@ -69,7 +69,7 @@ export default function ArrangeRoomSection() {
         {/* Project Tools */}
         <section>
           <div className="flex items-center gap-3 mb-4">
-            <Download className="w-6 h-6 text-blue-500" />
+            <Download className="w-6 h-6 text-brand-500" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Advanced Export Tools</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -87,10 +87,10 @@ export default function ArrangeRoomSection() {
         {/* Saving & Lock */}
         <section>
           <div className="flex items-center gap-3 mb-4">
-            <Save className="w-6 h-6 text-blue-500" />
+            <Save className="w-6 h-6 text-brand-500" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Project Lock & Contributors</h3>
           </div>
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-6 text-white shadow-lg">
+          <div className="bg-brand-600 rounded-xl p-6 text-white shadow-lg">
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="flex-1">
                 <p className="text-sm opacity-90 leading-relaxed mb-4">

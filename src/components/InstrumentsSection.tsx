@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function InstrumentsSection() {
   return (
-    <section id="instruments" className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20 overflow-hidden">
+    <section id="instruments" className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-brand-900 overflow-hidden">
       {/* Background Image Effect */}
       <div className="absolute inset-0" style={{ opacity: 0.1 }}>
         <Image 
@@ -29,7 +29,7 @@ export default function InstrumentsSection() {
         
         {/* Sound Engine Info */}
         <motion.div 
-          className="text-center mb-16 bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/20 dark:to-blue-900/20 p-8 rounded-3xl"
+          className="text-center mb-16 bg-brand-50 dark:bg-brand-900/20 p-8 rounded-3xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -40,12 +40,12 @@ export default function InstrumentsSection() {
             Experience professional sound quality with our integrated instrument engines, optimized for low-latency performance in the browser.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-2xl shadow-sm border border-purple-50 dark:border-purple-900/30">
-              <h4 className="font-semibold text-purple-600 dark:text-purple-400 mb-2">🎵 Multi-Sampled Instruments</h4>
+            <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-2xl shadow-sm border border-brand-100 dark:border-brand-900/30">
+              <h4 className="font-semibold text-brand dark:text-brand-300 mb-2">🎵 Multi-Sampled Instruments</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Powered by <strong>smplr</strong> - A high-performance soundfont engine delivering authentic acoustic and electronic instrument sounds.</p>
             </div>
-            <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-blue-900/30">
-              <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">🔊 Advanced Synthesis</h4>
+            <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-2xl shadow-sm border border-brand-100 dark:border-brand-900/30">
+              <h4 className="font-semibold text-brand dark:text-brand-300 mb-2">🔊 Advanced Synthesis</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Powered by <strong>Tone.js</strong> - Industry-standard Web Audio framework providing powerful analog and FM synthesis capabilities.</p>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function InstrumentsSection() {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold mb-6 flex items-center">
-                <span className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                <span className="w-12 h-12 bg-perform-500 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white text-xl">🎸</span>
                 </span>
                 Guitar & Bass
@@ -72,19 +72,19 @@ export default function InstrumentsSection() {
                 </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-perform-500 rounded-full"></span>
                   <span className="font-medium">Melody Mode with Scale Assistance</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-perform-500 rounded-full"></span>
                   <span className="font-medium">Chord Mode with Progressions</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-perform-500 rounded-full"></span>
                   <span className="font-medium">Basic Mode for Free Playing</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-perform-500 rounded-full"></span>
                   <span className="font-medium">smplr Soundfont Engine</span>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function InstrumentsSection() {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold mb-6 flex items-center">
-                <span className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                <span className="w-12 h-12 bg-arrange-500 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white text-xl">🎹</span>
                 </span>
                 Keyboard & Synthesizer
@@ -143,19 +143,19 @@ export default function InstrumentsSection() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-arrange-500 rounded-full"></span>
                   <span className="font-medium">QWERTY Musical Mapping</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-cyan-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-arrange-500 rounded-full"></span>
                   <span className="font-medium">Analog & FM Synthesis</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-arrange-500 rounded-full"></span>
                   <span className="font-medium">Chord Trigger System</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-arrange-500 rounded-full"></span>
                   <span className="font-medium">Tone.js Audio Engine</span>
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default function InstrumentsSection() {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold mb-6 flex items-center">
-                <span className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
+                <span className="w-12 h-12 bg-brand-600 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white text-xl">🥁</span>
                 </span>
                 Drum Machine & Drumpad
@@ -184,19 +184,19 @@ export default function InstrumentsSection() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-brand-500 rounded-full"></span>
                   <span className="font-medium">48 Pads across 3 pages</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-emerald-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-brand-500 rounded-full"></span>
                   <span className="font-medium">Per-pad Volume & Velocity sliders</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-brand-500 rounded-full"></span>
                   <span className="font-medium">Save & Load Pad Presets</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-brand-500 rounded-full"></span>
                   <span className="font-medium">General MIDI standard percussion set</span>
                 </div>
               </div>
@@ -245,7 +245,7 @@ export default function InstrumentsSection() {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold mb-6 flex items-center">
-                <span className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+                <span className="w-12 h-12 bg-brand-600 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white text-xl">🎼</span>
                 </span>
                 Step Sequencer
@@ -255,19 +255,19 @@ export default function InstrumentsSection() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-indigo-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-brand-500 rounded-full"></span>
                   <span className="font-medium">16-Step Grid</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-brand-500 rounded-full"></span>
                   <span className="font-medium">Pattern Creation</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-brand-500 rounded-full"></span>
                   <span className="font-medium">Real-Time Editing</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-brand-500 rounded-full"></span>
                   <span className="font-medium">Collaborative Sequencing</span>
                 </div>
               </div>

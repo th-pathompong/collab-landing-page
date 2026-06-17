@@ -5,7 +5,7 @@ export default function MusicTheoryAssistSection() {
   return (
     <div className="p-6 sm:p-8">
       <div className="flex items-center gap-3 mb-6">
-        <Sparkles className="w-8 h-8 text-purple-600" />
+        <Sparkles className="w-8 h-8 text-brand" />
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
             Music Theory Assistance
@@ -20,13 +20,13 @@ export default function MusicTheoryAssistSection() {
         {/* Scale Synchronization */}
         <section>
           <div className="flex items-center gap-3 mb-4">
-            <Music className="w-6 h-6 text-blue-500" />
+            <Music className="w-6 h-6 text-brand-500" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Scale Intelligence</h3>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="prose dark:prose-invert text-sm text-gray-600 dark:text-gray-300">
               <p>
-                In a collaborative room, the Room Owner can set a global key and scale. Jam Band then intelligently synchronizes all instruments to this scale.
+                In a collaborative room, the Room Owner can set a global key and scale. murva then intelligently synchronizes all instruments to this scale.
               </p>
               <ul>
                 <li><strong>Hum-to-Find Scale:</strong> Not sure about the key? Sing or hum into your mic and let our AI suggest the best matching scale for your jam.</li>
@@ -43,7 +43,7 @@ export default function MusicTheoryAssistSection() {
         {/* Chord Trigger Matrix */}
         <section>
           <div className="flex items-center gap-3 mb-4">
-            <Grid className="w-6 h-6 text-blue-500" />
+            <Grid className="w-6 h-6 text-brand-500" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Smart Chord Engine</h3>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -66,11 +66,11 @@ export default function MusicTheoryAssistSection() {
         {/* Intelligent Mapping */}
         <section>
           <div className="flex items-center gap-3 mb-4">
-            <Activity className="w-6 h-6 text-blue-500" />
+            <Activity className="w-6 h-6 text-brand-500" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Intelligent Mapping</h3>
           </div>
-          <div className="bg-blue-50 dark:bg-blue-900/10 p-5 rounded-xl border border-blue-100 dark:border-blue-900">
-            <p className="text-sm text-blue-800 dark:text-blue-300 leading-relaxed">
+          <div className="bg-brand-50 dark:bg-brand-900/10 p-5 rounded-xl border border-brand-100 dark:border-brand-900">
+            <p className="text-sm text-brand-800 dark:text-brand-300 leading-relaxed">
               When playing on a virtual guitar or keyboard, the system &quot;locks&quot; your input to musical intervals that sound good together. This is powered by our real-time music theory engine that calculates intervals on the fly based on the room&apos;s root key.
             </p>
           </div>

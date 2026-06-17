@@ -1,11 +1,11 @@
 {
-  "name": "COLLAB - Jam Band | Real-time Collaborative Music Platform",
-  "short_name": "COLLAB",
-  "description": "Create music together in real-time with virtual instruments, ultra-low latency voice chat, and synchronized metronome. Perfect for remote jam sessions, virtual music brainstorming, and collaborative music production. No installation required.",
+  "name": "murva | Real-time Collaborative Music Platform",
+  "short_name": "murva",
+  "description": "Create music together in real-time with virtual instruments, ultra-low latency voice chat, and synchronized metronome. No installation required — jam directly in your browser.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#667eea",
-  "theme_color": "#667eea",
+  "background_color": "#12152A",
+  "theme_color": "#3D3A6B",
   "orientation": "any",
   "scope": "/",
   "lang": "en-US",
@@ -24,42 +24,38 @@
       "purpose": "any"
     },
     {
-      "src": "/favicon-96x96.png",
-      "sizes": "96x96",
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-32x32.png",
-      "sizes": "32x32",
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
       "type": "image/png",
       "purpose": "any"
     }
   ],
   "shortcuts": [
     {
-      "name": "Try COLLAB App",
+      "name": "Try murva",
       "short_name": "Try App",
-      "description": "Launch the COLLAB music collaboration app",
-      "url": "https://jam-band-fe.vercel.app/",
-      "icons": [
-        {
-          "src": "/icon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
+      "description": "Launch the murva collaborative music app",
+      "url": "https://murva-beta.themiddnight.dev/",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
     },
     {
-      "name": "About COLLAB",
+      "name": "About murva",
       "short_name": "About",
-      "description": "Learn about COLLAB platform",
+      "description": "Learn about murva",
       "url": "/about",
-      "icons": [
-        {
-          "src": "/icon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
     }
   ]
-} 
+}

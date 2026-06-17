@@ -7,7 +7,7 @@ export default function TopSectionGuide() {
     <div className="p-6 sm:p-8">
       <div>
         <div className="flex items-center gap-3 ">
-          <Settings className="w-8 h-8 text-purple-600" />
+          <Settings className="w-8 h-8 text-brand" />
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
               Interface Guide
@@ -37,7 +37,7 @@ export default function TopSectionGuide() {
         {/* Voice Input Section */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Mic className="w-6 h-6 text-green-600" />
+            <Mic className="w-6 h-6 text-arrange-600" />
             Voice Input & Settings
           </h3>
           
@@ -73,9 +73,9 @@ export default function TopSectionGuide() {
             </div>
           </div>
 
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl p-6">
-            <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3">Voice Chat Features:</h4>
-            <ul className="space-y-2 text-sm text-green-700 dark:text-green-300">
+          <div className="bg-arrange-50 dark:bg-arrange-900/20 border border-arrange-200 dark:border-arrange-700 rounded-xl p-6">
+            <h4 className="font-semibold text-arrange-800 dark:text-arrange-300 mb-3">Voice Chat Features:</h4>
+            <ul className="space-y-2 text-sm text-arrange-700 dark:text-arrange-300">
               <li>• <strong>Ultra-low latency:</strong> Optimized for musical timing and real-time performance</li>
               <li>• <strong>WebRTC technology:</strong> Direct peer-to-peer connection for minimal delay</li>
               <li>• <strong>Clean Mode:</strong> Advanced noise reduction and echo cancellation for cleaner audio</li>
@@ -90,7 +90,7 @@ export default function TopSectionGuide() {
         {/* Instrument & Room Controls */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Music className="w-6 h-6 text-purple-600" />
+            <Music className="w-6 h-6 text-brand" />
             Room & Recording Controls
           </h3>
           
@@ -121,17 +121,17 @@ export default function TopSectionGuide() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-6">
-              <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">Jamming (Perform):</h4>
-              <ul className="space-y-2 text-sm text-purple-700 dark:text-purple-300">
+            <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
+              <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">Jamming (Perform):</h4>
+              <ul className="space-y-2 text-sm text-brand-700 dark:text-brand-300">
                 <li>• <strong>Live/Practice Toggle:</strong> Control who hears your performance.</li>
                 <li>• <strong>Swap Instrument:</strong> Instantly switch roles with other members.</li>
                 <li>• <strong>Voice Priority:</strong> Prioritize chat for better coordination.</li>
               </ul>
             </div>
-            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
-              <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">Production (Arrange):</h4>
-              <ul className="space-y-2 text-sm text-blue-700 dark:text-blue-300">
+            <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
+              <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">Production (Arrange):</h4>
+              <ul className="space-y-2 text-sm text-brand-700 dark:text-brand-300">
                 <li>• <strong>Record Engine:</strong> Captures audio regions with high fidelity.</li>
                 <li>• <strong>Split/Trim:</strong> Basic editing tools for audio regions.</li>
                 <li>• <strong>Mixdown:</strong> Export your final arrangement to .WAV.</li>
@@ -141,8 +141,8 @@ export default function TopSectionGuide() {
         </div>
 
         {/* MIDI Device Connection */}
-        <div className="mb-8 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 border border-indigo-200 dark:border-indigo-700 rounded-xl p-8 shadow-sm">
-          <h3 className="text-xl font-bold text-indigo-800 dark:text-indigo-300 mb-4 flex items-center gap-2">
+        <div className="mb-8 bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-8 shadow-sm">
+          <h3 className="text-xl font-bold text-brand-800 dark:text-brand-300 mb-4 flex items-center gap-2">
             <Keyboard className="w-6 h-6" />
             MIDI Device Connection
           </h3>
@@ -152,8 +152,8 @@ export default function TopSectionGuide() {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-200 dark:border-indigo-700">
-                <h4 className="font-semibold text-indigo-700 dark:text-indigo-300 mb-2">Setup Process</h4>
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-brand-200 dark:border-brand-700">
+                <h4 className="font-semibold text-brand-700 dark:text-brand-300 mb-2">Setup Process</h4>
                 <ol className="text-sm text-gray-600 dark:text-gray-400 space-y-1 list-decimal list-inside">
                   <li>Connect your MIDI device via USB or MIDI interface</li>
                   <li>Grant browser MIDI permissions when prompted</li>
@@ -163,8 +163,8 @@ export default function TopSectionGuide() {
                 </ol>
               </div>
               
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-200 dark:border-indigo-700">
-                <h4 className="font-semibold text-indigo-700 dark:text-indigo-300 mb-2">Compatible Devices</h4>
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-brand-200 dark:border-brand-700">
+                <h4 className="font-semibold text-brand-700 dark:text-brand-300 mb-2">Compatible Devices</h4>
                 <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                   <li>• MIDI keyboards and controllers</li>
                   <li>• Drum pads and electronic kits</li>
@@ -175,8 +175,8 @@ export default function TopSectionGuide() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-700">
-              <p className="text-sm text-blue-700 dark:text-blue-300">
+            <div className="bg-brand-50 dark:bg-brand-900/20 rounded-lg p-4 border border-brand-200 dark:border-brand-700">
+              <p className="text-sm text-brand-700 dark:text-brand-300">
                 <strong>Pro Tip:</strong> Use MIDI learn mode to map controller knobs and faders to instrument parameters and effects for real-time performance control.
               </p>
             </div>
@@ -235,15 +235,15 @@ export default function TopSectionGuide() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-4">
+            <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-2">
-                <Clock className="w-5 h-5 text-blue-600" />
-                <h4 className="font-semibold text-blue-800 dark:text-blue-300">Metronome</h4>
+                <Clock className="w-5 h-5 text-brand-600" />
+                <h4 className="font-semibold text-brand-800 dark:text-brand-300">Metronome</h4>
               </div>
-              <p className="text-sm text-blue-700 dark:text-blue-300 mb-3">
+              <p className="text-sm text-brand-700 dark:text-brand-300 mb-3">
                 Synchronized timing reference shared across all room members for perfect coordination.
               </p>
-              <div className="text-xs text-blue-600 dark:text-blue-400">
+              <div className="text-xs text-brand-600 dark:text-brand-400">
                 <strong>Tempo Setting:</strong> Click BPM number to type, use +/- buttons, or tap tempo by clicking the beat indicator multiple times
               </div>
             </div>
@@ -261,12 +261,12 @@ export default function TopSectionGuide() {
               </div>
             </div>
             
-            <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-700 rounded-xl p-4">
+            <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-2">
-                <Volume2 className="w-5 h-5 text-indigo-600" />
-                <h4 className="font-semibold text-indigo-800 dark:text-indigo-300">MIDI Integration</h4>
+                <Volume2 className="w-5 h-5 text-brand-600" />
+                <h4 className="font-semibold text-brand-800 dark:text-brand-300">MIDI Integration</h4>
               </div>
-              <p className="text-sm text-indigo-700 dark:text-indigo-300">
+              <p className="text-sm text-brand-700 dark:text-brand-300">
                 Connect external MIDI controllers and keyboards for full tactile control over virtual instruments.
               </p>
             </div>
@@ -274,11 +274,11 @@ export default function TopSectionGuide() {
         </div>
 
         {/* Tips */}
-        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-6">
-          <h4 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-3 flex items-center gap-2">
+        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+          <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-3 flex items-center gap-2">
             💡 Pro Tips
           </h4>
-          <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+          <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
             <li>• <strong>Start with Practice Mode:</strong> Get familiar with instruments before going live</li>
             <li>• <strong>Test Voice Chat:</strong> Make sure your microphone works before starting a session</li>
             <li>• <strong>Use Scale Helper:</strong> Enable scale highlighting to play in harmony with others</li>

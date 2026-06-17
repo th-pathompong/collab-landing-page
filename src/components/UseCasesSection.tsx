@@ -11,7 +11,7 @@ const useCases = [
     description: 'No more traveling miles for a rehearsal or coordination headaches. Open a Perform Room, invite your bandmates, and jam live from anywhere. Perfect for writing sessions and spontaneous improvisation.',
     features: ['Ultra-low latency audio sync', 'Professional instrument library', 'Room-based band management'],
     image: '/images/perform-room.webp',
-    color: 'from-blue-500 to-indigo-600'
+    color: 'bg-perform-500'
   },
   {
     title: 'For Creators & Influencers',
@@ -19,7 +19,7 @@ const useCases = [
     description: 'Engage your community like never before. Host live jam sessions where subscribers can jump in or watch in high quality via HLS broadcast. Turn your stream into an interactive musical stage.',
     features: ['High-quality HLS broadcasting', 'Subscriber guest slots', 'Interactive audience interaction'],
     image: '/images/app-overview.webp',
-    color: 'from-pink-500 to-rose-600'
+    color: 'bg-perform-600'
   },
   {
     title: 'For Songwriters & Producers',
@@ -27,13 +27,13 @@ const useCases = [
     description: 'Stop the file-sharing madness. Use the Arrange Room to produce tracks together in real-time. Edit MIDI, record ideas, and break through creative blocks with supportive AI assistance.',
     features: ['Collaborative real-time DAW', 'AI-powered idea generation', 'Instant stems & MIDI export'],
     image: '/images/arrange-room.webp',
-    color: 'from-purple-500 to-pink-600'
+    color: 'bg-arrange-500'
   }
 ];
 
 export default function UseCasesSection() {
   return (
-    <section id="use-cases" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <section id="use-cases" className="py-24 px-4 sm:px-6 lg:px-8 bg-brand-50 dark:bg-brand-950">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2 
@@ -51,7 +51,7 @@ export default function UseCasesSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            Whether you’ve been playing for years or just want to try something new, COLLAB meets you where you are.
+            Whether you’ve been playing for years or just want to try something new, murva meets you where you are.
           </motion.p>
         </div>
 
@@ -66,7 +66,7 @@ export default function UseCasesSection() {
               transition={{ delay: index * 0.1 }}
             >
               <div className="relative h-48 overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${useCase.color} opacity-80 group-hover:opacity-60 transition-opacity duration-300 z-10`} />
+                <div className={`absolute inset-0 ${useCase.color} opacity-80 group-hover:opacity-60 transition-opacity duration-300 z-10`} />
                 <Image 
                   src={useCase.image} 
                   alt={useCase.title}
@@ -87,7 +87,7 @@ export default function UseCasesSection() {
                 <ul className="space-y-2">
                   {useCase.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2" />
                       {feature}
                     </li>
                   ))}

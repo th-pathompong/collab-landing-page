@@ -8,7 +8,7 @@ export default function KeyboardSection() {
       <div
       >
         <div className="flex items-center gap-3 ">
-          <Piano className="w-8 h-8 text-purple-600" />
+          <Piano className="w-8 h-8 text-brand" />
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
               Virtual Keyboard
@@ -22,7 +22,7 @@ export default function KeyboardSection() {
         {/* Basic Keyboard */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Piano className="w-6 h-6 text-blue-600" />
+            <Piano className="w-6 h-6 text-brand-600" />
             Basic Keyboard Mode
           </h3>
           
@@ -39,16 +39,16 @@ export default function KeyboardSection() {
             Traditional piano layout with white and black keys
           </p>
 
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
-            <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">Basic Mode Features:</h4>
+          <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
+            <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">Basic Mode Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <ul className="space-y-2 text-blue-600 dark:text-blue-400">
+              <ul className="space-y-2 text-brand-600 dark:text-brand-400">
                 <li>• <strong>Traditional Layout:</strong> Standard piano key arrangement</li>
                 <li>• <strong>Chromatic Scale:</strong> Access to all 12 notes per octave</li>
                 <li>• <strong>Multiple Octaves:</strong> Switch between different octave ranges</li>
                 <li>• <strong>Velocity Control:</strong> Adjust playing dynamics</li>
               </ul>
-              <ul className="space-y-2 text-blue-600 dark:text-blue-400">
+              <ul className="space-y-2 text-brand-600 dark:text-brand-400">
                 <li>• <strong>Sustain Pedal:</strong> Hold notes for longer duration</li>
                 <li>• <strong>Computer Keyboard:</strong> Play with QWERTY keys</li>
                 <li>• <strong>Mouse/Touch:</strong> Click or tap virtual keys</li>
@@ -61,7 +61,7 @@ export default function KeyboardSection() {
         {/* Melody Scale Mode */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Music className="w-6 h-6 text-green-600" />
+            <Music className="w-6 h-6 text-arrange-600" />
             Melody Scale Mode
           </h3>
           
@@ -78,16 +78,16 @@ export default function KeyboardSection() {
             Scale-based layout highlighting notes that work well together
           </p>
 
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl p-6">
-            <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3">Melody Scale Features:</h4>
+          <div className="bg-arrange-50 dark:bg-arrange-900/20 border border-arrange-200 dark:border-arrange-700 rounded-xl p-6">
+            <h4 className="font-semibold text-arrange-800 dark:text-arrange-300 mb-3">Melody Scale Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <ul className="space-y-2 text-green-600 dark:text-green-400">
+              <ul className="space-y-2 text-arrange-600 dark:text-arrange-400">
                 <li>• <strong>Scale Highlighting:</strong> Shows which notes are in the selected scale</li>
                 <li>• <strong>Music Theory Help:</strong> Perfect for learning harmony</li>
                 <li>• <strong>Root Note Selection:</strong> Choose your key (C, D, E, etc.)</li>
                 <li>• <strong>Scale Types:</strong> Major and minor scales available</li>
               </ul>
-              <ul className="space-y-2 text-green-600 dark:text-green-400">
+              <ul className="space-y-2 text-arrange-600 dark:text-arrange-400">
                 <li>• <strong>Color-Coded Keys:</strong> Visual feedback for scale degrees</li>
                 <li>• <strong>Beginner Friendly:</strong> Reduces wrong notes</li>
                 <li>• <strong>Jam Ready:</strong> Always sounds harmonious</li>
@@ -100,7 +100,7 @@ export default function KeyboardSection() {
         {/* Chord Mode */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Layers3 className="w-6 h-6 text-purple-600" />
+            <Layers3 className="w-6 h-6 text-brand" />
             Chord Mode
           </h3>
           
@@ -117,16 +117,16 @@ export default function KeyboardSection() {
             One-key chord playing with automatic chord quality based on scale
           </p>
 
-          <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-xl p-6">
-            <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">Chord Mode Features:</h4>
+          <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
+            <h4 className="font-semibold text-brand-800 dark:text-brand-300 mb-3">Chord Mode Features:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <ul className="space-y-2 text-purple-600 dark:text-purple-400">
+              <ul className="space-y-2 text-brand dark:text-brand-300">
                 <li>• <strong>One-Key Chords:</strong> Play full triads (I–VII) with a single key</li>
                 <li>• <strong>Smart Harmony:</strong> Quality (Maj/Min/Dim) auto-detected from scale</li>
                 <li>• <strong>Arpeggio Control:</strong> N / M keys to adjust arpeggio speed</li>
                 <li>• <strong>Voicing & Spread:</strong> C / V keys to change chord inversion</li>
               </ul>
-              <ul className="space-y-2 text-purple-600 dark:text-purple-400">
+              <ul className="space-y-2 text-brand dark:text-brand-300">
                 <li>• <strong>Modifiers:</strong> Hold Q(6), W(7), E(M7), R(add9), A(sus2), S(sus4)</li>
                 <li>• <strong>Maj/Min Toggle:</strong> Press D to force parallel major/minor</li>
                 <li>• <strong>Visual Suffix:</strong> See active modifiers on keys (e.g., Am7)</li>
@@ -203,27 +203,27 @@ export default function KeyboardSection() {
               <div className="grid grid-cols-2 gap-y-2 text-xs">
                 <div className="flex justify-between items-center pr-4">
                   <span className="text-gray-500">Add 6</span>
-                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">Q</kbd>
+                  <kbd className="px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 rounded">Q</kbd>
                 </div>
                 <div className="flex justify-between items-center pl-4">
                   <span className="text-gray-500">Sus2</span>
-                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">A</kbd>
+                  <kbd className="px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 rounded">A</kbd>
                 </div>
                 <div className="flex justify-between items-center pr-4">
                   <span className="text-gray-500">Dom 7</span>
-                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">W</kbd>
+                  <kbd className="px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 rounded">W</kbd>
                 </div>
                 <div className="flex justify-between items-center pl-4">
                   <span className="text-gray-500">Sus4</span>
-                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">S</kbd>
+                  <kbd className="px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 rounded">S</kbd>
                 </div>
                 <div className="flex justify-between items-center pr-4">
                   <span className="text-gray-500">Major 7</span>
-                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">E</kbd>
+                  <kbd className="px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 rounded">E</kbd>
                 </div>
                 <div className="flex justify-between items-center pl-4">
                   <span className="text-gray-500">Maj/Min Toggle</span>
-                  <kbd className="px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded">D</kbd>
+                  <kbd className="px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 rounded">D</kbd>
                 </div>
               </div>
             </div>
@@ -237,12 +237,12 @@ export default function KeyboardSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20 border border-pink-200 dark:border-pink-700 rounded-xl p-6">
+            <div className="bg-perform-50 dark:bg-perform-900/20 border border-perform-200 dark:border-perform-700 rounded-xl p-6">
               <div className="flex items-center gap-2 mb-3">
-                <Heart className="w-5 h-5 text-pink-600" />
-                <h4 className="font-semibold text-pink-800 dark:text-pink-300">For Beginners</h4>
+                <Heart className="w-5 h-5 text-perform-600" />
+                <h4 className="font-semibold text-perform-800 dark:text-perform-300">For Beginners</h4>
               </div>
-              <ul className="space-y-2 text-sm text-pink-600 dark:text-pink-400">
+              <ul className="space-y-2 text-sm text-perform-600 dark:text-perform-400">
                 <li>• Start with <strong>Melody Scale Mode</strong> to avoid wrong notes</li>
                 <li>• Use <strong>Chord Mode</strong> to play accompaniment easily</li>
                 <li>• Practice with the <strong>metronome</strong> to stay in time</li>
@@ -251,12 +251,12 @@ export default function KeyboardSection() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
+            <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
               <div className="flex items-center gap-2 mb-3">
-                <Piano className="w-5 h-5 text-blue-600" />
-                <h4 className="font-semibold text-blue-800 dark:text-blue-300">For Advanced Players</h4>
+                <Piano className="w-5 h-5 text-brand-600" />
+                <h4 className="font-semibold text-brand-800 dark:text-brand-300">For Advanced Players</h4>
               </div>
-              <ul className="space-y-2 text-sm text-blue-600 dark:text-blue-400">
+              <ul className="space-y-2 text-sm text-brand-600 dark:text-brand-400">
                 <li>• Use <strong>Basic Mode</strong> for full chromatic control</li>
                 <li>• Connect <strong>MIDI controllers</strong> for better expression</li>
                 <li>• Layer with <strong>sequencer patterns</strong> for complex arrangements</li>
@@ -268,17 +268,17 @@ export default function KeyboardSection() {
         </div>
 
         {/* Collaboration Tips */}
-        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-6">
-          <h4 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-3 flex items-center gap-2">
+        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+          <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-3 flex items-center gap-2">
             🤝 Collaboration Tips
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+            <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li>• <strong>Coordinate scales:</strong> Make sure everyone is playing in the same key</li>
               <li>• <strong>Share the spotlight:</strong> Take turns playing lead and accompaniment</li>
               <li>• <strong>Listen actively:</strong> Leave space for other instruments</li>
             </ul>
-            <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-300">
+            <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li>• <strong>Use chord mode for comping:</strong> Perfect backing for soloists</li>
               <li>• <strong>Layer with bass:</strong> Coordinate chord progressions</li>
               <li>• <strong>Follow the drummer:</strong> Lock in with the rhythm section</li>

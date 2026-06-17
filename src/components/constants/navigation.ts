@@ -1,8 +1,12 @@
-// Application URL (The Jam App)
-export const APP_URL = "https://collab-stg.up.railway.app/";
+// Application URL (the murva app itself)
+// Set NEXT_PUBLIC_APP_URL in .env to override; falls back to the beta domain.
+export const APP_URL =
+  process.env.NEXT_PUBLIC_APP_URL ?? "https://murva-beta.themiddnight.dev";
 
-// Site URL (This Landing Page)
-export const SITE_URL = "https://jam-band-landing-page.vercel.app";
+// Site URL (this landing page)
+// Set NEXT_PUBLIC_SITE_URL in .env to override (e.g. for preview deploys).
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://murva.themiddnight.dev";
 
 // Section items that will be in the dropdown
 export const SECTION_MENU_ITEMS = [
@@ -55,8 +59,8 @@ export const ABOUT_SECTION_ITEMS = [
     href: '/about#our-story'
   },
   {
-    label: 'What is COLLAB?',
-    href: '/about#what-is-collab'
+    label: 'What is murva?',
+    href: '/about#what-is-murva'
   },
   {
     label: 'Roadmap',

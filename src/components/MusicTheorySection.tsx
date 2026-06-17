@@ -29,7 +29,7 @@ const theoryFeatures = [
 
 export default function MusicTheorySection() {
   return (
-    <section id="music-theory" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white dark:from-purple-900/10 dark:to-gray-900">
+    <section id="music-theory" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-brand-900">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <motion.div 
@@ -41,18 +41,18 @@ export default function MusicTheorySection() {
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               Focus on the Vibe.<br />
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="text-brand dark:text-brand-300">
                 Not the Technicalities.
               </span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Don&apos;t let music theory slow down your creative flow. COLLAB&apos;s assistive tools handle the heavy lifting, helping you find the right scales and chords so you can stay in the zone.
+              Don&apos;t let music theory slow down your creative flow. murva&apos;s assistive tools handle the heavy lifting, helping you find the right scales and chords so you can stay in the zone.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {theoryFeatures.map((feature) => (
                 <div key={feature.title} className="flex flex-col space-y-3">
-                  <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                  <div className="w-12 h-12 rounded-xl bg-brand-100/50 dark:bg-brand-900/30 flex items-center justify-center text-brand dark:text-brand-300">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg font-bold">{feature.title}</h3>
@@ -82,8 +82,8 @@ export default function MusicTheorySection() {
                </div>
             </div>
             {/* Decorative blobs */}
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-purple-300 dark:bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-300 dark:bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob delay-2000"></div>
+            <div className="absolute -top-10 -right-10 w-64 h-64 bg-brand-300 dark:bg-brand-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-arrange-300 dark:bg-arrange-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob delay-2000"></div>
           </motion.div>
         </div>
       </div>

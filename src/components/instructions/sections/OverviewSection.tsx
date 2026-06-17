@@ -8,10 +8,10 @@ export default function OverviewSection() {
       <div
       >
         <div className="flex items-center gap-3 ">
-          <Music className="w-8 h-8 text-purple-600" />
+          <Music className="w-8 h-8 text-brand" />
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-              Welcome to <span className="font-brand">COLLAB</span> - Jam Band
+              Welcome to <span className="font-wordmark text-brand dark:text-brand-300">murva</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mt-1">
               Your gateway to real-time collaborative music making
@@ -24,7 +24,7 @@ export default function OverviewSection() {
           <div className="relative rounded-xl overflow-hidden shadow-lg">
             <Image
               src="/images/lobby-entry.webp"
-              alt="COLLAB - Jam Band App Overview"
+              alt="murva App Overview"
               width={1200}
               height={800}
               className="w-full h-auto"
@@ -36,14 +36,14 @@ export default function OverviewSection() {
           </p>
         </div>
 
-        {/* What is <span className="font-brand">COLLAB</span> - Jam Band */}
+        {/* What is murva */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            What is <span className="font-brand">COLLAB</span> - Jam Band?
+            What is <span className="font-wordmark text-brand dark:text-brand-300">murva</span>?
           </h3>
           <div className="prose dark:prose-invert max-w-none">
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              <span className="font-brand">COLLAB</span> - Jam Band is a revolutionary web-based platform that enables musicians to create music together in real-time, 
+              <span className="font-wordmark text-brand dark:text-brand-300">murva</span> is a revolutionary web-based platform that enables musicians to create music together in real-time,
               regardless of their physical location. Whether you&apos;re a beginner or an experienced musician, our platform provides 
               the tools you need to jam, create, and collaborate.
             </p>
@@ -61,10 +61,10 @@ export default function OverviewSection() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div
-              className="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-purple-200 dark:border-purple-700"
+              className="bg-brand-50 dark:bg-brand-900/20 p-6 rounded-xl border border-brand-200 dark:border-brand-700"
             >
               <div className="flex items-center gap-3 mb-3">
-                <Music className="w-6 h-6 text-purple-600" />
+                <Music className="w-6 h-6 text-brand" />
                 <h4 className="font-semibold text-gray-900 dark:text-white">Perform Rooms</h4>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -73,10 +73,10 @@ export default function OverviewSection() {
             </div>
 
             <div
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700"
+              className="bg-brand-50 dark:bg-brand-900/20 p-6 rounded-xl border border-brand-200 dark:border-brand-700"
             >
               <div className="flex items-center gap-3 mb-3">
-                <Users className="w-6 h-6 text-blue-600" />
+                <Users className="w-6 h-6 text-brand-600" />
                 <h4 className="font-semibold text-gray-900 dark:text-white">Arrange Rooms</h4>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -85,7 +85,7 @@ export default function OverviewSection() {
             </div>
 
             <div
-              className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 p-6 rounded-xl border border-amber-200 dark:border-amber-700"
+              className="bg-amber-50 dark:bg-amber-900/20 p-6 rounded-xl border border-amber-200 dark:border-amber-700"
             >
               <div className="flex items-center gap-3 mb-3">
                 <Heart className="w-6 h-6 text-amber-600" />
@@ -97,10 +97,10 @@ export default function OverviewSection() {
             </div>
 
             <div
-              className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20 p-6 rounded-xl border border-pink-200 dark:border-pink-700"
+              className="bg-perform-50 dark:bg-perform-900/20 p-6 rounded-xl border border-perform-200 dark:border-perform-700"
             >
               <div className="flex items-center gap-3 mb-3">
-                <Zap className="w-6 h-6 text-pink-600" />
+                <Zap className="w-6 h-6 text-perform-600" />
                 <h4 className="font-semibold text-gray-900 dark:text-white">Pro Tools</h4>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -115,10 +115,10 @@ export default function OverviewSection() {
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Getting Started
           </h3>
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
+          <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-700 rounded-xl p-6">
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 bg-brand-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                   1
                 </div>
                 <div>
@@ -130,7 +130,7 @@ export default function OverviewSection() {
               </div>
               
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 bg-brand-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                   2
                 </div>
                 <div>
@@ -142,7 +142,7 @@ export default function OverviewSection() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 bg-arrange-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                   3
                 </div>
                 <div>
@@ -171,7 +171,7 @@ export default function OverviewSection() {
             </div>
             
             <div className="text-center p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
-              <Users className="w-8 h-8 text-blue-500 mx-auto mb-2" />
+              <Users className="w-8 h-8 text-brand-500 mx-auto mb-2" />
               <h4 className="font-medium text-gray-900 dark:text-white mb-1">Remote Bands</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400">
                 Musicians separated by distance who want to jam together
@@ -179,7 +179,7 @@ export default function OverviewSection() {
             </div>
             
             <div className="text-center p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
-              <Music className="w-8 h-8 text-purple-500 mx-auto mb-2" />
+              <Music className="w-8 h-8 text-brand-500 mx-auto mb-2" />
               <h4 className="font-medium text-gray-900 dark:text-white mb-1">Music Education</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400">
                 Teachers and students for interactive music lessons

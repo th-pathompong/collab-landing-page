@@ -43,7 +43,7 @@ const technicalRequirements = [
 
 export default function TechnicalRequirementsSection() {
   return (
-    <section id="technical-requirements" className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-orange-50 to-red-50 dark:from-gray-800 dark:via-orange-900/20 dark:to-red-900/20 overflow-hidden">
+    <section id="technical-requirements" className="relative py-16 px-4 sm:px-6 lg:px-8 bg-brand-50 dark:bg-brand-950 overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
           className="text-center mb-16"
@@ -52,7 +52,7 @@ export default function TechnicalRequirementsSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
             Technical Requirements & Notes
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -64,7 +64,7 @@ export default function TechnicalRequirementsSection() {
           {technicalRequirements.map((requirement, index) => (
             <motion.div
               key={requirement.title}
-              className="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-orange-100 dark:border-orange-800"
+              className="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-brand-100 dark:border-brand-800"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -72,7 +72,7 @@ export default function TechnicalRequirementsSection() {
               whileHover={{ y: -3, scale: 1.02 }}
             >
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-xl">{requirement.icon}</span>
                 </div>
                 <div className="flex-1">
@@ -80,7 +80,7 @@ export default function TechnicalRequirementsSection() {
                     <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
                       {requirement.title}
                     </h3>
-                    <span className="px-3 py-1 text-xs font-medium rounded-md bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300">
+                    <span className="px-3 py-1 text-xs font-medium rounded-md bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300">
                       {requirement.status}
                     </span>
                   </div>
@@ -95,14 +95,14 @@ export default function TechnicalRequirementsSection() {
 
         {/* Additional Info Box */}
         <motion.div 
-          className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6"
+          className="mt-12 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/60 rounded-xl p-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
         >
           <div className="flex items-center space-x-3 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center">
               <span className="text-white text-lg">💡</span>
             </div>
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
@@ -111,19 +111,19 @@ export default function TechnicalRequirementsSection() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600 dark:text-gray-300">
             <div className="flex items-center space-x-2">
-              <span className="text-blue-500">•</span>
+              <span className="text-amber-500 dark:text-amber-400">•</span>
               <span>Use a Chromium-based browser (Chrome, Edge, Brave) for full MIDI and Audio support</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-blue-500">•</span>
+              <span className="text-amber-500 dark:text-amber-400">•</span>
               <span>Connect via Ethernet/LAN for the most stable real-time synchronization</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-blue-500">•</span>
+              <span className="text-amber-500 dark:text-amber-400">•</span>
               <span>Use wired headphones to minimize audio latency and prevent feedback loops</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-blue-500">•</span>
+              <span className="text-amber-500 dark:text-amber-400">•</span>
               <span>Start with a &quot;Perform Room&quot; for quick jamming, or &quot;Arrange Room&quot; for production</span>
             </div>
           </div>

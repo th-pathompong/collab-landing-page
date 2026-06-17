@@ -1,32 +1,33 @@
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/components/constants/navigation';
 
 export const metadata: Metadata = {
-  title: "Feedback - COLLAB | Help Us Improve",
-  description: "Share your feedback, report bugs, or request new features for COLLAB. Your input helps us create a better music collaboration experience for all musicians.",
+  title: "Feedback - murva | Help Us Improve",
+  description: "Share your feedback, report bugs, or request new features for murva. Your input helps us create a better music collaboration experience for all musicians.",
   openGraph: {
-    title: "Feedback - COLLAB | Help Us Improve",
-    description: "Share your feedback, report bugs, or request new features for COLLAB. Your input helps us create a better music collaboration experience for all musicians.",
+    title: "Feedback - murva | Help Us Improve",
+    description: "Share your feedback, report bugs, or request new features for murva. Your input helps us create a better music collaboration experience for all musicians.",
     type: "website",
-    url: "https://jam-band-landing-page.vercel.app/feedback",
-    siteName: "COLLAB - Jam Band",
+    url: `${SITE_URL}/feedback`,
+    siteName: "murva",
     locale: "en_US",
     images: [
       {
         url: "/images/og/cover-feedback.webp",
         width: 1200,
         height: 630,
-        alt: "Feedback - COLLAB | Help Us Improve",
+        alt: "Feedback - murva | Help Us Improve",
         type: "image/webp",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Feedback - COLLAB | Help Us Improve",
-    description: "Share your feedback, report bugs, or request new features for COLLAB. Your input helps us create a better music collaboration experience for all musicians.",
+    title: "Feedback - murva | Help Us Improve",
+    description: "Share your feedback, report bugs, or request new features for murva. Your input helps us create a better music collaboration experience for all musicians.",
     images: ["/images/og/cover-feedback.webp"],
-    creator: "@jam_band",
-    site: "@jam_band",
+    creator: "@murva_app",
+    site: "@murva_app",
   },
 };
 
