@@ -6,17 +6,17 @@ import { Rocket, Bot, Zap } from 'lucide-react';
 const milestones = [
   {
     phase: 'Phase 5',
-    title: 'The Jam-to-Arrange Bridge',
-    icon: <Zap className="w-6 h-6" />,
-    description: 'Introducing the "Catch!" mechanic. Retroactively save the best moments from your live jams and instantly turn them into structured projects in the Arrange Room.',
+    title: 'Virtual Sessionists',
+    icon: <Bot className="w-6 h-6" />,
+    description: 'Never play alone again. Our autonomous AI bandmates react to your dynamics and style, providing real-time accompaniment that feels alive.',
     status: 'IN DEVELOPMENT',
     color: 'border-amber-500 text-amber-500'
   },
   {
     phase: 'Phase 6',
-    title: 'Virtual Sessionists',
-    icon: <Bot className="w-6 h-6" />,
-    description: 'Never play alone again. Our autonomous AI bandmates react to your dynamics and style, providing real-time accompaniment that feels alive.',
+    title: 'The Jam-to-Arrange Bridge',
+    icon: <Zap className="w-6 h-6" />,
+    description: 'Introducing the "Catch!" mechanic. Retroactively save the best moments from your live jams and instantly turn them into structured projects in the Arrange Room.',
     status: 'PLANNED',
     color: 'border-brand-500 text-brand-500'
   },
@@ -26,7 +26,7 @@ const milestones = [
     icon: <Rocket className="w-6 h-6" />,
     description: 'Full integration with external AI agents. Control your studio with natural language and collaborate with specialized music-focused AI models.',
     status: 'RESEARCH',
-    color: 'border-arrange-500 text-arrange-500'
+    color: 'border-brand-500 text-brand-500'
   }
 ];
 
