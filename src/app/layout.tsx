@@ -94,22 +94,14 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "murva",
     locale: "en_US",
-    images: [
-      {
-        url: "/images/og/cover-index.webp",
-        width: 1200,
-        height: 630,
-        alt: "murva | Real-time Collaborative Music Platform - Virtual instruments, voice chat, synchronized metronome",
-        type: "image/webp",
-      },
-    ],
+    // og:image is generated dynamically by src/app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
     title: "murva | Real-time Collaborative Music Platform",
     description:
       "Create music together in real-time with virtual instruments, ultra-low latency voice chat, and synchronized metronome. No installation required - jam directly in your browser.",
-    images: ["/images/og/cover-index.webp"],
+    // twitter:image is generated dynamically by src/app/opengraph-image.tsx
     creator: "@murva_app",
     site: "@murva_app",
   },

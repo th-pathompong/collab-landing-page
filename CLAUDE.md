@@ -154,10 +154,52 @@ collab-landing-page/
 Every page/layout must define `export const metadata: Metadata` with:
 - `title` — page-specific, format: `"Page Name | murva"` (root layout uses template)
 - `description`
-- `openGraph.title` + `openGraph.description` + `openGraph.images`
+- `openGraph.title` + `openGraph.description`
 - Twitter/OG social fields where relevant
 
 Root layout (`app/layout.tsx`) sets the default template and fallback metadata.
+
+> **Do NOT add `openGraph.images` / `twitter.images` to metadata.** OG images are
+> generated dynamically by the `opengraph-image.tsx` file convention (see below), which
+> auto-injects the correct `og:image` + `twitter:image` tags. Adding manual `images`
+> would produce duplicate tags.
+
+### Open Graph (social share) Images
+
+OG / Twitter card images are **generated dynamically at build time** with `next/og`
+(`ImageResponse`) via Next.js's file convention — there are no static `.webp`/`.png`
+cover files to maintain.
+
+**File layout**
+
+| File | Role |
+|------|------|
+| `src/lib/og.tsx` | Shared renderer `renderOgImage({ title, subtitle, eyebrow })` + the visual layout (brand gradient, wordmark, pill, stacked app screenshots). **Edit here to change the design.** |
+| `src/app/opengraph-image.tsx` | Home card — passes its own `title` / `subtitle` / `eyebrow`. |
+| `src/app/about/opengraph-image.tsx` | About card. |
+| `src/app/feedback/opengraph-image.tsx` | Feedback card. |
+
+**To change the copy on a card** (the common future task): edit the `title` / `subtitle`
+/ `eyebrow` strings in that page's `opengraph-image.tsx`. Each file also exports an `alt`
+string — keep it in sync with the title for accessibility/SEO. The home copy currently
+mirrors the hero (`HeroSection.tsx`): *"Jam Live. Produce Together."* — when the hero copy
+changes, update the home card to match.
+
+**To change the design / layout** (fonts, colours, screenshot arrangement): edit the JSX
+in `src/lib/og.tsx`. All three cards share it, so one edit updates every card.
+
+**Assets used by the renderer** (paths are read from disk via `process.cwd()`):
+- Fonts: `src/assets/fonts/Figtree-{400,700}.ttf` — **static** instances. Satori (the engine
+  behind `next/og`) **cannot read variable fonts** (throws `Cannot read properties of
+  undefined (reading '256')`). If you swap fonts, instance a static weight first, e.g.
+  `python3 -m fontTools.varLib.instancer Figtree[wght].ttf wght=700 -o Figtree-700.ttf`.
+- Screenshots: `public/images/og/app-{arrange,perform}.jpg` — optimized app captures
+  (resized ~1500px, JPEG). Source screenshots live in the app project, not this repo.
+- Logo: `public/images/logo/logo_color.svg` (embedded as a base64 data URI).
+
+**Verify a change**: run `npm run dev` and open `/opengraph-image`, `/about/opengraph-image`,
+`/feedback/opengraph-image` — each must return `200 image/png`. The bound `og:image` URL
+resolves against `metadataBase` (`SITE_URL`) in production.
 
 ### Structured Data
 

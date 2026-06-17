@@ -11,21 +11,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/feedback`,
     siteName: "murva",
     locale: "en_US",
-    images: [
-      {
-        url: "/images/og/cover-feedback.webp",
-        width: 1200,
-        height: 630,
-        alt: "Feedback - murva | Help Us Improve",
-        type: "image/webp",
-      },
-    ],
+    // og:image is generated dynamically by src/app/feedback/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
     title: "Feedback - murva | Help Us Improve",
     description: "Share your feedback, report bugs, or request new features for murva. Your input helps us create a better music collaboration experience for all musicians.",
-    images: ["/images/og/cover-feedback.webp"],
+    // twitter:image is generated dynamically by src/app/feedback/opengraph-image.tsx
     creator: "@murva_app",
     site: "@murva_app",
   },

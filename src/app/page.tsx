@@ -64,7 +64,7 @@ export default function HomePage() {
         "Real-time chat system",
         "Network diagnostics and performance monitoring"
       ],
-      "screenshot": `${SITE_URL}/images/og/cover-index.webp`,
+      "screenshot": `${SITE_URL}/opengraph-image`,
       "softwareVersion": "1.0.0",
       "datePublished": "2024-08-27",
       "dateModified": "2026-02-22",

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About murva - Real-time Collaborative Music Platform",
     description: "Learn about murva, a Proof of Concept for real-time collaborative music creation. Built with modern web technologies including React, Next.js, Tone.js, and WebRTC to explore the possibilities of virtual jamming and collaborative music production.",
-    images: ["/images/og/cover-index.webp"],
+    // og:image is generated dynamically by src/app/about/opengraph-image.tsx
   },
   keywords: [
     "murva about",
