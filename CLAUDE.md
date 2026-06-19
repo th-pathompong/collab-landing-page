@@ -81,13 +81,25 @@ Do not write "COLLAB", "Jam Band", or "collab-landing-page" in any user-visible 
 **Rule:** Never use raw `#hex` colors in components. Use `brand-*` Tailwind tokens or CSS variables (`--color-brand`, etc.).
 **Rule:** Do not use `purple-*` or `blue-*` as primary brand colors — these were the old palette. Use `brand-*`.
 
-### CSS Variables (defined in `globals.css` via `@theme`)
+### Design Token System (`globals.css`)
 
-```
---color-brand, --color-brand-light, --color-brand-dark
---color-bg, --color-surface, --color-border, --color-text-primary
---font-sans, --font-display, --font-brand
-```
+Source of truth: **`murva-brand/tokens.css`** — values copied manually, not imported.
+
+`globals.css` มี 3 ส่วน:
+
+**`@theme {}` — Tailwind utility generation + structural light defaults**
+- Primitive scales: `--color-brand-50..950`, `--color-perform-50..900`, `--color-arrange-50..900`, `--color-amber-50..950`
+- Structural semantic defaults (light): `--color-bg`, `--color-surface`, `--color-border`, `--color-text-primary`, `--color-surface-raised`
+
+**`:root {}` — Standalone semantic light defaults**
+- `--color-primary`, `--color-perform`, `--color-arrange`, `--color-success`, `--color-error`, `--color-warning`, `--color-info`, `--color-neutral`
+- `--color-border-strong`, `--color-text-secondary`, `--color-text-disabled`, `--color-focus-ring`, `--color-overlay`, `--color-skeleton-*`
+- (เหล่านี้ไม่ใส่ใน `@theme` เพราะ Tailwind v4 silently drops standalone non-scale tokens)
+
+**`.dark {}` — Dark theme overrides**
+- Override ทุก semantic token ด้วย dark values เมื่อ `ThemeProvider` ใส่ `.dark` class บน `<html>`
+
+**Font vars:** `--font-sans`, `--font-display`, `--font-brand` อยู่ใน `@theme`
 
 ---
 
@@ -207,13 +219,24 @@ Pages that need SEO structured data use `<Script>` with `type="application/ld+js
 
 ### Dark Mode
 
-Dark mode uses the `class` strategy (`darkMode: 'class'` in Tailwind config).
-Always provide both light and dark variants for interactive or colored elements:
-- `text-gray-700 dark:text-gray-300`
-- `bg-white dark:bg-gray-800`
-- `text-brand dark:text-brand-300`
+Dark mode uses the `class` strategy — `ThemeProvider` toggles `.dark` class บน `<html>`.
+`ThemeProvider` และ `ThemeToggle` handle toggle logic — do not reimplement.
 
-`ThemeProvider` and `ThemeToggle` handle the toggle logic — do not reimplement.
+**Prefer semantic tokens** ที่ auto-switch ตาม theme แทน explicit `dark:` pairs:
+
+| แทนที่ | ใช้แทน |
+|--------|--------|
+| `bg-white dark:bg-gray-900` | `bg-bg` |
+| `bg-white dark:bg-gray-800` | `bg-surface` หรือ `bg-surface-raised` |
+| `border-gray-200 dark:border-gray-700` | `border-border` |
+| `text-gray-900 dark:text-white` | `text-text-primary` (ถ้า map ได้) |
+
+**คง `dark:` pairs ไว้** สำหรับ intentional design choices ที่ไม่ใช่ neutral switching:
+- `bg-brand-50 dark:bg-brand-950` — tinted section (deliberate)
+- `text-brand dark:text-brand-300` — brand accent pair (deliberate)
+- `text-gray-600 dark:text-gray-300` — neutral prose (ไม่ map ไป brand token)
+
+**ห้ามใส่** `dark:` variant ด้วย gray/white values แล้วหวังให้มันสะท้อน brand — ให้ใช้ semantic token แทน
 
 ### Navigation Constants
 
@@ -282,8 +305,8 @@ npm run lint
 
 | Resource | Location |
 |----------|---------|
-| **murva app (monorepo)** | `~/Sites/Personal/collab-monorepo/` |
-| **Monorepo CLAUDE.md** | `collab-monorepo/CLAUDE.md` — full product/tech context |
+| **murva app (monorepo)** | `~/Sites/Personal/murva/murva-app/` |
+| **Monorepo CLAUDE.md** | `murva-app/CLAUDE.md` — full product/tech context |
 | **murva - app (Linear project)** | https://linear.app/pathompong-thitithan/project/murva-app-cc69e94f6179 |
 
 > When a task spans both the landing page and the app (e.g. shared domains, SEO, brand, cross-linking), check the monorepo code + the **murva - app** Linear project for related/in-flight work before starting.

@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { OG_COLORS } from "./og-colors";
 
 /** Shared config + renderer for the file-convention OG images (home, about, feedback). */
 export const OG_SIZE = { width: 1200, height: 630 } as const;
@@ -47,9 +48,9 @@ export async function renderOgImage({
           position: "relative",
           overflow: "hidden",
           fontFamily: "Figtree",
-          backgroundColor: "#0D0F1A",
+          backgroundColor: OG_COLORS.bg,
           backgroundImage:
-            "linear-gradient(135deg, #161A33 0%, #0D0F1A 55%, #0B0D16 100%)",
+            `linear-gradient(135deg, ${OG_COLORS.bgGradientStart} 0%, ${OG_COLORS.bg} 55%, ${OG_COLORS.bgGradientEnd} 100%)`,
         }}
       >
         {/* Brand gradient glow */}
@@ -61,8 +62,7 @@ export async function renderOgImage({
             width: "720px",
             height: "720px",
             borderRadius: "9999px",
-            backgroundImage:
-              "radial-gradient(circle, rgba(139,92,246,0.45) 0%, rgba(238,91,183,0.12) 45%, rgba(13,15,26,0) 70%)",
+            backgroundImage: OG_COLORS.glowGradient,
           }}
         />
 
@@ -76,8 +76,8 @@ export async function renderOgImage({
             display: "flex",
             borderRadius: "14px",
             overflow: "hidden",
-            border: "1px solid rgba(152,150,200,0.25)",
-            boxShadow: "0 30px 70px rgba(0,0,0,0.5)",
+            border: `1px solid ${OG_COLORS.cardBorderSubtle}`,
+            boxShadow: `0 30px 70px ${OG_COLORS.shadowSubtle}`,
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -94,8 +94,8 @@ export async function renderOgImage({
             display: "flex",
             borderRadius: "16px",
             overflow: "hidden",
-            border: "1px solid rgba(152,150,200,0.4)",
-            boxShadow: "0 45px 100px rgba(0,0,0,0.65)",
+            border: `1px solid ${OG_COLORS.cardBorderStrong}`,
+            boxShadow: `0 45px 100px ${OG_COLORS.shadowStrong}`,
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -123,7 +123,7 @@ export async function renderOgImage({
                 marginLeft: "16px",
                 fontSize: "46px",
                 fontWeight: 700,
-                color: "#EDEBF7",
+                color: OG_COLORS.textWordmark,
                 letterSpacing: "-0.5px",
               }}
             >
@@ -139,11 +139,11 @@ export async function renderOgImage({
                   fontSize: "18px",
                   fontWeight: 600,
                   letterSpacing: "3px",
-                  color: "#C9C5EC",
+                  color: OG_COLORS.textEyebrow,
                   padding: "8px 18px",
                   borderRadius: "9999px",
-                  border: "1px solid rgba(139,92,246,0.55)",
-                  backgroundColor: "rgba(139,92,246,0.14)",
+                  border: `1px solid ${OG_COLORS.pillBorder}`,
+                  backgroundColor: OG_COLORS.pillBackground,
                 }}
               >
                 {eyebrow}
@@ -159,7 +159,7 @@ export async function renderOgImage({
               fontWeight: 700,
               lineHeight: 1.05,
               letterSpacing: "-1.5px",
-              color: "#FFFFFF",
+              color: OG_COLORS.textPrimary,
             }}
           >
             {title}
@@ -173,7 +173,7 @@ export async function renderOgImage({
               fontSize: "26px",
               fontWeight: 400,
               lineHeight: 1.35,
-              color: "#A6A2CE",
+              color: OG_COLORS.textSubtitle,
               maxWidth: "500px",
             }}
           >
@@ -189,10 +189,10 @@ export async function renderOgImage({
                 borderRadius: "9999px",
                 marginRight: "18px",
                 backgroundImage:
-                  "linear-gradient(90deg, #ee5bb7 0%, #8b5cf6 50%, #3fc4dc 100%)",
+                  `linear-gradient(90deg, ${OG_COLORS.glowPink} 0%, ${OG_COLORS.glowViolet} 50%, ${OG_COLORS.glowCyan} 100%)`,
               }}
             />
-            <span style={{ fontSize: "22px", fontWeight: 600, color: "#8E8AB8" }}>
+            <span style={{ fontSize: "22px", fontWeight: 600, color: OG_COLORS.textDomain }}>
               murva.themiddnight.dev
             </span>
           </div>

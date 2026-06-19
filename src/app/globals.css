@@ -20,13 +20,12 @@
   --color-brand-800: #1E2240;
   --color-brand-900: #12152A;
   --color-brand-950: #0D0F1A;
-  --color-bg: #0D0F1A;
-  --color-surface: #12152A;
-  --color-border: #1E2240;
-  --color-text-primary: #D8D0F0;
+  --color-bg:           #FAF8F5;
+  --color-surface:      #F2EDE6;
+  --color-border:       #E6DFD5;
+  --color-text-primary: #1C1A33;
 
-  /* Room accent — Perform Room (coral pink, hsl ~322) */
-  --color-perform: #D43F93;
+  /* Room accent — Perform Room scale (hsl ~322) */
   --color-perform-50: #FBE9F4;
   --color-perform-100: #F6CDE7;
   --color-perform-200: #EFA3D2;
@@ -52,8 +51,7 @@
   --color-amber-900: #78350F;
   --color-amber-950: #451A03;
 
-  /* Room accent — Arrange Room (cyan-teal, hsl ~188) */
-  --color-arrange: #2AA7BE;
+  /* Room accent — Arrange Room scale (hsl ~188) */
   --color-arrange-50: #E7F6F9;
   --color-arrange-100: #C6EAF0;
   --color-arrange-200: #97D9E4;
@@ -64,6 +62,76 @@
   --color-arrange-700: #1B6B7A;
   --color-arrange-800: #154E5A;
   --color-arrange-900: #103A43;
+
+  /* Surface extras — these DO generate used utilities (bg-surface-raised) */
+  --color-surface-raised:   #FFFFFF;
+}
+
+/*
+ * Semantic tokens — defined outside @theme so they are plain CSS custom properties.
+ * Tailwind v4 drops standalone (non-scale) semantic tokens from @theme silently.
+ *
+ * Light theme defaults:
+ */
+:root {
+  --color-primary:         #3D3A6B; /* brand-600 on warm-white */
+  --color-primary-content: #FAF8F5;
+
+  --color-perform:         #C13D8E; /* deeper for light-bg contrast */
+  --color-perform-content: #FFFFFF;
+  --color-arrange:         #1F8898; /* deeper for light-bg contrast */
+  --color-arrange-content: #FFFFFF;
+
+  --color-success:         #16A34A;
+  --color-success-content: #FFFFFF;
+  --color-error:           #DC2626;
+  --color-error-content:   #FFFFFF;
+  --color-warning:         #D97706;
+  --color-warning-content: #FFFFFF;
+  --color-info:            #3B82F6;
+  --color-info-content:    #FFFFFF;
+  --color-neutral:         #1C1A33;
+  --color-neutral-content: #FAF8F5;
+
+  --color-border-strong:   #B4AEDE;
+  --color-text-secondary:  #5C5998;
+  --color-text-disabled:   #9896C8;
+  --color-focus-ring:      #3D3A6B;
+  --color-overlay:         rgba(28, 26, 51, 0.50);
+  --color-skeleton-base:   #E6DFD5;
+  --color-skeleton-shimmer:#FAF8F5;
+}
+
+/* Dark theme — overrides @theme semantic defaults when ThemeProvider adds .dark to <html> */
+.dark {
+  --color-bg:              #0D0F1A;
+  --color-surface:         #12152A;
+  --color-surface-raised:  #1A1D35;
+  --color-border:          #1E2240;
+  --color-border-strong:   #2E2B52;
+  --color-text-primary:    #D8D0F0;
+  --color-text-secondary:  #9896C8;
+  --color-text-disabled:   #7A77B0;
+  --color-primary:         #877DCA;
+  --color-primary-content: #15132E;
+  --color-perform:         #D846AC;
+  --color-perform-content: #2E0A22;
+  --color-arrange:         #35A5B6;
+  --color-arrange-content: #06262B;
+  --color-success:         #36D399;
+  --color-success-content: #04140D;
+  --color-error:           #F87272;
+  --color-error-content:   #2A0A0A;
+  --color-warning:         #FBBD23;
+  --color-warning-content: #221A02;
+  --color-info:            #5B8DEF;
+  --color-info-content:    #050F24;
+  --color-neutral:         #1E2240;
+  --color-neutral-content: #D8D0F0;
+  --color-focus-ring:      #877DCA;
+  --color-overlay:         rgba(13, 15, 26, 0.75);
+  --color-skeleton-base:   #12152A;
+  --color-skeleton-shimmer:#1E2240;
 }
 
 @utility font-brand {

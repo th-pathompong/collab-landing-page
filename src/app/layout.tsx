@@ -156,7 +156,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`scroll-smooth ${figtree.variable} ${anuphan.variable}`}>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased bg-bg">
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
             <NavigationWrapper />

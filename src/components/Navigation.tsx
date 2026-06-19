@@ -110,7 +110,7 @@ export default function Navigation({
     const isExpanded = mobileExpandedLabel === item.label;
     
     return (
-      <div key={item.label} className="border-b border-gray-100 dark:border-gray-800">
+      <div key={item.label} className="border-b border-border">
         <div className="flex items-center justify-between py-2 px-4">
           <Link
             href={item.href}
@@ -180,7 +180,7 @@ export default function Navigation({
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+      <nav className="fixed top-0 w-full bg-bg/80 backdrop-blur-md z-50 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex justify-between items-center h-16 gap-8">
             {/* Logo and Navigation Links */}
@@ -234,7 +234,7 @@ export default function Navigation({
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
-                className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 overflow-hidden relative z-50"
+                className="md:hidden bg-bg border-t border-border overflow-hidden relative z-50"
               >
                 <div className="py-4 space-y-4">
                   {NAVIGATION_MENU_ITEMS.map((item) => 
@@ -242,7 +242,7 @@ export default function Navigation({
                       ? renderDropdownSectionItems(item)
                       : renderNavigationItem(item, true)
                   )}
-                  <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <div className="pt-4 border-t border-border">
                     <a 
                       href={APP_URL} 
                       target="_blank" 

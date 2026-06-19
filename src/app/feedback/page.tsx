@@ -2,7 +2,7 @@ import FeedbackForm from '@/components/FeedbackForm';
 
 export default function FeedbackPage() {
   return (
-    <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 flex-grow">
+    <div className="bg-bg text-gray-900 dark:text-gray-100 transition-colors duration-300 flex-grow">
       <main className="pt-16">
         <div className="bg-brand-50 dark:bg-gray-800 py-12">
           <div className="container mx-auto px-4">
